@@ -1,0 +1,15 @@
+.venv/
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local env (chứa OPENAI_API_KEY, MONGODB_URI) — KHÔNG commit
+env.sh
+.env
+
+# HuggingFace cache nếu để trong repo
+.hf_cache/
+
+# Outputs / checkpoints
+data/outputs/
+data/hasaki_prelabel.json  # symlink, vẫn có file gốc ở data/raw/hasaki/
