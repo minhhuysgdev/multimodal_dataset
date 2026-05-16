@@ -1,0 +1,23 @@
+{
+  "total_samples": 2043,
+  "usable_approved": 1761,
+  "needs_human_review": 275,
+  "skipped_ambiguous": 7,
+  "invalid_slug": 25,
+  "exact_duplicates": 0,
+  "unique_l1": 5,
+  "unique_l2": 56,
+  "unique_l3_in_data": 366,
+  "unique_l3_in_taxonomy": 109,
+  "l3_covered": 55,
+  "l3_missing_coverage": 54,
+  "l3_oov_in_data": 311,
+  "intents_sufficient": 17,
+  "intents_need_augment": 349,
+  "total_gap_to_fill": 9184,
+  "avg_word_count": 12.99,
+  "avg_char_count": 53.49,
+  "l1_before_sale": 1596,
+  "l1_after_sale": 433,
+  "imbalance_ratio": 74.0
+}
