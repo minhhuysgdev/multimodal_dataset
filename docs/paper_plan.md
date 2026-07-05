@@ -1,516 +1,411 @@
-# Dataset Build Plan — ViEcomIntent: Vietnamese E-Commerce Intent Dataset
+# Do Hierarchies Help? Minimal Intent Prototypes for Vietnamese Hierarchical Intent Retrieval
 
-> Mục tiêu: Xây dựng dataset intent tiếng Việt cho e-commerce mỹ phẩm,  
-> đủ tiêu chuẩn công bố tại hội nghị/tạp chí khoa học (ACL/EMNLP/COLING/WWW).
+## Abstract
 
----
+Retrieval-based intent classification is a practical approach for reducing the search space in hierarchical intent taxonomies. Instead of directly predicting an intent label from a large label set, the system first retrieves a small set of candidate intents and then performs downstream classification or annotation within that narrowed space. However, a key design question remains unclear: how should intent labels be represented for dense retrieval?
 
-## 0. Tổng quan
+A common intuition is to enrich each intent representation with hierarchy-derived context such as taxonomy paths or higher-level category information. In this work, we revisit this assumption in the context of Vietnamese e-commerce queries, where user inputs are often short, noisy, and domain-specific. We propose a **Minimal Intent Prototype Representation**, where each intent is represented only by its label, natural-language description, detection signals, and example utterances. Unlike hierarchy-augmented representations, our main representation does not inject additional taxonomy context into the dense retrieval text.
 
-| Hạng mục | Mục tiêu |
-|---|---|
-| Tên dataset | **ViEcomIntent** (Vietnamese E-Commerce Intent Dataset) |
-| Miền | Mỹ phẩm / skincare (Hasaki.vn) |
-| Ngôn ngữ | Tiếng Việt |
-| Taxonomy | 2 L1 × ~12 L2 × 50+ L3 |
-| Tổng mẫu target | **5,000 câu hỏi** (annotated, quality-controlled) |
-| Split | Train 70% / Val 10% / Test 20% |
-| Annotation method | Pipeline bán tự động (notebook hiện tại) + Claude loop harness |
-| Tiêu chuẩn | Inter-annotator agreement ≥ 0.75 (Cohen's κ) |
+We construct a Vietnamese hierarchical intent retrieval benchmark from e-commerce customer queries and a three-level L1–L2–L3 intent taxonomy. We compare minimal prototypes with lightweight hierarchy-aware variants across multiple embedding models and retrieval settings. Beyond retrieval accuracy, the prototype-based formulation also supports **training-free taxonomy extension**: new intents can be added by defining and encoding new prototypes without retraining the full model. This makes the approach suitable for evolving domain-specific intent taxonomies.
 
----
+***
 
-## 1. Hiện trạng (what we have)
+## 1. Introduction
 
-```
-intent_nodes   : 181 nodes (L1/L2/L3 taxonomy đã build)
-intent_edges   : 182 edges (graph structure)
-hasaki_prelabel: ~5,000 câu hỏi thô từ product page Q&A
-Pipeline       : notebook intent_labeling_mongodb_qwen.ipynb
-  ├── Graph-aware embedding (paraphrase-multilingual-MiniLM-L12-v2)
-  ├── Union retrieval (regex + semantic, top-12 candidates)
-  ├── LLM labeling (GPT-4o-mini / Qwen2.5-7B)
-  ├── Taxonomy validation + guardrail slug
-  └── QA status: auto_labeled / needs_review / rejected
-```
+Hierarchical intent classification is widely used in practical systems such as customer support automation, FAQ retrieval, and conversational agents. In these systems, user queries are mapped to a structured taxonomy of intents. The taxonomy is often organized into multiple levels, such as high-level domains, functional categories, and fine-grained intent labels.
 
-**Gap để đủ công bố:**
-- Chưa có test set được verify thủ công (ground truth)
-- Chưa có inter-annotator agreement
-- Chưa có baseline classifier chạy trên dataset
-- Chưa có data card / dataset paper chuẩn
+This structure is useful because it organizes the label space and makes the system easier to inspect. However, it also introduces challenges. As the taxonomy grows, direct classification over the entire label set becomes more difficult. Fine-grained intents may be semantically close, and short user queries may not provide enough information for reliable classification.
 
----
+A common solution is retrieval-based intent classification. Instead of predicting a label directly from the full taxonomy, the system first retrieves a small set of candidate intents. A downstream classifier, LLM annotator, or human reviewer then selects the final label from this candidate set. This approach reduces the search space and improves interpretability.
 
-## 2. Kiến trúc Dataset
+With sentence embedding models, retrieval can be implemented by encoding both the input query and intent representations into a shared vector space. Sentence embedding approaches make semantic search practical by producing vector representations that can be compared using similarity measures such as cosine similarity.
 
-### 2.1. Split chiến lược
+However, a key design question remains: **how should intent labels be represented for dense retrieval?** A natural intuition is to enrich each intent representation with hierarchy-derived information, such as taxonomy paths, so that the representation captures not only the intent itself but also its position in the taxonomy.
 
-```
-Tổng 5,000 câu
-├── TRAIN  3,500 câu (70%) — auto_labeled + reviewed
-│   ├── auto_labeled (conf ≥ 0.85): ~2,800 câu
-│   └── needs_review (reviewed thủ công): ~700 câu
-├── VAL    500 câu (10%) — PHẢI verify thủ công 100%
-│   └── Dùng để tune threshold / ablation
-└── TEST   1,000 câu (20%) — PHẢI verify thủ công 100%
-    ├── 500 câu: in-domain (từ Hasaki Q&A)
-    └── 500 câu: synthetic diversity (Claude loop harness)
-```
+In this paper, we question this assumption. While hierarchy-derived context can be useful for validation and analysis, injecting it directly into the dense retrieval text may introduce noise or reduce the specificity of the target intent representation. A taxonomy path can provide useful coarse context, but it can also make the prototype less focused on the fine-grained meaning of the intent.
 
-### 2.2. Phân phối nhãn (target)
+We focus on Vietnamese e-commerce queries, where user inputs are often short, informal, and domain-specific. This setting makes representation design especially important. We propose a **Minimal Intent Prototype Representation**, where each intent is represented using only the information that directly describes its meaning: label, description, detection signals, and example utterances.
 
-- Mỗi L3 intent: tối thiểu **30 mẫu** trong train
-- Mỗi L3 intent: tối thiểu **10 mẫu** trong test
-- Tỷ lệ before_sale / after_sale: ~60% / 40%
-- Không có intent nào chiếm > 8% tổng dataset (balance)
+Our main hypothesis is simple:
 
-### 2.3. Schema mẫu (mỗi row)
+> For dense intent retrieval, a compact semantic prototype can be more reliable than a verbose hierarchy-augmented prototype.
 
-```json
-{
-  "id": "VI-ECOM-00001",
-  "question": "Sản phẩm này có rẻ hơn bên Shopee không?",
-  "question_normalized": "san pham nay co re hon ben shopee khong",
-  "source": "hasaki_faq | synthetic_claude | synthetic_paraphrase",
-  "L1": "truoc_mua_hang",
-  "L2": "gia_so_sanh",
-  "L3": "compare_price_platform",
-  "taxonomy_path": "truoc_mua_hang/gia_so_sanh/compare_price_platform",
-  "annotation_method": "auto_labeled | human_reviewed | claude_harness",
-  "confidence": 0.92,
-  "annotator_1": "L3_label",
-  "annotator_2": "L3_label",
-  "agreement": true,
-  "split": "train | val | test",
-  "created_at": "2025-01-01T00:00:00Z"
-}
+We construct a Vietnamese hierarchical intent retrieval benchmark and compare minimal prototypes with lightweight hierarchy-aware variants. We also compare multiple embedding models, including lightweight multilingual encoders and Vietnamese-oriented retrieval models.
+
+Our contributions are fourfold:
+
+1. We introduce a Vietnamese e-commerce hierarchical intent retrieval benchmark based on customer queries and a three-level L1–L2–L3 intent taxonomy.
+2. We propose **Minimal Intent Prototype Representation**, a compact semantic representation for dense intent retrieval.
+3. We conduct a controlled ablation study comparing minimal prototypes with hierarchy-aware variants.
+4. We show that prototype-based retrieval naturally supports **training-free taxonomy extension**, allowing new intents to be added without retraining the full model.
+
+Overall, this work reframes hierarchical intent retrieval as a representation design problem rather than a model architecture problem.
+
+***
+
+## 2. Dataset
+
+We construct a Vietnamese e-commerce intent dataset from customer question–answer data and product-related text. The dataset contains user queries related to product information, usage, pricing, suitability, purchase decisions, and after-sale support.
+
+Each query is mapped to a hierarchical intent taxonomy with three levels:
+
+* **L1**: high-level domain or customer journey stage
+* **L2**: functional intent category
+* **L3**: fine-grained intent label
+
+For example, a query such as:
+
+```text
+Laptop này pin dùng được mấy tiếng?
 ```
 
----
+may be mapped to:
 
-## 3. Claude Loop Harness — Thiết kế
-
-> Dùng Claude API để sinh câu hỏi đa dạng + verify nhãn cho test set.
-
-### 3.1. Mục đích của Claude harness
-
-```
-Task 1 — GENERATE: Sinh câu hỏi đa dạng cho intent thiếu mẫu
-Task 2 — VERIFY  : Review nhãn từ pipeline (thay human annotator 1)
-Task 3 — PARAPHRASE: Tạo biến thể paraphrase cho data augmentation
-Task 4 — ADVERSARIAL: Sinh câu khó, gần nghĩa nhưng khác intent
+```text
+L1: truoc_mua_hang
+L2: laptop_pin
+L3: laptop_pin_thoi_luong
 ```
 
-### 3.2. Prompt Template — Task GENERATE
+Each intent node contains metadata such as:
 
-```python
-GENERATE_PROMPT = """
-Bạn là annotator chuyên về e-commerce mỹ phẩm tiếng Việt.
+* intent label
+* natural-language description
+* detection signals
+* example utterances
 
-Nhiệm vụ: Sinh {n} câu hỏi THỰC TẾ mà khách hàng có thể hỏi trên Hasaki.vn,
-thuộc intent sau:
+The taxonomy itself is stored as a structured graph with parent–child relationships. However, in our main retrieval method, only the semantic prototype of each intent is used for dense retrieval. The taxonomy structure is retained for validation, evaluation, and error analysis.
 
-Intent path: {taxonomy_path}
-Mô tả: {description}
-Tín hiệu nhận diện: {detection_signals}
-Ví dụ hiện có: {existing_examples}
+The benchmark contains queries paired with their gold L1–L2–L3 intent paths. This allows us to evaluate both retrieval quality and downstream label accuracy.
 
-Yêu cầu:
-- Câu hỏi tiếng Việt tự nhiên, như người thật gõ (có thể viết tắt, thiếu dấu)
-- ĐA DẠNG: không lặp cấu trúc, không lặp từ khóa
-- KHÔNG dùng lại ví dụ có sẵn
-- Độ dài: 5–30 từ
-- Bao gồm: câu ngắn, câu dài, câu có emoji, câu viết không dấu
+***
 
-Trả về JSON array:
-[
-  {{"question": "...", "style": "formal|informal|no_accent|with_emoji"}},
-  ...
-]
-"""
+## 3. Related Work
+
+### 3.1 Sentence Embeddings and Semantic Retrieval
+
+Sentence embedding models are widely used for semantic search and retrieval. These models encode text into dense vectors, allowing queries and candidate representations to be compared in the same vector space.
+
+Our work uses this general retrieval principle: both user queries and intent prototypes are encoded into dense vectors, and retrieval is performed using vector similarity.
+
+### 3.2 Hierarchical Text Classification
+
+Hierarchical text classification studies how to classify documents or utterances into a structured label hierarchy. Prior work has explored ways to incorporate label hierarchy into model architectures, training objectives, or prediction constraints.
+
+However, these methods usually focus on supervised classification. In contrast, our work focuses on a different question: when using sentence embedding models for retrieval, should hierarchy-derived context be injected into the textual representation of each label?
+
+This distinction is important because dense retrieval models encode semantic similarity, not necessarily hierarchical decision boundaries.
+
+### 3.3 Vietnamese Embedding Models
+
+Vietnamese semantic retrieval requires encoders that can handle Vietnamese language patterns and domain-specific expressions. Multilingual encoders provide a useful baseline, but Vietnamese-oriented retrieval models may better capture local phrasing, short queries, and domain-specific terms.
+
+This motivates our encoder comparison in the experimental setup.
+
+### 3.4 LLM-Assisted Annotation
+
+LLMs are increasingly used to support data annotation. In our pipeline, candidate retrieval narrows the possible intent labels before an LLM annotator predicts the final label.
+
+This motivates treating retrieval as a critical upstream component. If the correct intent is not retrieved, the downstream annotator is unlikely to produce the correct final label.
+
+***
+
+## 4. Method
+
+### 4.1 Problem Formulation
+
+Given a user query $$q$$, the goal is to retrieve a set of Top-K candidate intents from an intent taxonomy:
+
+$$
+C_K(q) = \text{TopK}_i \; sim(q, i)
+$$
+
+where $$sim(q, i)$$ measures the similarity between query $$q$$ and intent $$i$$.
+
+The retrieval module does not directly produce the final label. Instead, it returns a candidate set that can be consumed by a downstream classifier, LLM annotator, or human reviewer.
+
+The goal is to maximize the probability that the gold L3 intent appears in the Top-K candidate set and appears as high as possible in the ranking.
+
+***
+
+### 4.2 Minimal Intent Prototype Representation
+
+For each intent $$i$$, we construct a textual prototype $$p_i$$. The proposed **Minimal Intent Prototype Representation** includes only information directly describing the target intent:
+
+* intent label
+* natural-language description
+* detection signals
+* example utterances
+
+Formally:
+
+$$
+p_i = concat(label_i, description_i, signals_i, examples_i)
+$$
+
+For example, for the intent:
+
+```text
+truoc_mua_hang.laptop_pin.laptop_pin_thoi_luong
 ```
 
-### 3.3. Prompt Template — Task VERIFY
+the minimal prototype is:
 
-```python
-VERIFY_PROMPT = """
-Bạn là expert reviewer cho dataset intent classification tiếng Việt.
-
-Cho câu hỏi sau và nhãn được gán tự động, hãy xác nhận hoặc sửa lại:
-
-Câu hỏi: "{question}"
-Nhãn gán tự động:
-  L1: {predicted_L1}
-  L2: {predicted_L2}
-  L3: {predicted_L3}
-  Confidence: {confidence}
-
-Taxonomy có sẵn (L3 options trong L2={predicted_L2}):
-{sibling_intents_with_descriptions}
-
-Trả về JSON:
-{{
-  "verdict": "correct | wrong | ambiguous",
-  "corrected_L1": "...",  // nếu wrong
-  "corrected_L2": "...",  // nếu wrong
-  "corrected_L3": "...",  // nếu wrong
-  "reason": "giải thích ngắn gọn",
-  "confidence_review": 0.0–1.0
-}}
-"""
+```text
+Intent: laptop_pin_thoi_luong
+Description: User asks about laptop battery duration after a full charge.
+Detection signals: pin, thời lượng pin, dùng được bao lâu, mấy tiếng
+Example: Laptop pin được bao lâu?
 ```
 
-### 3.4. Prompt Template — Task ADVERSARIAL
+The prototype does **not** include additional taxonomy context in the main retrieval representation.
 
-```python
-ADVERSARIAL_PROMPT = """
-Sinh {n} câu hỏi "khó" cho bài toán intent classification:
-Câu hỏi phải TRÔNG GIỐNG intent {source_intent} nhưng thực ra thuộc {target_intent}.
+This is a deliberate design choice. Additional taxonomy context may provide coarse structural information, but it may also reduce the specificity of the target intent representation in dense embedding space.
 
-Source intent: {source_path} — {source_description}
-Target intent: {target_path} — {target_description}
+***
 
-Ví dụ source: {source_examples}
-Ví dụ target: {target_examples}
+### 4.3 Prototype Encoding
 
-Mục tiêu: Tạo test case thách thức, dễ nhầm lẫn giữa 2 intent gần nhau.
-Trả về JSON array với field: question, correct_intent (target), confusion_reason
-"""
+Each prototype is encoded using a sentence embedding model:
+
+$$
+h_i = Enc(p_i)
+$$
+
+where $$Enc(\cdot)$$ is the encoder and $$h_i$$ is the dense vector representation of intent $$i$$.
+
+All prototype vectors are stored in an intent prototype memory:
+
+$$
+H = \{h_1, h_2, ..., h_n\}
+$$
+
+The query is encoded using the same encoder:
+
+$$
+h_q = Enc(q)
+$$
+
+Similarity is computed using cosine similarity:
+
+$$
+sim(q, i) = cos(h_q, h_i)
+$$
+
+***
+
+### 4.4 Candidate Retrieval
+
+The Top-K candidate intents are retrieved as:
+
+$$
+C_K(q) = TopK_i \; cos(h_q, h_i)
+$$
+
+This retrieval step can be used alone or combined with keyword-based matching. In our system, semantic retrieval can be combined with regex-based retrieval over detection signals:
+
+$$
+C_K^{union}(q) = dedup(C_K^{semantic}(q) \cup C_K^{regex}(q))
+$$
+
+This union strategy is useful because Vietnamese e-commerce queries often contain clear lexical signals such as:
+
+```text
+giá
+pin
+đổi trả
+bảo hành
+da dầu
 ```
 
-### 3.5. Loop Harness Flow
+***
 
-```python
-# Pseudocode — chạy song song với notebook hiện tại
+### 4.5 Hierarchy-Aware Variant
 
-def claude_harness_loop(db, target_per_intent=30):
-    """
-    Loop qua từng intent L3, kiểm tra số mẫu,
-    gọi Claude để bổ sung nếu thiếu.
-    """
-    for intent in db.intent_nodes.find({"level": "intent"}):
-        current_count = db.labeled_examples.count_documents({
-            "intent.level_3": intent["l3"],
-            "qa_status": {"$in": ["auto_labeled", "human_reviewed"]}
-        })
+Although our main representation is minimal, we evaluate a lightweight hierarchy-aware variant as an ablation:
 
-        # Phase 1: Generate nếu thiếu mẫu
-        if current_count < target_per_intent:
-            n_needed = target_per_intent - current_count
-            generated = claude_generate(intent, n=n_needed)
-            save_to_db(generated, source="synthetic_claude", split="train")
+| Representation      | Prototype Content                        |
+| ------------------- | ---------------------------------------- |
+| Label-only          | label                                    |
+| Label + Description | label + description                      |
+| Minimal Prototype   | label + description + signals + examples |
+| Minimal + Path      | minimal + taxonomy path                  |
 
-        # Phase 2: Verify needs_review samples
-        pending = db.labeled_examples.find({
-            "intent.level_3": intent["l3"],
-            "qa_status": "needs_review"
-        })
-        for sample in pending:
-            verdict = claude_verify(sample, intent)
-            update_qa_status(sample, verdict)
+The purpose of this ablation is to test whether adding taxonomy path information improves or harms dense retrieval.
 
-    # Phase 3: Adversarial pairs
-    confusable_pairs = find_confusable_intent_pairs(db)
-    for src, tgt in confusable_pairs:
-        adversarial = claude_adversarial(src, tgt, n=5)
-        save_to_db(adversarial, source="synthetic_adversarial", split="test")
+***
+
+### 4.6 Role of the Taxonomy Graph
+
+The taxonomy graph is not discarded. It is used for:
+
+1. **Taxonomy validation**  
+   Ensuring that predicted L1–L2–L3 paths exist.
+
+2. **Hierarchical evaluation**  
+   Computing L1, L2, L3, and path-level metrics.
+
+3. **Error analysis**  
+   Distinguishing near errors from far errors.
+
+4. **Candidate organization**  
+   Presenting candidates in a structured way for annotation or review.
+
+The key distinction is that taxonomy structure is used for validation and analysis, but not directly injected into the main dense prototype representation.
+
+***
+
+### 4.7 Training-Free Taxonomy Extension
+
+A practical advantage of prototype-based retrieval is that it separates taxonomy updates from model training. In conventional supervised intent classifiers, adding a new intent changes the output label space and often requires retraining or fine-tuning the classifier.
+
+In contrast, our method represents each intent as an independent textual prototype. When a new intent appears, the system only needs to define its label, description, detection signals, and example utterances:
+
+$$
+p_{new} = concat(label_{new}, description_{new}, signals_{new}, examples_{new})
+$$
+
+The new prototype is encoded using the existing encoder:
+
+$$
+h_{new} = Enc(p_{new})
+$$
+
+Then the intent memory is updated:
+
+$$
+H' = H \cup \{h_{new}\}
+$$
+
+No classifier parameters are updated, and the full model does not need to be retrained. This makes the framework suitable for evolving e-commerce taxonomies, where new intents may appear due to new products, policy changes, campaigns, or newly observed customer concerns.
+
+We refer to this property as **training-free taxonomy extension**, rather than continual learning in the strict model-training sense. Adaptation happens at the prototype memory level, not through parameter updates.
+
+A concise summary is:
+
+> The system does not learn new intents by updating model parameters; it adapts by extending the prototype memory.
+
+***
+
+## 5. Experimental Setup
+
+### 5.1 Representation Baselines
+
+We compare the following prototype representations:
+
+| Representation      | Content                                  |
+| ------------------- | ---------------------------------------- |
+| Label-only          | label                                    |
+| Label + Description | label + description                      |
+| Minimal Prototype   | label + description + signals + examples |
+| Minimal + Path      | minimal + taxonomy path                  |
+
+***
+
+### 5.2 Encoder Baselines
+
+We compare different embedding models:
+
+| Encoder               | Role                                     |
+| --------------------- | ---------------------------------------- |
+| MiniLM                | lightweight multilingual baseline        |
+| BGE-M3                | strong multilingual retrieval baseline   |
+| Vietnamese\_Embedding | Vietnamese-oriented retrieval encoder    |
+| multilingual E5       | retrieval-oriented multilingual baseline |
+
+***
+
+### 5.3 Retrieval Strategies
+
+We evaluate:
+
+| Strategy        | Description                            |
+| --------------- | -------------------------------------- |
+| Regex-only      | keyword and detection-signal matching  |
+| Semantic-only   | dense retrieval over prototypes        |
+| Union retrieval | regex candidates ∪ semantic candidates |
+
+***
+
+### 5.4 Metrics
+
+We evaluate retrieval using:
+
+* **Recall\@K**: whether the correct intent appears in the Top-K candidates
+* **MRR\@K**: how early the correct intent appears in the ranking
+* **nDCG\@K**: ranking quality with hierarchy-aware graded relevance
+
+For downstream labeling, we report:
+
+* L1 accuracy
+* L2 accuracy
+* L3 accuracy
+* full-path accuracy
+* Macro-F1 at L3
+
+For taxonomy extension, we report:
+
+* new-intent Recall\@K
+* new-intent MRR\@K
+* existing-intent Recall\@K before and after insertion
+* interference rate on existing intents
+
+***
+
+## 6. Analysis
+
+### 6.1 Why Can Additional Taxonomy Context Hurt Dense Retrieval?
+
+Although taxonomy structure is useful, injecting taxonomy-derived text directly into dense retrieval representations can introduce several issues.
+
+First, taxonomy paths provide coarse contextual information, but they may reduce the specificity of the target intent representation. For example, a high-level path may describe the general topic, while the retrieval task requires distinguishing a fine-grained intent.
+
+Second, dense embedding models are trained to capture semantic similarity, not necessarily to separate fine-grained class boundaries. Adding additional taxonomy context may make prototypes more similar to nearby classes and less focused on the target intent.
+
+Third, dense retrieval works best when the representation clearly describes the semantic meaning of the item being retrieved. A compact prototype containing the intent meaning, detection signals, and examples may therefore be more effective than a verbose representation with additional structural context.
+
+***
+
+### 6.2 Why Minimal Prototypes Are Practical
+
+Minimal prototypes are easy to write, inspect, and update. They directly describe what the intent means without requiring the designer to decide how much taxonomy context to include.
+
+This is especially useful in low-resource settings, where there may not be enough labeled data to train a supervised classifier. The system can rely on prototype construction and embedding-based retrieval instead of full model training.
+
+***
+
+### 6.3 Taxonomy Extension without Retraining
+
+The prototype formulation also supports incremental taxonomy updates. When a new intent is added, the system creates a new prototype and inserts its vector into memory. This avoids retraining a classifier whenever the label set changes.
+
+This property is useful in e-commerce, where customer concerns evolve over time. New product types, new promotions, new return policies, or unexpected user questions can introduce new intents.
+
+***
+
+## 7. Conclusion
+
+This paper studies a simple but important question in retrieval-based hierarchical intent classification: how should intents be represented for dense retrieval?
+
+We propose Minimal Intent Prototype Representation, where each intent is represented using only its label, description, detection signals, and example utterances. Unlike hierarchy-augmented representations, the proposed representation does not inject additional taxonomy context into the dense retrieval text.
+
+Our study frames hierarchical intent retrieval as a representation design problem rather than a model architecture problem. Through controlled ablations, we compare minimal prototypes with a lightweight hierarchy-aware variant and analyze whether taxonomy path information helps or hurts retrieval.
+
+Beyond retrieval performance, the prototype-based formulation also supports training-free taxonomy extension. New intents can be added by creating and encoding new prototypes, without retraining the full model.
+
+Overall, the findings suggest that compact semantic prototypes are a strong and practical representation for Vietnamese hierarchical intent retrieval, especially in domain-specific and evolving taxonomy settings.
+
+***
+
+## Final Paper Spine
+
+```text
+We show that, for Vietnamese hierarchical intent retrieval, compact intent prototypes based on direct semantic descriptions are a reliable and extensible alternative to dense retrieval representations that inject additional taxonomy context.
 ```
 
----
+***
 
-## 4. Quy trình Build theo Phase
+## Final Contribution Paragraph
 
-### Phase 1 — Data Audit (Tuần 1)
-
-**Mục tiêu:** Biết chính xác mình có gì, thiếu gì.
-
+```text
+Our contributions are fourfold. First, we introduce a Vietnamese e-commerce hierarchical intent retrieval benchmark based on real-world customer queries and a three-level L1–L2–L3 taxonomy. Second, we propose Minimal Intent Prototype Representation, a compact semantic representation that encodes each intent using only its label, description, detection signals, and example utterances. Third, we conduct a controlled ablation study comparing minimal prototypes with a lightweight hierarchy-aware variant across multiple embedding models and retrieval strategies. Fourth, we show that the prototype-based formulation supports training-free taxonomy extension, allowing new intents to be added by encoding new prototypes without retraining the full model.
 ```
-[ ] Export toàn bộ intent_annotations từ MongoDB
-[ ] Vẽ distribution plot: số mẫu per L3 intent
-[ ] Xác định các intent thiếu (< 30 mẫu train)
-[ ] Xác định các intent thừa (> 200 mẫu) → cần down-sample
-[ ] Tính tỷ lệ auto_labeled / needs_review / rejected hiện tại
-[ ] Tạo spreadsheet tracking: intent_id | count | status | gap
-```
-
-**Output:** `data/audit/intent_distribution.csv`
-
----
-
-### Phase 2 — Test Set Construction (Tuần 1–2)
-
-> Test set phải SẠCH NHẤT — đây là thứ reviewer xem đầu tiên.
-
-```
-[ ] Chọn ngẫu nhiên 1,000 câu từ hasaki_prelabel.json
-    └── Stratified by L2 (tỷ lệ theo distribution thực)
-[ ] Chạy pipeline hiện tại để lấy predicted label
-[ ] Gọi Claude VERIFY loop cho toàn bộ 1,000 câu
-[ ] Human review 200 câu random (spot-check)
-[ ] Tính Cohen's κ giữa Claude verdict vs human spot-check
-    └── Target: κ ≥ 0.75 (substantial agreement)
-[ ] Mark 1,000 câu này là split="test", lock khỏi training
-[ ] Thêm 500 câu synthetic adversarial (Claude harness Phase 3)
-```
-
-**Output:** `data/splits/test_v1.jsonl`
-
----
-
-### Phase 3 — Val Set Construction (Tuần 2)
-
-```
-[ ] Chọn 500 câu từ pool còn lại (chưa vào test)
-    └── Stratified, ưu tiên needs_review samples
-[ ] Claude VERIFY toàn bộ 500 câu
-[ ] Human spot-check 100 câu
-[ ] Tính κ
-[ ] Mark split="val"
-```
-
-**Output:** `data/splits/val_v1.jsonl`
-
----
-
-### Phase 4 — Train Set Augmentation (Tuần 2–3)
-
-```
-[ ] Dùng pool còn lại (~3,500 câu) làm train base
-[ ] Chạy Claude GENERATE cho các intent < 30 mẫu
-    └── Sinh tối đa 2x so với số mẫu thật (không quá 50% synthetic)
-[ ] Chạy Claude PARAPHRASE cho train để tăng diversity
-[ ] Verify nhanh bằng Claude (confidence filter > 0.85)
-[ ] Down-sample intent > 200 mẫu về 150 (random seed = 42)
-[ ] Final train size: ~3,500 câu thật + ~500 synthetic
-```
-
-**Output:** `data/splits/train_v1.jsonl`
-
----
-
-### Phase 5 — Quality Check & Statistics (Tuần 3)
-
-```
-[ ] Tính Inter-Annotator Agreement (IAA)
-    └── Cohen's κ tại L3 level
-    └── Fleiss' κ nếu có 3+ annotators
-[ ] Vẽ confusion matrix giữa Claude predict vs human
-[ ] Tính class imbalance ratio (max_class / min_class)
-[ ] Check: không có câu nào xuất hiện ở 2 splits khác nhau
-[ ] Check: không có câu duplicate trong cùng split
-[ ] Tạo data card (xem Phase 6)
-```
-
-**Output:** `data/quality/iaa_report.json`, `data/quality/stats.csv`
-
----
-
-### Phase 6 — Baseline Experiments (Tuần 3–4)
-
-> Phải có ít nhất 1 baseline để chứng minh dataset "useful".
-
-```
-Baseline 1: Zero-shot với paraphrase-multilingual-MiniLM-L12-v2
-  └── Cosine similarity → top-1 intent (no fine-tuning)
-  └── Report: Accuracy@1, Accuracy@3, Macro-F1
-
-Baseline 2: Fine-tuned PhoBERT-base trên train set
-  └── Multi-class classification tại L3 level
-  └── Report: Precision, Recall, F1 per L1/L2/L3
-
-Baseline 3: Pipeline hiện tại (GPT-4o-mini + retrieval)
-  └── Chạy trên test set, dùng kết quả verify làm ground truth
-  └── Report: Auto-labeled accuracy, Pipeline F1
-
-Baseline 4 (optional): GPT-4o zero-shot prompt
-  └── Dùng làm upper-bound reference
-```
-
-**Output:** `experiments/baseline_results.csv`
-
----
-
-### Phase 7 — Data Card & Release (Tuần 4)
-
-```
-[ ] Viết Data Card theo HuggingFace standard:
-    ├── Dataset summary
-    ├── Source & collection method
-    ├── Taxonomy description
-    ├── Annotation process
-    ├── Quality metrics (IAA, coverage)
-    ├── Intended use & limitations
-    ├── License (đề xuất: CC BY 4.0)
-    └── Citation BibTeX
-[ ] Upload lên HuggingFace Datasets (public)
-    └── URL: huggingface.co/datasets/[username]/ViEcomIntent
-[ ] Tạo GitHub repo với README + notebook demo
-[ ] Viết Dataset Paper (~4 pages, format ACL)
-```
-
----
-
-## 5. File Structure
-
-```
-ViEcomIntent/
-├── README.md                    # Data card
-├── LICENSE                      # CC BY 4.0
-│
-├── data/
-│   ├── raw/
-│   │   └── hasaki_prelabel.json # Nguồn gốc (không publish nếu có PII)
-│   ├── splits/
-│   │   ├── train_v1.jsonl       # 3,500 mẫu
-│   │   ├── val_v1.jsonl         # 500 mẫu
-│   │   └── test_v1.jsonl        # 1,000 mẫu (500 real + 500 synthetic)
-│   ├── taxonomy/
-│   │   ├── intent_nodes.json    # 181 nodes
-│   │   └── intent_edges.json    # 182 edges
-│   └── quality/
-│       ├── iaa_report.json      # Cohen's κ per L2
-│       ├── stats.csv            # Distribution stats
-│       └── confusion_matrix.png
-│
-├── src/
-│   ├── build_dataset.py         # Script chạy toàn bộ pipeline
-│   ├── claude_harness.py        # Claude API loop (generate/verify/adversarial)
-│   ├── split_dataset.py         # Tạo train/val/test
-│   └── compute_iaa.py           # Tính Cohen's κ
-│
-├── notebooks/
-│   ├── intent_labeling_mongodb_qwen.ipynb  # Pipeline hiện tại
-│   ├── baseline_phobert.ipynb   # Fine-tune PhoBERT
-│   └── analysis.ipynb           # Distribution & quality plots
-│
-└── experiments/
-    └── baseline_results.csv
-```
-
----
-
-## 6. Tiêu chuẩn nộp bài báo
-
-### Venue đề xuất (theo độ khó tăng dần)
-
-| Venue | Deadline | Scope | Chance |
-|---|---|---|---|
-| **PACLIC 2025** | ~Aug 2025 | SE Asia NLP, dataset OK | ⭐⭐⭐ |
-| **SoICT 2025** | ~Sep 2025 | Hội nghị Việt Nam, phù hợp | ⭐⭐⭐⭐ |
-| **COLING 2026** | ~Oct 2025 | Dataset track | ⭐⭐⭐ |
-| **ACL 2026 Findings** | ~Feb 2026 | Dataset + system | ⭐⭐ |
-| **EMNLP 2025** | ~Jun 2025 | Rất cạnh tranh | ⭐ |
-
-### Checklist tối thiểu để submit
-
-```
-[ ] Dataset có train/val/test split rõ ràng
-[ ] IAA (Cohen's κ) ≥ 0.70 tại L3 level
-[ ] Tối thiểu 3,000 mẫu annotated
-[ ] Ít nhất 2 baseline experiments với số liệu
-[ ] Data card đầy đủ (source, license, limitations)
-[ ] Public release (HuggingFace hoặc GitHub)
-[ ] Không có PII (câu hỏi không chứa tên người dùng)
-[ ] Paper ≥ 4 pages mô tả dataset + experiments
-```
-
----
-
-## 7. Timeline
-
-```
-Tuần 1 (hiện tại)
-├── Phase 1: Data audit — biết số mẫu per intent
-└── Phase 2 (bắt đầu): Xây test set, chạy Claude VERIFY loop
-
-Tuần 2
-├── Phase 2 (hoàn thành): Lock test set 1,000 câu
-└── Phase 3: Xây val set 500 câu
-
-Tuần 3
-├── Phase 4: Augment train set
-└── Phase 5: Quality check, tính IAA
-
-Tuần 4
-├── Phase 6: Chạy baseline experiments
-└── Phase 7: Data card + HuggingFace upload
-
-Tuần 5–6
-└── Viết paper, submit
-```
-
----
-
-## 8. Claude Harness — Implementation Checklist
-
-```python
-# src/claude_harness.py — cần implement các functions sau:
-
-def claude_generate(intent_node, n=10, model="claude-sonnet-4-20250514"):
-    """Sinh n câu hỏi cho 1 intent node."""
-    pass
-
-def claude_verify(sample, intent_node, siblings, model="claude-sonnet-4-20250514"):
-    """Verify nhãn của 1 sample. Trả về verdict JSON."""
-    pass
-
-def claude_paraphrase(question, n=3):
-    """Sinh n paraphrase cho 1 câu hỏi."""
-    pass
-
-def claude_adversarial(src_intent, tgt_intent, n=5):
-    """Sinh n câu khó, trông giống src nhưng thực ra là tgt."""
-    pass
-
-def run_verify_loop(db, split="val", batch_size=50):
-    """Chạy VERIFY loop cho toàn bộ một split."""
-    pass
-
-def run_generate_loop(db, target_per_intent=30):
-    """Chạy GENERATE loop cho các intent thiếu mẫu."""
-    pass
-
-def compute_cohen_kappa(human_labels, claude_labels):
-    """Tính Cohen's κ giữa human và Claude."""
-    from sklearn.metrics import cohen_kappa_score
-    return cohen_kappa_score(human_labels, claude_labels)
-```
-
----
-
-## 9. Rủi ro và Mitigation
-
-| Rủi ro | Mitigation |
-|---|---|
-| Claude sinh câu không tự nhiên | Spot-check 10% mẫu synthetic, loại nếu κ < 0.7 |
-| Dataset bị imbalanced nặng | Down-sample + up-sample cứng theo cap 150 / floor 30 |
-| Test set bị contaminate với train | Hash dedup trước khi split |
-| Không đủ mẫu after_sale | Viết thêm câu hỏi after_sale từ kinh nghiệm domain |
-| Hasaki không cho phép publish | Chỉ publish câu hỏi (không publish câu trả lời/URL gốc) |
-| IAA thấp do taxonomy mơ hồ | Review lại description của các intent dễ nhầm, làm rõ boundary |
-
----
-
-## 10. Số liệu kỳ vọng cho paper
-
-```
-Dataset Statistics (target):
-  Total samples:        5,000
-  Train / Val / Test:   3,500 / 500 / 1,000
-  L1 categories:        2
-  L2 groups:            ~12
-  L3 intents:           50+
-  Avg question length:  12.3 words
-  Synthetic ratio:      ~15% (750 câu Claude-generated)
-  IAA (Cohen's κ):      ≥ 0.75
-
-Baseline Results (target):
-  Zero-shot MiniLM:     Acc@1 ~65%, Macro-F1 ~60%
-  Fine-tuned PhoBERT:   Acc@1 ~82%, Macro-F1 ~79%
-  Pipeline (GPT+RAG):   Acc@1 ~88%, Macro-F1 ~85%
-```
-
----
-
-*Plan version 1.0 — cập nhật sau Phase 1 audit*
