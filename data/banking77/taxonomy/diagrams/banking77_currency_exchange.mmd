@@ -1,0 +1,7 @@
+flowchart TB
+  root["currency_exchange"]
+  root --> l2_exchangeinfo["exchange_info"]
+  l2_exchangeinfo --> l3_31["31: exchange_charge"]
+  l2_exchangeinfo --> l3_32["32: exchange_rate"]
+  l2_exchangeinfo --> l3_33["33: exchange_via_app"]
+  l2_exchangeinfo --> l3_36["36: fiat_currency_support"]

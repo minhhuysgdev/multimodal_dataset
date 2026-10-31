@@ -1,0 +1,31 @@
+{
+  "merge_rule": "clean approved (not in reverify queue) + reverified approved; reverified wins on overlap",
+  "excluded_statuses": [
+    "approved_auto_new_label",
+    "needs_review",
+    "no_intent",
+    "pending_new_label_invalid_slug",
+    "pending_new_label_review"
+  ],
+  "num_from_clean_approved": 1603,
+  "num_from_reverified_approved": 99,
+  "num_samples": 1702,
+  "reverify_queue_size": 250,
+  "overlap_clean_reverify_ids": 0,
+  "qa_status_distribution": {
+    "approved": 1702
+  },
+  "d2_source_distribution": {
+    "clean_approved": 1603,
+    "reverified_approved": 99
+  },
+  "unique_l1": 2,
+  "unique_l2": 37,
+  "unique_l3": 197,
+  "l1_distribution": {
+    "sau_mua_hang": 357,
+    "truoc_mua_hang": 1345
+  },
+  "clean_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/raw/hasaki/hasaki_labelled_clean.json",
+  "reverified_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/audit/hasaki_labelled_clean_human_review_reverified (1).json"
+}

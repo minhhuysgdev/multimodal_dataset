@@ -18,7 +18,7 @@
     "needs_review": 81,
     "pending_new_label_review": 169,
     "pending_new_label_invalid_slug": 25,
-    "skipped_ambiguous": 7
+    "no_intent": 7
   },
   "results": [
     {
@@ -8865,7 +8865,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_4",
       "error": null
     },
@@ -8963,7 +8963,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_3",
       "error": null
     },
@@ -9439,7 +9439,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_5",
       "error": null
     },
@@ -10237,7 +10237,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_3",
       "error": null
     },
@@ -13163,7 +13163,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_4",
       "error": null
     },
@@ -16831,7 +16831,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_3",
       "error": null
     },
@@ -19351,7 +19351,7 @@
         "level_3": ""
       },
       "confidence": 0.0,
-      "qa_status": "skipped_ambiguous",
+      "qa_status": "no_intent",
       "reasoning": "Câu quá ngắn/mơ hồ để dự đoán: too_short_chars_5",
       "error": null
     },

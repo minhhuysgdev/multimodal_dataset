@@ -1,0 +1,11 @@
+flowchart TB
+  root["account_and_access"]
+  root --> l2_accountlifecycle["account_lifecycle"]
+  l2_accountlifecycle --> l3_30["30: edit_personal_details"]
+  l2_accountlifecycle --> l3_55["55: terminate_account"]
+  root --> l2_appaccesssecurity["app_access_security"]
+  l2_appaccesssecurity --> l3_42["42: lost_or_stolen_phone"]
+  l2_appaccesssecurity --> l3_44["44: passcode_forgotten"]
+  root --> l2_eligibility["eligibility"]
+  l2_eligibility --> l3_1["1: age_limit"]
+  l2_eligibility --> l3_24["24: country_support"]

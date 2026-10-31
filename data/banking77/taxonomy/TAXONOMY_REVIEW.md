@@ -1,0 +1,47 @@
+# BANKING77 taxonomy — sơ đồ review
+
+## Cách xem nhanh nhất
+
+1. Mở file HTML trong trình duyệt (menu L1 → L2 → L3, tìm kiếm, lọc flag):
+
+   [`banking77_taxonomy_review.html`](../banking77_taxonomy_review.html)
+
+2. Sơ đồ tổng quan L1 → L2 (Mermaid): xem [`diagrams/banking77_overview.mmd`](diagrams/banking77_overview.mmd) trên GitHub hoặc paste vào [mermaid.live](https://mermaid.live).
+
+3. Chi tiết từng L1 (L2 → L3 đủ 77 intent): các file `diagrams/banking77_<L1>.mmd`.
+
+## Overview (Mermaid)
+
+```mermaid
+flowchart TB
+  banking["BANKING root"]
+  banking --> card["card<br/>27 L3"]
+  card --> card_cardfunction["card_function<br/>2 intents"]
+  card --> card_cardissuance["card_issuance<br/>8 intents"]
+  card --> card_cardpayment["card_payment<br/>6 intents"]
+  card --> card_cardproductinfo["card_product_info<br/>3 intents"]
+  card --> card_cardsecurity["card_security<br/>4 intents"]
+  card --> card_virtualcard["virtual_card<br/>4 intents"]
+  banking --> cashwithdrawal["cash_withdrawal<br/>8 L3"]
+  cashwithdrawal --> cashwithdrawal_atmoperation["atm_operation<br/>5 intents"]
+  cashwithdrawal --> cashwithdrawal_withdrawaldiscrepancy["withdrawal_discrepancy<br/>3 intents"]
+  banking --> transfer["transfer<br/>10 L3"]
+  transfer --> transfer_transferinfoandfee["transfer_info_and_fee<br/>2 intents"]
+  transfer --> transfer_transfersetup["transfer_setup<br/>3 intents"]
+  transfer --> transfer_transferstatus["transfer_status<br/>5 intents"]
+  banking --> topup["top_up<br/>13 L3"]
+  topup --> topup_topupfeeandlimit["top_up_fee_and_limit<br/>3 intents"]
+  topup --> topup_topupmethod["top_up_method<br/>5 intents"]
+  topup --> topup_topupstatus["top_up_status<br/>5 intents"]
+  banking --> currencyexchange["currency_exchange<br/>4 L3"]
+  currencyexchange --> currencyexchange_exchangeinfo["exchange_info<br/>4 intents"]
+  banking --> refundandcharges["refund_and_charges<br/>5 L3"]
+  refundandcharges --> refundandcharges_refund["refund<br/>2 intents"]
+  refundandcharges --> refundandcharges_unrecognisedorextracharg["unrecognised_or_extra_charge<br/>3 intents"]
+  banking --> identityverification["identity_verification<br/>4 L3"]
+  identityverification --> identityverification_kyc["kyc<br/>4 intents"]
+  banking --> accountandaccess["account_and_access<br/>6 L3"]
+  accountandaccess --> accountandaccess_accountlifecycle["account_lifecycle<br/>2 intents"]
+  accountandaccess --> accountandaccess_appaccesssecurity["app_access_security<br/>2 intents"]
+  accountandaccess --> accountandaccess_eligibility["eligibility<br/>2 intents"]
+```

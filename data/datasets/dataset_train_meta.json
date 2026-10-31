@@ -1,0 +1,24 @@
+{
+  "d1_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/raw/hasaki/d1_dataset.json",
+  "d2_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/d2_dataset.json",
+  "d3_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/gold/d3_dataset.json",
+  "d3_excluded_count": 300,
+  "d2_total": 2011,
+  "d2_approved_total": 1737,
+  "matched_train_ids": 1454,
+  "d1_train_count": 1454,
+  "d2_train_count": 1454,
+  "missing_in_d1": [],
+  "d1_l3_classes": 233,
+  "d2_l3_classes": 201,
+  "d1_l1_distribution": {
+    "sau_mua_hang": 276,
+    "truoc_mua_hang": 1176,
+    "truoc_ban": 1,
+    "sau_ban": 1
+  },
+  "d2_l1_distribution": {
+    "sau_mua_hang": 308,
+    "truoc_mua_hang": 1146
+  }
+}

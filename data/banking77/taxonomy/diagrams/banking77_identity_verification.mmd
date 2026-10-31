@@ -1,0 +1,7 @@
+flowchart TB
+  root["identity_verification"]
+  root --> l2_kyc["kyc"]
+  l2_kyc --> l3_68["68: unable_to_verify_identity"]
+  l2_kyc --> l3_69["69: verify_my_identity"]
+  l2_kyc --> l3_70["70: verify_source_of_funds"]
+  l2_kyc --> l3_74["74: why_verify_identity"]

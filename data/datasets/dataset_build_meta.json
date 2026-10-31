@@ -1,0 +1,22 @@
+{
+  "d1_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/raw/hasaki/hasaki_labelled_clean.json",
+  "d2_source": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/raw/hasaki/hasaki_labelled_approved_merged.json",
+  "d3_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/gold/d3_human_gold_to_annotate.json",
+  "d3_excluded_count": 300,
+  "matched_train_ids": 1402,
+  "d1_train_count": 1402,
+  "d2_train_count": 1402,
+  "missing_in_d1": [],
+  "d1_l3_classes": 193,
+  "d2_l3_classes": 154,
+  "d1_l1_distribution": {
+    "sau_mua_hang": 301,
+    "truoc_mua_hang": 1099,
+    "truoc_ban": 1,
+    "sau_ban": 1
+  },
+  "d2_l1_distribution": {
+    "sau_mua_hang": 301,
+    "truoc_mua_hang": 1101
+  }
+}

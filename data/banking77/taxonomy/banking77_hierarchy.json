@@ -1,0 +1,1104 @@
+{
+  "schema_version": "1.0",
+  "dataset": "PolyAI/banking77",
+  "convention": {
+    "root": "BANKING (outside L1-L2-L3)",
+    "L3": "Original Hugging Face intent name; unchanged semantics and identifier",
+    "L1": "Primary banking product line",
+    "L2": "Intent family within L1"
+  },
+  "coverage": {
+    "l3": 77,
+    "unique_ids": 77,
+    "orphans": 0,
+    "label_ids": "0-76 inclusive"
+  },
+  "statistics": {
+    "L1_counts": {
+      "account_and_access": 6,
+      "card": 27,
+      "cash_withdrawal": 8,
+      "currency_exchange": 4,
+      "identity_verification": 4,
+      "refund_and_charges": 5,
+      "top_up": 13,
+      "transfer": 10
+    },
+    "L2_count": 21
+  },
+  "flat": [
+    {
+      "label_id": 0,
+      "L3": "activate_my_card",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Post-delivery activation of physical card."
+    },
+    {
+      "label_id": 1,
+      "L3": "age_limit",
+      "L2": "eligibility",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Minimum age or age limit policy."
+    },
+    {
+      "label_id": 2,
+      "L3": "apple_pay_or_google_pay",
+      "L2": "card_product_info",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Apple Pay / Google Pay support."
+    },
+    {
+      "label_id": 3,
+      "L3": "atm_support",
+      "L2": "atm_operation",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "General ATM support."
+    },
+    {
+      "label_id": 4,
+      "L3": "automatic_top_up",
+      "L2": "top_up_method",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Automatic top-up configuration."
+    },
+    {
+      "label_id": 5,
+      "L3": "balance_not_updated_after_bank_transfer",
+      "L2": "top_up_status",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Inbound bank transfer not reflected in balance; utterances are top-up posting, not an outgoing transfer."
+    },
+    {
+      "label_id": 6,
+      "L3": "balance_not_updated_after_cheque_or_cash_deposit",
+      "L2": "top_up_status",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Balance not updated after cash/cheque deposit."
+    },
+    {
+      "label_id": 7,
+      "L3": "beneficiary_not_allowed",
+      "L2": "transfer_setup",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Beneficiary not allowed for transfer."
+    },
+    {
+      "label_id": 8,
+      "L3": "cancel_transfer",
+      "L2": "transfer_status",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Cancel an outgoing transfer."
+    },
+    {
+      "label_id": 9,
+      "L3": "card_about_to_expire",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Card expiring and user asks for a replacement; issuance lifecycle, not a malfunction."
+    },
+    {
+      "label_id": 10,
+      "L3": "card_acceptance",
+      "L2": "card_product_info",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Merchant or terminal card acceptance."
+    },
+    {
+      "label_id": 11,
+      "L3": "card_arrival",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Tracking or delay of card delivery."
+    },
+    {
+      "label_id": 12,
+      "L3": "card_delivery_estimate",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Expected delivery timeline for a card."
+    },
+    {
+      "label_id": 13,
+      "L3": "card_linking",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Linking card to wallet or account."
+    },
+    {
+      "label_id": 14,
+      "L3": "card_not_working",
+      "L2": "card_function",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Card fails for payments or general use."
+    },
+    {
+      "label_id": 15,
+      "L3": "card_payment_fee_charged",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Fee charged on card payment."
+    },
+    {
+      "label_id": 16,
+      "L3": "card_payment_not_recognised",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Unrecognised card payment on statement."
+    },
+    {
+      "label_id": 17,
+      "L3": "card_payment_wrong_exchange_rate",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Wrong FX rate applied to card payment."
+    },
+    {
+      "label_id": 18,
+      "L3": "card_swallowed",
+      "L2": "atm_operation",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "ATM retained the card; same channel as cash withdrawal, not a card-function failure."
+    },
+    {
+      "label_id": 19,
+      "L3": "cash_withdrawal_charge",
+      "L2": "atm_operation",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Fee charged when using an ATM; same channel as withdrawal, not a dispensed-amount discrepancy."
+    },
+    {
+      "label_id": 20,
+      "L3": "cash_withdrawal_not_recognised",
+      "L2": "withdrawal_discrepancy",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Unrecognised ATM withdrawal."
+    },
+    {
+      "label_id": 21,
+      "L3": "change_pin",
+      "L2": "card_security",
+      "L1": "card",
+      "flag": "",
+      "rationale": "PIN change workflow."
+    },
+    {
+      "label_id": 22,
+      "L3": "compromised_card",
+      "L2": "card_security",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Suspected fraud or compromised card."
+    },
+    {
+      "label_id": 23,
+      "L3": "contactless_not_working",
+      "L2": "card_function",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Contactless payment not working."
+    },
+    {
+      "label_id": 24,
+      "L3": "country_support",
+      "L2": "eligibility",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Country availability support."
+    },
+    {
+      "label_id": 25,
+      "L3": "declined_card_payment",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Card payment declined."
+    },
+    {
+      "label_id": 26,
+      "L3": "declined_cash_withdrawal",
+      "L2": "atm_operation",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Cash withdrawal declined."
+    },
+    {
+      "label_id": 27,
+      "L3": "declined_transfer",
+      "L2": "transfer_status",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Transfer declined."
+    },
+    {
+      "label_id": 28,
+      "L3": "direct_debit_payment_not_recognised",
+      "L2": "unrecognised_or_extra_charge",
+      "L1": "refund_and_charges",
+      "flag": "",
+      "rationale": "Unrecognised direct debit."
+    },
+    {
+      "label_id": 29,
+      "L3": "disposable_card_limits",
+      "L2": "virtual_card",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Limits on disposable virtual cards."
+    },
+    {
+      "label_id": 30,
+      "L3": "edit_personal_details",
+      "L2": "account_lifecycle",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Edit personal profile details."
+    },
+    {
+      "label_id": 31,
+      "L3": "exchange_charge",
+      "L2": "exchange_info",
+      "L1": "currency_exchange",
+      "flag": "",
+      "rationale": "Currency-exchange fee; same family as rate, in-app exchange, and fiat support."
+    },
+    {
+      "label_id": 32,
+      "L3": "exchange_rate",
+      "L2": "exchange_info",
+      "L1": "currency_exchange",
+      "flag": "",
+      "rationale": "General exchange rate inquiry."
+    },
+    {
+      "label_id": 33,
+      "L3": "exchange_via_app",
+      "L2": "exchange_info",
+      "L1": "currency_exchange",
+      "flag": "",
+      "rationale": "Exchange via mobile app."
+    },
+    {
+      "label_id": 34,
+      "L3": "extra_charge_on_statement",
+      "L2": "unrecognised_or_extra_charge",
+      "L1": "refund_and_charges",
+      "flag": "",
+      "rationale": "Extra charge on statement."
+    },
+    {
+      "label_id": 35,
+      "L3": "failed_transfer",
+      "L2": "transfer_status",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Transfer failed."
+    },
+    {
+      "label_id": 36,
+      "L3": "fiat_currency_support",
+      "L2": "exchange_info",
+      "L1": "currency_exchange",
+      "flag": "",
+      "rationale": "Supported fiat currencies."
+    },
+    {
+      "label_id": 37,
+      "L3": "get_disposable_virtual_card",
+      "L2": "virtual_card",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Disposable virtual card issuance."
+    },
+    {
+      "label_id": 38,
+      "L3": "get_physical_card",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "How to obtain a physical card."
+    },
+    {
+      "label_id": 39,
+      "L3": "getting_spare_card",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Replacement or spare physical card."
+    },
+    {
+      "label_id": 40,
+      "L3": "getting_virtual_card",
+      "L2": "virtual_card",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Creating or accessing a virtual card."
+    },
+    {
+      "label_id": 41,
+      "L3": "lost_or_stolen_card",
+      "L2": "card_security",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Report lost or stolen card."
+    },
+    {
+      "label_id": 42,
+      "L3": "lost_or_stolen_phone",
+      "L2": "app_access_security",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Lost or stolen phone with app access."
+    },
+    {
+      "label_id": 43,
+      "L3": "order_physical_card",
+      "L2": "card_issuance",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Ordering a new physical card."
+    },
+    {
+      "label_id": 44,
+      "L3": "passcode_forgotten",
+      "L2": "app_access_security",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Forgotten app passcode."
+    },
+    {
+      "label_id": 45,
+      "L3": "pending_card_payment",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Card payment pending settlement."
+    },
+    {
+      "label_id": 46,
+      "L3": "pending_cash_withdrawal",
+      "L2": "atm_operation",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Cash withdrawal pending."
+    },
+    {
+      "label_id": 47,
+      "L3": "pending_top_up",
+      "L2": "top_up_status",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top-up pending."
+    },
+    {
+      "label_id": 48,
+      "L3": "pending_transfer",
+      "L2": "transfer_status",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Outgoing transfer pending."
+    },
+    {
+      "label_id": 49,
+      "L3": "pin_blocked",
+      "L2": "card_security",
+      "L1": "card",
+      "flag": "",
+      "rationale": "PIN blocked after failed attempts."
+    },
+    {
+      "label_id": 50,
+      "L3": "receiving_money",
+      "L2": "transfer_setup",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Receiving money from others."
+    },
+    {
+      "label_id": 51,
+      "L3": "Refund_not_showing_up",
+      "L2": "refund",
+      "L1": "refund_and_charges",
+      "flag": "",
+      "rationale": "Refund not visible on account."
+    },
+    {
+      "label_id": 52,
+      "L3": "request_refund",
+      "L2": "refund",
+      "L1": "refund_and_charges",
+      "flag": "",
+      "rationale": "Customer requests a refund."
+    },
+    {
+      "label_id": 53,
+      "L3": "reverted_card_payment?",
+      "L2": "card_payment",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Card payment reverted or reversed."
+    },
+    {
+      "label_id": 54,
+      "L3": "supported_cards_and_currencies",
+      "L2": "top_up_method",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Which cards or currencies can be used to add money; top-up instrument, not the user's card product."
+    },
+    {
+      "label_id": 55,
+      "L3": "terminate_account",
+      "L2": "account_lifecycle",
+      "L1": "account_and_access",
+      "flag": "",
+      "rationale": "Close or terminate account."
+    },
+    {
+      "label_id": 56,
+      "L3": "top_up_by_bank_transfer_charge",
+      "L2": "top_up_fee_and_limit",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Fee for top-up by bank transfer."
+    },
+    {
+      "label_id": 57,
+      "L3": "top_up_by_card_charge",
+      "L2": "top_up_fee_and_limit",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Fee for top-up by card."
+    },
+    {
+      "label_id": 58,
+      "L3": "top_up_by_cash_or_cheque",
+      "L2": "top_up_method",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top up via cash or cheque."
+    },
+    {
+      "label_id": 59,
+      "L3": "top_up_failed",
+      "L2": "top_up_status",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top-up failed."
+    },
+    {
+      "label_id": 60,
+      "L3": "top_up_limits",
+      "L2": "top_up_fee_and_limit",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top-up amount limits."
+    },
+    {
+      "label_id": 61,
+      "L3": "top_up_reverted",
+      "L2": "top_up_status",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top-up reverted."
+    },
+    {
+      "label_id": 62,
+      "L3": "topping_up_by_card",
+      "L2": "top_up_method",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "Top up using another card."
+    },
+    {
+      "label_id": 63,
+      "L3": "transaction_charged_twice",
+      "L2": "unrecognised_or_extra_charge",
+      "L1": "refund_and_charges",
+      "flag": "",
+      "rationale": "Same transaction charged twice."
+    },
+    {
+      "label_id": 64,
+      "L3": "transfer_fee_charged",
+      "L2": "transfer_info_and_fee",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Fee charged on transfer."
+    },
+    {
+      "label_id": 65,
+      "L3": "transfer_into_account",
+      "L2": "transfer_setup",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Incoming transfer to own account."
+    },
+    {
+      "label_id": 66,
+      "L3": "transfer_not_received_by_recipient",
+      "L2": "transfer_status",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "Recipient did not receive transfer."
+    },
+    {
+      "label_id": 67,
+      "L3": "transfer_timing",
+      "L2": "transfer_info_and_fee",
+      "L1": "transfer",
+      "flag": "",
+      "rationale": "How long transfers take."
+    },
+    {
+      "label_id": 68,
+      "L3": "unable_to_verify_identity",
+      "L2": "kyc",
+      "L1": "identity_verification",
+      "flag": "",
+      "rationale": "Unable to complete identity verification."
+    },
+    {
+      "label_id": 69,
+      "L3": "verify_my_identity",
+      "L2": "kyc",
+      "L1": "identity_verification",
+      "flag": "",
+      "rationale": "Complete identity verification."
+    },
+    {
+      "label_id": 70,
+      "L3": "verify_source_of_funds",
+      "L2": "kyc",
+      "L1": "identity_verification",
+      "flag": "",
+      "rationale": "Source-of-funds verification."
+    },
+    {
+      "label_id": 71,
+      "L3": "verify_top_up",
+      "L2": "top_up_method",
+      "L1": "top_up",
+      "flag": "",
+      "rationale": "How to verify the card used for a top-up; not a posting status and not identity KYC."
+    },
+    {
+      "label_id": 72,
+      "L3": "virtual_card_not_working",
+      "L2": "virtual_card",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Virtual card malfunction."
+    },
+    {
+      "label_id": 73,
+      "L3": "visa_or_mastercard",
+      "L2": "card_product_info",
+      "L1": "card",
+      "flag": "",
+      "rationale": "Visa vs Mastercard product question."
+    },
+    {
+      "label_id": 74,
+      "L3": "why_verify_identity",
+      "L2": "kyc",
+      "L1": "identity_verification",
+      "flag": "",
+      "rationale": "Why identity verification is required."
+    },
+    {
+      "label_id": 75,
+      "L3": "wrong_amount_of_cash_received",
+      "L2": "withdrawal_discrepancy",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Wrong cash amount dispensed."
+    },
+    {
+      "label_id": 76,
+      "L3": "wrong_exchange_rate_for_cash_withdrawal",
+      "L2": "withdrawal_discrepancy",
+      "L1": "cash_withdrawal",
+      "flag": "",
+      "rationale": "Wrong FX on cash withdrawal."
+    }
+  ],
+  "tree": {
+    "root": "BANKING",
+    "children": {
+      "card": {
+        "children": {
+          "card_issuance": {
+            "children": [
+              {
+                "label_id": 0,
+                "L3": "activate_my_card"
+              },
+              {
+                "label_id": 9,
+                "L3": "card_about_to_expire"
+              },
+              {
+                "label_id": 11,
+                "L3": "card_arrival"
+              },
+              {
+                "label_id": 12,
+                "L3": "card_delivery_estimate"
+              },
+              {
+                "label_id": 13,
+                "L3": "card_linking"
+              },
+              {
+                "label_id": 38,
+                "L3": "get_physical_card"
+              },
+              {
+                "label_id": 39,
+                "L3": "getting_spare_card"
+              },
+              {
+                "label_id": 43,
+                "L3": "order_physical_card"
+              }
+            ]
+          },
+          "card_product_info": {
+            "children": [
+              {
+                "label_id": 2,
+                "L3": "apple_pay_or_google_pay"
+              },
+              {
+                "label_id": 10,
+                "L3": "card_acceptance"
+              },
+              {
+                "label_id": 73,
+                "L3": "visa_or_mastercard"
+              }
+            ]
+          },
+          "card_function": {
+            "children": [
+              {
+                "label_id": 14,
+                "L3": "card_not_working"
+              },
+              {
+                "label_id": 23,
+                "L3": "contactless_not_working"
+              }
+            ]
+          },
+          "card_payment": {
+            "children": [
+              {
+                "label_id": 15,
+                "L3": "card_payment_fee_charged"
+              },
+              {
+                "label_id": 16,
+                "L3": "card_payment_not_recognised"
+              },
+              {
+                "label_id": 17,
+                "L3": "card_payment_wrong_exchange_rate"
+              },
+              {
+                "label_id": 25,
+                "L3": "declined_card_payment"
+              },
+              {
+                "label_id": 45,
+                "L3": "pending_card_payment"
+              },
+              {
+                "label_id": 53,
+                "L3": "reverted_card_payment?"
+              }
+            ]
+          },
+          "card_security": {
+            "children": [
+              {
+                "label_id": 21,
+                "L3": "change_pin"
+              },
+              {
+                "label_id": 22,
+                "L3": "compromised_card"
+              },
+              {
+                "label_id": 41,
+                "L3": "lost_or_stolen_card"
+              },
+              {
+                "label_id": 49,
+                "L3": "pin_blocked"
+              }
+            ]
+          },
+          "virtual_card": {
+            "children": [
+              {
+                "label_id": 29,
+                "L3": "disposable_card_limits"
+              },
+              {
+                "label_id": 37,
+                "L3": "get_disposable_virtual_card"
+              },
+              {
+                "label_id": 40,
+                "L3": "getting_virtual_card"
+              },
+              {
+                "label_id": 72,
+                "L3": "virtual_card_not_working"
+              }
+            ]
+          }
+        }
+      },
+      "account_and_access": {
+        "children": {
+          "eligibility": {
+            "children": [
+              {
+                "label_id": 1,
+                "L3": "age_limit"
+              },
+              {
+                "label_id": 24,
+                "L3": "country_support"
+              }
+            ]
+          },
+          "account_lifecycle": {
+            "children": [
+              {
+                "label_id": 30,
+                "L3": "edit_personal_details"
+              },
+              {
+                "label_id": 55,
+                "L3": "terminate_account"
+              }
+            ]
+          },
+          "app_access_security": {
+            "children": [
+              {
+                "label_id": 42,
+                "L3": "lost_or_stolen_phone"
+              },
+              {
+                "label_id": 44,
+                "L3": "passcode_forgotten"
+              }
+            ]
+          }
+        }
+      },
+      "cash_withdrawal": {
+        "children": {
+          "atm_operation": {
+            "children": [
+              {
+                "label_id": 3,
+                "L3": "atm_support"
+              },
+              {
+                "label_id": 18,
+                "L3": "card_swallowed"
+              },
+              {
+                "label_id": 19,
+                "L3": "cash_withdrawal_charge"
+              },
+              {
+                "label_id": 26,
+                "L3": "declined_cash_withdrawal"
+              },
+              {
+                "label_id": 46,
+                "L3": "pending_cash_withdrawal"
+              }
+            ]
+          },
+          "withdrawal_discrepancy": {
+            "children": [
+              {
+                "label_id": 20,
+                "L3": "cash_withdrawal_not_recognised"
+              },
+              {
+                "label_id": 75,
+                "L3": "wrong_amount_of_cash_received"
+              },
+              {
+                "label_id": 76,
+                "L3": "wrong_exchange_rate_for_cash_withdrawal"
+              }
+            ]
+          }
+        }
+      },
+      "top_up": {
+        "children": {
+          "top_up_method": {
+            "children": [
+              {
+                "label_id": 4,
+                "L3": "automatic_top_up"
+              },
+              {
+                "label_id": 54,
+                "L3": "supported_cards_and_currencies"
+              },
+              {
+                "label_id": 58,
+                "L3": "top_up_by_cash_or_cheque"
+              },
+              {
+                "label_id": 62,
+                "L3": "topping_up_by_card"
+              },
+              {
+                "label_id": 71,
+                "L3": "verify_top_up"
+              }
+            ]
+          },
+          "top_up_status": {
+            "children": [
+              {
+                "label_id": 5,
+                "L3": "balance_not_updated_after_bank_transfer"
+              },
+              {
+                "label_id": 6,
+                "L3": "balance_not_updated_after_cheque_or_cash_deposit"
+              },
+              {
+                "label_id": 47,
+                "L3": "pending_top_up"
+              },
+              {
+                "label_id": 59,
+                "L3": "top_up_failed"
+              },
+              {
+                "label_id": 61,
+                "L3": "top_up_reverted"
+              }
+            ]
+          },
+          "top_up_fee_and_limit": {
+            "children": [
+              {
+                "label_id": 56,
+                "L3": "top_up_by_bank_transfer_charge"
+              },
+              {
+                "label_id": 57,
+                "L3": "top_up_by_card_charge"
+              },
+              {
+                "label_id": 60,
+                "L3": "top_up_limits"
+              }
+            ]
+          }
+        }
+      },
+      "transfer": {
+        "children": {
+          "transfer_setup": {
+            "children": [
+              {
+                "label_id": 7,
+                "L3": "beneficiary_not_allowed"
+              },
+              {
+                "label_id": 50,
+                "L3": "receiving_money"
+              },
+              {
+                "label_id": 65,
+                "L3": "transfer_into_account"
+              }
+            ]
+          },
+          "transfer_status": {
+            "children": [
+              {
+                "label_id": 8,
+                "L3": "cancel_transfer"
+              },
+              {
+                "label_id": 27,
+                "L3": "declined_transfer"
+              },
+              {
+                "label_id": 35,
+                "L3": "failed_transfer"
+              },
+              {
+                "label_id": 48,
+                "L3": "pending_transfer"
+              },
+              {
+                "label_id": 66,
+                "L3": "transfer_not_received_by_recipient"
+              }
+            ]
+          },
+          "transfer_info_and_fee": {
+            "children": [
+              {
+                "label_id": 64,
+                "L3": "transfer_fee_charged"
+              },
+              {
+                "label_id": 67,
+                "L3": "transfer_timing"
+              }
+            ]
+          }
+        }
+      },
+      "refund_and_charges": {
+        "children": {
+          "unrecognised_or_extra_charge": {
+            "children": [
+              {
+                "label_id": 28,
+                "L3": "direct_debit_payment_not_recognised"
+              },
+              {
+                "label_id": 34,
+                "L3": "extra_charge_on_statement"
+              },
+              {
+                "label_id": 63,
+                "L3": "transaction_charged_twice"
+              }
+            ]
+          },
+          "refund": {
+            "children": [
+              {
+                "label_id": 51,
+                "L3": "Refund_not_showing_up"
+              },
+              {
+                "label_id": 52,
+                "L3": "request_refund"
+              }
+            ]
+          }
+        }
+      },
+      "currency_exchange": {
+        "children": {
+          "exchange_info": {
+            "children": [
+              {
+                "label_id": 31,
+                "L3": "exchange_charge"
+              },
+              {
+                "label_id": 32,
+                "L3": "exchange_rate"
+              },
+              {
+                "label_id": 33,
+                "L3": "exchange_via_app"
+              },
+              {
+                "label_id": 36,
+                "L3": "fiat_currency_support"
+              }
+            ]
+          }
+        }
+      },
+      "identity_verification": {
+        "children": {
+          "kyc": {
+            "children": [
+              {
+                "label_id": 68,
+                "L3": "unable_to_verify_identity"
+              },
+              {
+                "label_id": 69,
+                "L3": "verify_my_identity"
+              },
+              {
+                "label_id": 70,
+                "L3": "verify_source_of_funds"
+              },
+              {
+                "label_id": 74,
+                "L3": "why_verify_identity"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "audit": {
+    "l3_count": 77,
+    "unique_ids": 77,
+    "ids_complete_0_76": true,
+    "l3_match_hf": true,
+    "unique_paths": 77,
+    "duplicate_paths": 0,
+    "orphans": 0,
+    "L1_counts": {
+      "account_and_access": 6,
+      "card": 27,
+      "cash_withdrawal": 8,
+      "currency_exchange": 4,
+      "identity_verification": 4,
+      "refund_and_charges": 5,
+      "top_up": 13,
+      "transfer": 10
+    },
+    "L2_count": 21,
+    "flagged_count": 0,
+    "flagged_intents": []
+  },
+  "citation": {
+    "title": "Efficient Intent Detection with Dual Sentence Encoders",
+    "authors": "Casanueva et al.",
+    "year": 2020,
+    "url": "https://huggingface.co/datasets/PolyAI/banking77"
+  }
+}

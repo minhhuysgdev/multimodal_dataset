@@ -283,7 +283,26 @@ Output: `data/splits/train.json`, `val.json`, `test.json` (+ `split_meta.json`).
 
 ---
 
-## 11. Phase 4 — Baseline Models
+json` |
+| Metrics | Macro-F1, Accuracy, Weighted-F1 (L3 primary) |
+
+Đây là thí nghiệm **mạnh nhất** hỗ trợ paper (RQ3).
+
+**Phân tích bổ sung (khuyến nghị):**
+
+- Confusion: lỗi A sửa được bởi B
+- Hiệu năng theo head vs tail classes
+- Correlation: mẫu REVISE bởi verifier có giúp B hơn không
+
+---
+
+## 14. Ablation Study
+
+| Config | Components |
+|--------|------------|
+| Abl-1 | Annotation only (direct LLM) |
+| Abl-2 | Annotation + Retrieval |
+| Abl-3 | Annotation + Retrieva## 11. Phase 4 — Baseline Models
 
 ### Classical
 
@@ -347,26 +366,7 @@ Encoders: multilingual-e5-large, BGE-M3, jina-embeddings-v3
 | Model | PhoBERT-base (cùng hyperparams, seed) |
 | Train A | Nhãn annotator-only, cùng `sample_id` train |
 | Train B | Nhãn verified-approved, cùng `sample_id` train |
-| Eval | `data/gold/test_gold.json` |
-| Metrics | Macro-F1, Accuracy, Weighted-F1 (L3 primary) |
-
-Đây là thí nghiệm **mạnh nhất** hỗ trợ paper (RQ3).
-
-**Phân tích bổ sung (khuyến nghị):**
-
-- Confusion: lỗi A sửa được bởi B
-- Hiệu năng theo head vs tail classes
-- Correlation: mẫu REVISE bởi verifier có giúp B hơn không
-
----
-
-## 14. Ablation Study
-
-| Config | Components |
-|--------|------------|
-| Abl-1 | Annotation only (direct LLM) |
-| Abl-2 | Annotation + Retrieval |
-| Abl-3 | Annotation + Retrieval + Verification |
+| Eval | `data/gold/test_gold.l + Verification |
 | Abl-4 | Annotation + Retrieval + Verification + Guardrails |
 
 **Measure:** Macro-F1 (vs gold test), Approval Rate, Human Review Rate
@@ -469,3 +469,50 @@ Abl-4 là full framework; so sánh incremental gains.
 
 Chỉ mục thí nghiệm: [`experiments/README.md`](../experiments/README.md).
 )
+---
+
+## 22. Baseline Evaluation Implementation Status (2026-07-19)
+
+### Data Freeze ✅
+- D1 (annotator-only): 1454 samples
+- D2 (verified approved): 1454 samples (matched sample_ids with D1)
+- D3 (human gold): 300 samples with complete L1/L2/L3 labels
+- Splits rebuilt: train=989, val=188, test=225 (D3 excluded, **zero leakage**)
+- Config frozen: `experiments/evaluation_config.json` (seed=42, taxonomy, models)
+
+### Phase 2: Retrieval Baselines (R1-R4) ✅
+Implementation: `experiments/phase2_retrieval/`
+- R1: Regex/BM25 | R2: Dense embedding | R3: Hybrid union | R4: TechniqueRAG reranking
+- **Status**: Ready to run (R2 needs sentence-transformers, R4 needs OpenAI API)
+
+### Phase 5: Pipeline Baselines (M1-M3) ✅
+Implementation: `experiments/phase5_pipeline/`
+- M1: Direct LLM | M2: Hybrid RAG | M2-RR: TechniqueRAG | M2-SR: Self-Refine | M3: Full
+- **Status**: Ready to run with unified schema (needs OpenAI API)
+
+### Phase 6: Review-Routing (B1-B4) ✅
+Implementation: `experiments/phase6_review_routing/`
+- B1: Random | B2: Confidence | B3: Entropy (pending K-run) | B4: Framework
+- **Status**: B1-B2 complete with oracle simulation
+
+### Citations
+- RAG (M2): Lewis et al. NeurIPS 2020
+- Self-Refine (M2-SR): Madaan et al. NeurIPS 2023
+- CoAnnotating (B3): Li et al. EMNLP 2023
+- TechniqueRAG (R4, M2-RR): Lekssays et al. Findings ACL 2025
+
+### Quick Start
+```bash
+export OPENAI_API_KEY="your-key"
+# Phase 2
+python experiments/phase2_retrieval/evaluate_r1_r2_r3.py
+# Phase 5
+python experiments/phase5_pipeline/run_m1_direct.py
+python experiments/phase5_pipeline/compare_all_methods.py
+# Phase 6
+python experiments/phase6_review_routing/run_b1_random.py --budget 0.2
+# Report
+python experiments/generate_baseline_report.py
+```
+
+**Estimated cost**: ~$20-30 USD for full evaluation on 300 D3 samples

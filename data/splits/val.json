@@ -1,0 +1,2699 @@
+{
+  "split": "val",
+  "num_samples": 188,
+  "seed": 42,
+  "results": [
+    {
+      "sample_id": "bo-goi-xa-buoi-cocoon-giam-gay-rung-toc-500ml-310ml-113217_q00",
+      "sentence": "dầu gội suông mềm tóc nhưng bị rụng tóc. trong khi gội dầu gội đầu khác thì ko bị rụng. ko biết do đâu",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "cham_soc_toc_thanh_phan"
+      },
+      "confidence": 0.8,
+      "qa_status": "approved",
+      "reasoning": "Khách hàng đang hỏi về nguyên nhân gây rụng tóc khi sử dụng dầu gội, điều này cho thấy họ đang tìm hiểu về sự phù hợp của sản phẩm với tình trạng tóc của mình. Ý định này thuộc về việc tư vấn trước khi mua hàng, cụ thể là về thành phần và công dụng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', và tôi sẽ đề xuất L2 và L3 phù hợp với ngữ nghĩa câu hỏi.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-ma-hong-bat-sang-3ce-middy-hype-canh-hong-phai-9g-195477_q00",
+      "sentence": "Giá ngoài cửa hàng bao nhiêu",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_san_pham",
+        "level_3": "so_sanh_gia_mua_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá cả của sản phẩm tại cửa hàng, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua. Ý định chính là muốn biết giá sản phẩm, do đó tôi chọn L1 là 'truoc_mua_hang'. L3 phù hợp nhất với ý định này là 'khuyen_mai_tai_cua_hang_va_app', vì nó liên quan đến giá cả và khuyến mãi tại cửa hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-chong-nang-elixir-duong-da-ngua-lao-hoa-35ml-123872_q00",
+      "sentence": "Sp này của sinh học hay hoá học vậy shop",
+      "category": "Mỹ phẩm high end",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thanh_phan_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về thành phần của sản phẩm, cụ thể là muốn biết sản phẩm này thuộc lĩnh vực sinh học hay hóa học. Điều này cho thấy khách đang hỏi trước khi mua để có thông tin về sản phẩm. Do đó, ý định chính là tìm hiểu thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "serum-elixir-kich-hoat-tre-hoa-lan-da-50ml-137439_q00",
+      "sentence": "Sao sp của dòng này nghèo nàn vậy? Nên nhập thêm đi!",
+      "category": "Mỹ phẩm high end",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khac_biet_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự quan tâm đến việc cải thiện chất lượng sản phẩm, cụ thể là việc bổ sung thêm sản phẩm vào dòng hàng hiện tại. Điều này cho thấy khách đang tìm kiếm thông tin về sản phẩm và mong muốn có thêm lựa chọn. Do đó, ý định chính là hỏi về thông tin sản phẩm. L3 phù hợp nhất là 'khac_biet_san_pham' vì khách đang đề cập đến sự đa dạng của sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-phan-phu-innisfree-kiem-dau-dang-bot-khoang-5g-moi-2023-112747_q03",
+      "sentence": "Mình đặt đơn thì k giao..huỷ ngang vậy shop..",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc đơn hàng không được giao và bị hủy. Điều này cho thấy khách đang hỏi về vấn đề giao hàng sau khi đã đặt hàng. Ý định chính là yêu cầu kiểm tra tình trạng giao hàng của đơn hàng đã đặt.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-goodndoc-rau-ma-duong-am-phuc-hoi-da-50ml-107253_q03",
+      "sentence": "bên mình có là đại lý chính hãng của sản phẩm này không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khac_biet_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có phải là đại lý chính hãng của sản phẩm hay không, điều này liên quan đến thông tin sản phẩm và tính xác thực của nguồn gốc sản phẩm. Ý định chính là tìm hiểu về thông tin sản phẩm trước khi mua. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'khac_biet_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "lan-khu-mui-etiaxil-danh-cho-da-nhay-cam-15ml-9604_q04",
+      "sentence": "Hi shop, Tôi mới mua 1 chai tại Hasaki chi nhánh Phú Yên nhưng hôm nay lại mở ra để sử dụng thì mùi cồn nồng, không có mùi thơm như trước và lắc lên toàn là nước khác với những chai tôi sử dụng trước đó, tôi cần shop làm rõ cho tôi việc này?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "chat_luong_loi",
+        "level_3": "cham_soc_da_bien_mau_chat_luong_sau_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Khách hàng đang hỏi về chất lượng sản phẩm mà họ đã mua, cụ thể là về mùi và tình trạng của sản phẩm khi sử dụng. Điều này cho thấy họ đã sở hữu sản phẩm và đang gặp vấn đề với nó, do đó thuộc về nhóm sau bán.",
+      "error": null
+    },
+    {
+      "sample_id": "giay-tham-dau-mayan-than-hoat-tinh-100-to-goi-3369_q02",
+      "sentence": "Giá của than tre mà giấy thì của original. Giấy rất mỏng, thấm dầu tệ hơn. Cho hỏi vì sao lại sản xuất đợt này tệ hơn vậy?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_gia_ca"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về lý do sản phẩm không đạt chất lượng như mong đợi, điều này cho thấy họ đang hỏi về thông tin sản phẩm trước khi mua. Ý định chính là tìm hiểu về chất lượng sản phẩm và lý do sản xuất không đạt yêu cầu.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-l-oreal-hyaluronic-acid-cap-am-sang-da-30ml-90023_q00",
+      "sentence": "Sản phẩm này bầu xài được k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thiet_bi_tu_van",
+        "level_3": "phu_hop_da_dau"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về khả năng sử dụng sản phẩm, cụ thể là liệu sản phẩm này có phù hợp với họ hay không. Điều này cho thấy khách đang tìm kiếm thông tin trước khi quyết định mua hàng. Do đó, ý định chính là tư vấn về sự phù hợp của sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "dung-dich-ve-sinh-phu-nu-lactacyd-odor-fresh-ngan-mui-250ml-83037_q00",
+      "sentence": "cs dùng đc cho em 14t ko",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu xem sản phẩm có phù hợp cho trẻ em 14 tuổi hay không, điều này liên quan đến việc tư vấn và sự an toàn cho đối tượng sử dụng. Ý định chính là xác định sự phù hợp của sản phẩm với độ tuổi cụ thể. Do đó, L1 sẽ là 'truoc_mua_hang' và L2, L3 sẽ được xác định dựa trên ngữ nghĩa này.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-eucerin-lam-sang-da-ban-dem-50ml-moi-97137_q00",
+      "sentence": "Da dầu dễ lên mụn xài đc ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mun"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm cho da dầu và có thể gây mụn, điều này cho thấy họ đang cần thông tin về sự phù hợp của sản phẩm với loại da của mình. Ý định chính là tìm hiểu về sự an toàn và hiệu quả của sản phẩm cho da dầu. Do đó, L1 là 'truoc_mua_hang', L2 là 'di_ung_an_toan' và L3 là 'chon_san_pham_phu_hop_cho_da_mun'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-skin1004-lam-diu-da-chiet-xuat-rau-ma-75ml-89637_q00",
+      "sentence": "da dầu mụn đỏ dùng được khong ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_dau"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách là về việc sử dụng sản phẩm cho da dầu mụn đỏ, tức là khách đang tìm hiểu xem sản phẩm có phù hợp với tình trạng da của họ hay không. Điều này thuộc về việc tư vấn trước khi mua hàng. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_da_dau'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-nen-bb-naris-cosmetic-alius-01-light-beige-30g-86891_q03",
+      "sentence": "mẹ bầu sử dụng được không ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_bau"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm có phù hợp cho mẹ bầu hay không, điều này thể hiện ý định tìm hiểu về sự an toàn và tính phù hợp của sản phẩm trước khi mua. Do đó, ý định này thuộc về giai đoạn trước khi mua hàng. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_bau'.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-3-hop-bong-tay-trang-co-ban-silcot-82-mieng-hop-88133_q00",
+      "sentence": "Tui thắc mắc s 1hộp là 35 mà 2hộp thì 70 ạ . Do lúc chiều mua xong k in giá rõ nên kbt h về tra mới bt",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách liên quan đến việc xác nhận giá của sản phẩm sau khi đã mua, thể hiện sự thắc mắc về thông tin giá cả. Điều này cho thấy khách đang hỏi về vấn đề giá cả sau khi đã thực hiện giao dịch. Do đó, ý định này thuộc về giai đoạn sau khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-can-bang-cocoon-sen-hau-giang-lam-diu-da-nhay-cam-310ml-123740_q03",
+      "sentence": "mình đặt mua toner cocoon 500ml theo deal 1 tặng 1 mà chỉ giao cho mình 1 chai thoi??",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc chỉ nhận được một sản phẩm trong khi đã đặt hàng theo chương trình khuyến mãi 1 tặng 1, cho thấy khách đang gặp vấn đề với giao hàng. Do đó, ý định chính là liên quan đến vấn đề giao hàng. L3 phù hợp nhất là 'thieu_qua_tang_khuyen_mai' vì khách hàng không nhận đủ sản phẩm như đã hứa hẹn.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-tao-khoi-too-cool-for-school-15-mau-trung-tinh-95g-117668_q00",
+      "sentence": "Chị vừa mua sản phẩm này tại chi nhánh Lê Văn Khương Q12, nhubgw sao k được nhận cây cọ vậy shop?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "giao_thieu_san_pham_trong_don"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc không nhận được cây cọ sau khi đã mua sản phẩm, cho thấy khách đang gặp vấn đề với giao hàng. Điều này chỉ ra rằng ý định của khách là liên quan đến vấn đề giao hàng sau khi đã mua sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-10-mat-na-sinh-hoc-emmie-by-happy-skin-phuc-hoi-da-23g-122332_q01",
+      "sentence": "Sao hình thức đặt hàng 2h khó quá vậy shop ơi. Muốn mua hàng thấy khó khăn quá.",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cach_dat_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự khó khăn trong việc đặt hàng, điều này cho thấy họ đang tìm kiếm thông tin về quy trình đặt hàng. Ý định chính là muốn biết cách thức đặt hàng, do đó L1 là 'truoc_mua_hang'. L3 phù hợp nhất là 'cach_dat_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-mat-na-nghe-hung-yen-cocoon-duong-da-min-mang-30ml-104359_q01",
+      "sentence": "Mình nua hàng rất nhiều lần . Hôm nay cũng mới mua hàng mà hình như shop tặng thiếu hàng cho mình thì phải . Mình 2 mặt nạ nghệ mà không thấy tặng nước cân bằng cùng hãng",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Khách hàng đang phản ánh về việc thiếu hàng trong đơn hàng mà họ đã nhận, điều này cho thấy họ đã mua hàng và đang gặp vấn đề với giao hàng. Do đó, ý định chính là liên quan đến vấn đề giao hàng sau khi mua. L3 phù hợp nhất là 'thieu_qua_tang_khuyen_mai' vì khách hàng đề cập đến việc không nhận được quà tặng kèm theo đơn hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-tam-goi-cetaphil-diu-nhe-cho-be-400ml-97943_q04",
+      "sentence": "dành cho trẻ từ bao nhiêu tuổi ạ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về độ tuổi phù hợp để sử dụng sản phẩm, điều này cho thấy khách đang hỏi trước khi mua. Ý định chính là tìm hiểu thông tin về sự phù hợp của sản phẩm với độ tuổi của trẻ em.",
+      "error": null
+    },
+    {
+      "sample_id": "xit-khoa-makeup-silkygirl-giu-lop-nen-min-li-lau-troi-70ml-124436_q01",
+      "sentence": "tệ nha. hãy gọi nó là xịt tẩy trang. phấn mình dùng giữ được khi chỉ đánh trần là 3 tiếng. xịt vô là thành bãi bùn nhão trên mặt",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "khieu_nai_dich_vu",
+        "level_3": "khieu_nai_nhan_vien_cua_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi thể hiện sự không hài lòng với sản phẩm xịt tẩy trang và mô tả tình trạng sản phẩm khi sử dụng. Điều này cho thấy khách hàng đang gặp vấn đề với sản phẩm đã mua, do đó ý định là liên quan đến vấn đề sau khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-goi-xa-dove-ceramide-phuc-hoi-hu-ton-640g-610g-moi-244336_q01",
+      "sentence": "Tôi mua hàng mà khi cầm soi đèn mà cả 2 chai đều chỉ có 2/3 so vs dung tich",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_giao_hang_som"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc kiểm tra dung tích của sản phẩm mà họ đã mua, cho thấy họ đang gặp vấn đề với sản phẩm sau khi đã nhận hàng. Điều này chỉ ra rằng ý định của khách là liên quan đến vấn đề giao hàng hoặc chất lượng sản phẩm sau khi mua. Do đó, L1 là 'sau_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "mat-na-ngu-moi-laneige-mini-huong-qua-mong-3g1-86247_q02",
+      "sentence": "Giờ còn được tặng kèm 4 hủ k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_tang_kem",
+        "level_3": "thong_tin_qua_tang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc có được tặng kèm sản phẩm hay không, điều này cho thấy khách đang tìm hiểu về khuyến mãi trước khi mua hàng. Ý định chính là hỏi về thông tin quà tặng đi kèm với sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-obagi-retinol-1-0-tre-hoa-da-ngua-mun-28g-60613_q02",
+      "sentence": "hạn sử dụng bao lâu ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về hạn sử dụng của sản phẩm, điều này cho thấy họ đang hỏi thông tin trước khi mua. Ý định chính là muốn biết thông tin về thời gian sử dụng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', và L2, L3 sẽ liên quan đến thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-obagi-retinol-1-0-tre-hoa-da-ngua-mun-28g-60613_q03",
+      "sentence": "retinol obgi còn hàng k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng tồn kho của sản phẩm retinol Obagi, tức là khách muốn biết sản phẩm này còn hàng hay không trước khi quyết định mua. Điều này phù hợp với ý định 'trước bán'.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-tuoi-mat-l-oreal-3-in-1-danh-cho-da-dau-da-hon-hop-400ml-19325_q01",
+      "sentence": "có chính hãng không v",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chinh_hang_auth"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về tính chính hãng của sản phẩm, điều này cho thấy họ đang quan tâm đến việc mua hàng và muốn biết thông tin trước khi quyết định. Ý định này phù hợp với việc kiểm tra tính an toàn và chính hãng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'di_ung_an_toan' và L3 là 'chinh_hang_auth'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-lot-che-lo-chan-long-silkygirl-mau-01-natural-15ml-89849_q02",
+      "sentence": "trên app là 153k thì ở ngoài chi nhánh nếu mua trực tiếp giá có rẻ như thế kh ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "khuyen_mai_tai_cua_hang_va_app"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về giá cả khi mua sản phẩm trực tiếp tại chi nhánh so với giá trên app. Ý định chính là so sánh giá giữa hai hình thức mua hàng. Do đó, intent phù hợp là liên quan đến giá cả và khuyến mãi tại cửa hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-chong-nang-sunplay-hieu-chinh-sac-da-50g-tim-75956_q03",
+      "sentence": "Kcn skin aqua lavender dùng được cho bầu không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_kho"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm Kcn skin aqua lavender có phù hợp cho bà bầu hay không, tức là khách muốn biết thông tin về sự an toàn và tính phù hợp của sản phẩm trước khi mua. Điều này liên quan đến việc tư vấn sản phẩm cho đối tượng cụ thể.",
+      "error": null
+    },
+    {
+      "sample_id": "bong-mut-tan-nen-khang-khuan-mastige-marshmallow-mem-min-203023_q02",
+      "sentence": "Hạn sd bao nhiêu năm ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "han_su_dung",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua. Ý định chính là muốn biết thông tin về hạn sử dụng của sản phẩm. Do đó, L1 sẽ là 'truoc_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "long-mi-gia-tu-dinh-mlen-diary-huong-duong-135461_q02",
+      "sentence": "cái này có keo sẵn ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "tim_kiem_dung_tich_san_pham"
+      },
+      "confidence": 0.8,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sản phẩm có keo sẵn, điều này cho thấy họ đang hỏi thông tin trước khi mua. Ý định chính là tìm hiểu về tính năng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', và tôi sẽ đề xuất L2 và L3 phù hợp với ngữ nghĩa này.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-hoa-hong-khong-mui-klairs-danh-cho-da-nhay-cam-180ml-65994_q02",
+      "sentence": "Giá ở trên web = giá ở cửa hàng trực tiếp k shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "gia_online_va_offline"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về sự so sánh giá giữa giá trên web và giá ở cửa hàng trực tiếp, điều này cho thấy khách đang tìm hiểu thông tin trước khi mua hàng. Ý định chính là muốn biết giá cả giữa hai kênh bán hàng khác nhau.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-duong-am-sau-klairs-80ml-66006_q03",
+      "sentence": "hạn sử dụng khi nào vậy",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này thuộc về thông tin sản phẩm mà khách hàng cần biết trước khi mua. Ý định chính là tìm hiểu thông tin liên quan đến sản phẩm, cụ thể là hạn sử dụng.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-l-oreal-paris-sieu-cap-am-cang-min-da-50ml-96181_q03",
+      "sentence": "Thái độ nv thu ngân hasaki tỉnh lộ 10 tphcm kênh kiệu qá..giống nhu xem thường KH",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "khieu_nai_dich_vu",
+        "level_3": "khieu_nai_nhan_vien_cua_hang"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng với thái độ của nhân viên thu ngân, cho thấy khách đang khiếu nại về dịch vụ. Do đó, ý định chính là khiếu nại dịch vụ. Nhãn phù hợp nhất là từ ứng viên số 1 với L1 là sau mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-smoothie-tay-da-chet-dove-huong-luu-do-298g-sua-tam-lifebuoy-100g-mau-ngau-nhien-241323_q00",
+      "sentence": "cho em hỏi bản dove lựu đỏ này là bản trung hay mỹ ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "dinh_dang_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về thông tin cụ thể của sản phẩm Dove, cụ thể là bản trung hay mỹ. Điều này cho thấy khách đang hỏi trước khi mua sản phẩm để có thông tin rõ ràng hơn. Do đó, ý định chính là tìm hiểu thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "son-kem-li-3ce-mau-do-dat-daffodil-4g-35262_q02",
+      "sentence": "E đặt đơn cây son 3ce màu taupe để tặng sinh nhật. Shop giao trong ngày dùm e đc k ạ. E ở phường chánh nghĩa, thủ dầu một. E đặt thì thấy để giao thứ 5",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_giao_hang_som"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc giao hàng cho đơn đặt của họ, cụ thể là yêu cầu giao hàng trong ngày. Điều này cho thấy khách đang ở giai đoạn sau khi đã đặt hàng. Ý định chính là yêu cầu kiểm tra tình trạng giao hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-rua-mat-chiet-xuat-rau-ma-skin1004-diu-nhe-lam-sach-sau-da-125ml-86169_q00",
+      "sentence": "loại này hợp da dầu không bạn?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_dau"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sự phù hợp của sản phẩm với loại da của mình, cụ thể là da dầu. Điều này cho thấy khách đang hỏi trước khi mua sản phẩm. Do đó, ý định chính là tìm kiếm thông tin về sự phù hợp của sản phẩm với loại da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-cat-da-kem-nghia-thep-chuyen-dung-ma-niken-d205-131904_q01",
+      "sentence": "kềm cắt da có dùng cắt móng được ko ạ? hay phải mua 2 loại riêng ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khong_biet_kien_dau"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng kềm cắt da cho mục đích cắt móng, tức là khách đang hỏi về tính năng và sự phù hợp của sản phẩm trước khi mua. Điều này cho thấy ý định của khách là tìm kiếm thông tin trước khi quyết định mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-moi-khong-mau-dhc-ho-tro-giam-tham-moi-1-5g-6710_q01",
+      "sentence": "Môi phun xong có xài được ko",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "chat_luong_loi",
+        "level_3": "cham_soc_da_bien_mau_chat_luong_sau_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm sau khi đã thực hiện một quy trình làm đẹp (môi phun). Ý định chính là hỏi về tính an toàn hoặc khả năng sử dụng sản phẩm sau khi đã thực hiện dịch vụ làm đẹp. Do đó, đây là một câu hỏi thuộc nhóm 'sau_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-sua-chong-nang-cocoon-chiet-xuat-bi-dao-quang-pho-rong-50ml-124732_q04",
+      "sentence": "Mua ở store có đc quà tặng ko a",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_tang_sample"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có quà tặng khi mua hàng, điều này cho thấy họ đang tìm hiểu thông tin trước khi quyết định mua. Ý định chính là tìm hiểu về khuyến mãi hoặc quà tặng đi kèm với sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'uu_dai_yeu_cau' và L3 là 'khuyen_mai_tang_sample'.",
+      "error": null
+    },
+    {
+      "sample_id": "dau-duong-toc-tinh-dau-hoa-tu-nhien-l-oreal-100ml-76026_q02",
+      "sentence": "Sp này có dành cho tóc nhuộm không và siwr dụng chung vớii xịt dưỡng được không.",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "chon_san_pham_phu_hop_cho_toc_nhuom"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu xem sản phẩm có phù hợp cho tóc nhuộm hay không và có thể sử dụng chung với xịt dưỡng hay không. Điều này cho thấy khách đang hỏi về tính an toàn và sự phù hợp của sản phẩm trước khi mua. Do đó, ý định chính là tư vấn về sản phẩm phù hợp cho tóc nhuộm.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-phu-perfect-diary-kiem-dau-ngan-tham-nuoc-mau-02-7g-114977_q03",
+      "sentence": "Phấn phủ có sẵn mút kh ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cua_hang_co_san_pham_khong"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có sẵn sản phẩm phấn phủ, tức là họ muốn biết thông tin về tình trạng hàng hóa trước khi mua. Điều này phù hợp với ý định tìm hiểu thông tin sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'cua_hang_co_san_pham_khong'.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-ma-hong-3ce-min-li-mono-pink-mau-hong-dao-5-5g-98947_q01",
+      "sentence": "Shop ơi, sao phấn này lại để là made in china vậy ạ, huhu em mua về rồi mới thấy",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "chat_luong_loi",
+        "level_3": "phan_biet_hang_that_gia"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc sản phẩm có nguồn gốc từ Trung Quốc, điều này cho thấy khách đang thắc mắc về thông tin sản phẩm sau khi đã mua. Ý định chính là tìm hiểu về xuất xứ của sản phẩm, do đó thuộc về nhóm sau bán. Không có ứng viên nào khớp ngữ nghĩa, nên tôi sẽ tự đề xuất nhãn phù hợp. | VERIFIER: Câu hỏi của khách liên quan đến việc phát hiện sản phẩm có xuất xứ không như mong đợi sau khi đã mua, điều này có thể liên quan đến việc phân biệt hàng thật và giả. Do đó, nhãn phù hợp hơn là 'chat_luong_loi' và 'phan_biet_hang_that_gia'.",
+      "error": null,
+      "qa_status_before_reverify": "needs_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "xuat_xu_san_pham"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi của khách liên quan đến việc phát hiện sản phẩm có xuất xứ không như mong đợi sau khi đã mua, điều này có thể liên quan đến việc phân biệt hàng thật và giả. Do đó, nhãn phù hợp hơn là 'chat_luong_loi' và 'phan_biet_hang_that_gia'.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-garnier-danh-cho-da-dau-va-mun-400ml-moi-106533_q02",
+      "sentence": "khuyến mãi mua hai tặng một mà đặt mua có được đâu ạ từ trưa giờ  đặt mà có được đâu",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách liên quan đến khuyến mãi mua hai tặng một và việc đặt hàng, cho thấy khách đang tìm hiểu về chương trình khuyến mãi trước khi mua hàng. Ý định chính là hỏi về khuyến mãi và điều kiện áp dụng. Do đó, L1 là 'truoc_mua_hang', L2 là 'uu_dai_yeu_cau' và L3 là 'khuyen_mai_dac_biet'.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-goi-xa-l-oreal-toc-phong-bong-benh-cho-da-dau-thuong-dau-620ml-375ml-248778_q02",
+      "sentence": "mẹ bầu dùng dc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "phu_hop_cho_tre_so_sinh"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm cho mẹ bầu, điều này liên quan đến sự an toàn và phù hợp của sản phẩm với đối tượng cụ thể. Ý định chính là tìm hiểu xem sản phẩm có phù hợp cho mẹ bầu hay không, do đó thuộc về nhóm tư vấn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "mascara-mlen-diary-2-dau-4-trong-1-8g-121252_q03",
+      "sentence": "nếu mà đặt thì bao lâu mới có hàng sốp ?? cụ thể",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "thoi_gian_restock"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thời gian giao hàng, cụ thể là khi nào thì có hàng. Điều này cho thấy khách đang quan tâm đến vấn đề giao hàng trước khi mua sản phẩm. Do đó, ý định chính là liên quan đến giao hàng. Không có ứng viên nào khớp với ngữ nghĩa câu hỏi, vì vậy tôi sẽ tự đề xuất bộ nhãn hợp lệ. | VERIFIER: Câu hỏi của khách hàng thực chất đang hỏi về thời gian có hàng trở lại, tức là kiểm tra tồn kho, không phải về vấn đề giao hàng. Do đó, cần điều chỉnh nhãn để phản ánh đúng ý định của khách hàng.",
+      "error": null,
+      "qa_status_before_reverify": "needs_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thoi_gian_giao_hang"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi của khách hàng thực chất đang hỏi về thời gian có hàng trở lại, tức là kiểm tra tồn kho, không phải về vấn đề giao hàng. Do đó, cần điều chỉnh nhãn để phản ánh đúng ý định của khách hàng.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "gel-rua-mat-svr-khong-chua-xa-phong-cho-da-dau-400ml-90639_q03",
+      "sentence": "Shop ơi cho hởi sữa rửa mặt svr có phù hợp cho da nhiều dầu và mụn ko",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu xem sản phẩm sữa rửa mặt có phù hợp cho da nhiều dầu và mụn hay không, điều này thuộc về việc tư vấn trước khi mua hàng. Ý định chính là xác định sự phù hợp của sản phẩm với loại da của khách hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-naris-cosmetic-ngua-nhan-va-kho-moi-3g-75534_q01",
+      "sentence": "có khử thâm hay chống nắng không",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khong_biet_kien_dau"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về tính năng của sản phẩm, cụ thể là có khử thâm hay chống nắng hay không. Điều này cho thấy khách đang hỏi trước khi mua sản phẩm. Ý định chính là tìm hiểu thông tin về sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-am-klairs-danh-cho-da-kho-mat-nuoc-80ml-95305_q00",
+      "sentence": "da rất nhạy cảm dùng kem này có bị nóng rát châm chich ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhay_cam"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc sử dụng kem dưỡng ẩm cho da nhạy cảm và lo ngại về phản ứng như nóng rát hay châm chích. Điều này cho thấy khách đang tìm hiểu về sự an toàn của sản phẩm trước khi quyết định sử dụng. Do đó, ý định chính là tìm hiểu về sự phù hợp và an toàn cho da nhạy cảm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-skin1004-lam-diu-da-chiet-xuat-rau-ma-75ml-89637_q04",
+      "sentence": "dóp ơi kem này bé 14 tuổi coơ dùng được kg ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc kem dưỡng có phù hợp cho bé 14 tuổi hay không, tức là khách đang tìm hiểu về sự phù hợp của sản phẩm với độ tuổi cụ thể. Điều này thuộc về ý định trước khi mua hàng, liên quan đến việc tư vấn sản phẩm. Do đó, tôi chọn L1 là 'truoc_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-chong-nang-caryophy-nang-tone-spf50-pa-50ml-95867_q02",
+      "sentence": "Da dầu mụn dùng đuọc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_dau"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm cho da dầu mụn, tức là khách muốn biết sản phẩm có phù hợp với tình trạng da của họ hay không. Điều này thuộc về việc tư vấn trước khi mua sản phẩm. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_da_dau'.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-3-hop-bong-tay-trang-cao-cap-silcot-premium-66-mieng-hop-88131_q00",
+      "sentence": "Mua trực tiếp tại cửa hàng hcm giống giá trên web k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "khuyen_mai_tai_cua_hang_va_app"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc giá cả khi mua trực tiếp tại cửa hàng so với giá trên web, điều này cho thấy khách đang tìm hiểu thông tin trước khi mua hàng. Ý định chính là so sánh giá cả giữa hai kênh mua sắm.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-la-roche-posay-danh-cho-da-nhay-cam-400ml-43795_q02",
+      "sentence": "Ủa shop ơi thiệt sự e kh nt đc gọi thì k thấy ai nghe rr đơn của e bên mình tính sao v ạ. K giáo thì hủy để e mua chổ khác chứ bảo trễ bù 100k cũng k thấy đâu ib page cũng k thấy rep. Mấy lần trc mua rất chi là nhanh gọn mà lần này bị sao v ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc giao hàng chậm trễ và mong muốn hủy đơn hàng để mua ở nơi khác. Điều này cho thấy khách đang hỏi về vấn đề giao hàng sau khi đã đặt hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-la-roche-posay-ho-tro-phuc-hoi-da-30ml-76584_q02",
+      "sentence": "Muốn giảm mụn ẩn thì mình nên dùng j ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "giam_mun_an"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm kiếm sản phẩm phù hợp để giảm mụn ẩn, điều này cho thấy họ đang hỏi trước khi mua. Ý định chính là tìm hiểu về sản phẩm nào có thể giúp giảm mụn ẩn. Do đó, L1 là 'truoc_mua_hang'. Không có ứng viên nào khớp ngữ nghĩa, nên tôi sẽ đề xuất bộ nhãn mới. | VERIFIER: Câu hỏi của khách hàng liên quan đến việc tìm kiếm sản phẩm để giảm mụn ẩn, phù hợp với nhãn L1 'truoc_mua_hang'. L2 'thong_tin_san_pham' và L3 'giam_mun_an' từ ứng viên 2 là phù hợp nhất với ngữ nghĩa câu hỏi.",
+      "error": null,
+      "qa_status_before_reverify": "pending_new_label_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "chon_san_pham_giam_mun_an"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi của khách hàng liên quan đến việc tìm kiếm sản phẩm để giảm mụn ẩn, phù hợp với nhãn L1 'truoc_mua_hang'. L2 'thong_tin_san_pham' và L3 'giam_mun_an' từ ứng viên 2 là phù hợp nhất với ngữ nghĩa câu hỏi.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "combo-2-nuoc-duong-toc-cocoon-tinh-dau-buoi-phien-ban-moi-140ml-105873_q01",
+      "sentence": "mua ở cửa hàng có giống giá 2sp giống onl ko ah",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "gia_online_va_offline"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sự khác biệt giá giữa mua tại cửa hàng và giá trực tuyến cho hai sản phẩm. Điều này cho thấy khách đang có ý định so sánh giá trước khi quyết định mua hàng. Do đó, ý định này thuộc về giai đoạn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-chong-nang-martiderm-pho-rong-toan-dien-spf50-40ml-90401_q01",
+      "sentence": "Mình ở phươngg hôngg ngự lại cửa hàng mua hôm nay có giảm giá ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc có giảm giá hay không cho sản phẩm mà họ đã mua, điều này cho thấy họ đang tìm kiếm thông tin về khuyến mãi trước khi mua. Do đó, ý định chính là hỏi về khuyến mãi. L3 phù hợp nhất là 'khuyen_mai_dac_biet'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-co-mau-lipice-do-mong-2-4g-68874_q00",
+      "sentence": "Son dưỡng này ăn uống có bi trôi màu ko shop",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "chat_luong_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về khả năng trôi màu của son dưỡng khi ăn uống, điều này liên quan đến thông tin sản phẩm và tính năng của nó. Ý định chính là muốn biết sản phẩm có giữ màu tốt hay không khi sử dụng trong thực tế. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'chat_luong_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-la-roche-posay-giam-mun-3-tac-dong-30ml-93795_q03",
+      "sentence": "shop ơi hôm qua mình có mua serum laroche mình về dùng bị kích ứng , giờ có đổi được sản phẩm khác không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_sua_chua_san_pham"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc đổi sản phẩm do bị kích ứng sau khi sử dụng, cho thấy khách đã sở hữu sản phẩm và đang hỏi về chính sách đổi trả. Do đó, ý định chính là liên quan đến vấn đề giao hàng hoặc đổi trả sản phẩm. L3 phù hợp nhất là 'yeu_cau_sua_chua_san_pham' từ ứng viên số 3.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nuoc-aperire-chong-nang-che-phu-cao-01-tong-sang-hong-13g-131740_q01",
+      "sentence": "Da ngăm mua tone nào ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về tông màu phù hợp cho làn da ngăm, điều này cho thấy họ đang cần tư vấn trước khi mua sản phẩm. Ý định chính là tìm hiểu về sự phù hợp của sản phẩm với loại da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-chong-nang-innisfree-nang-tong-kiem-dau-60ml-moi-114787_q03",
+      "sentence": "Bản mới Ex này lỏng hơn cũ đúng k chị",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "huong_dan_su_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về sự khác biệt giữa hai phiên bản sản phẩm, cụ thể là độ lỏng của bản mới so với bản cũ. Điều này cho thấy khách đang tìm hiểu thông tin về sản phẩm trước khi quyết định mua. Do đó, ý định chính là tìm hiểu thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nuoc-judydoll-lau-troi-che-phu-cao-n20-14g-135189_q03",
+      "sentence": "minh k đặt giap nhanh 2h đc",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "trang_thai_van_chuyen",
+        "level_3": "giao_hang_2h"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc không thể đặt giao hàng nhanh trong 2 giờ. Điều này cho thấy khách đang hỏi về tình trạng giao hàng trước khi mua hàng. Ý định chính là tìm hiểu về khả năng giao hàng nhanh chóng.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-goodndoc-rau-ma-duong-am-phuc-hoi-da-50ml-107253_q01",
+      "sentence": "Sau đặt qua nay ma hàng chưa soạn chua sử lí nữa.  E nt hỗ trợ hk tl   Luôn",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc hàng hóa chưa được xử lý sau khi đặt hàng, cho thấy khách đang hỏi về tình trạng đơn hàng của mình. Điều này cho thấy ý định của khách là liên quan đến vấn đề giao hàng, cụ thể là yêu cầu kiểm tra đơn hàng. Do đó, L1 là 'sau_mua_hang', L2 là 'van_de_giao_hang' và L3 là 'yeu_cau_kiem_tra_don_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "serum-timeless-vitamin-b5-lam-diu-phuc-hoi-da-30ml-3495_q01",
+      "sentence": "shop kiểm tra giúp e đơn hàng đặt 12/12/2025 giao vào 14/12 mà sao nay vẫn chưa thấy ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_giao_hang_som"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc kiểm tra tình trạng đơn hàng đã đặt, cho thấy khách đang hỏi về vấn đề giao hàng. Điều này cho thấy ý định của khách là muốn biết thông tin về trạng thái giao hàng của đơn hàng đã đặt trước đó.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-hoa-nu-armaf-club-de-nuit-woman-105ml-119860_q00",
+      "sentence": "Sản. Phẩm. Có triet dung thu k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cong_dung_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm có triệt để dung thu hay không, tức là khách muốn biết về công dụng hoặc hiệu quả của sản phẩm trước khi quyết định mua. Điều này cho thấy ý định của khách là tìm hiểu thông tin sản phẩm trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "serum-caryophy-giam-mun-mo-tham-se-lo-chan-long-30ml-98247_q04",
+      "sentence": "sh ơi mình dùng serum và dưỡng ẩm bên sh rất ổn, 1 tháng mà hết mụn da mịn, nhưng giờ mình có baby có dùng được nữa k sh, hay ngưng ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Khách hàng đang hỏi về việc sử dụng sản phẩm serum và dưỡng ẩm khi có em bé, điều này liên quan đến sự an toàn và phù hợp của sản phẩm với đối tượng đặc biệt. Ý định chính là tìm hiểu xem sản phẩm có an toàn cho trẻ em hay không.",
+      "error": null
+    },
+    {
+      "sample_id": "bong-tay-trang-bong-bach-tuyet-calla-giup-sach-sau-tui-500g-124132_q04",
+      "sentence": "Khug gio nào sale 114k vay ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_san_pham",
+        "level_3": "thong_tin_khuyen_mai"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thời điểm có khuyến mãi (sale) với một mức giá cụ thể, điều này cho thấy khách đang tìm kiếm thông tin trước khi mua hàng. Ý định chính là tìm hiểu về khuyến mãi sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-la-roche-posay-giam-mun-hieu-qua-40ml-114501_q00",
+      "sentence": "Này là kem dưỡng toàn mặt hay sao ạ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "chon_san_pham_phu_hop_cho_da"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về loại sản phẩm kem dưỡng, cụ thể là kem dưỡng toàn mặt. Điều này cho thấy khách đang hỏi thông tin về sản phẩm trước khi mua. Do đó, ý định chính là tìm hiểu thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-jmsolution-rau-ma-cho-da-dau-mun-500ml-114623_q03",
+      "sentence": "cho mình biết hsd đko a",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách yêu cầu thông tin về hạn sử dụng của sản phẩm, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua. Ý định này phù hợp với việc hỏi về thông tin sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'han_su_dung_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "xit-co-dinh-lop-trang-diem-colorkey-nam-cham-den-100ml-117299_q01",
+      "sentence": "Da thường thiên dầu thì dùng màu nào ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về màu sắc phù hợp cho da thường thiên dầu, điều này cho thấy họ đang cần tư vấn trước khi mua sản phẩm. Ý định chính là chọn sản phẩm phù hợp cho loại da này.",
+      "error": null
+    },
+    {
+      "sample_id": "mieng-dan-mun-derma-angel-dung-ban-ngay-dem-43843_q03",
+      "sentence": "Cho mình hỏi cái nào hút mụn mủ nhanh hơn",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mun"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sản phẩm có khả năng hút mụn mủ nhanh hơn, điều này cho thấy họ đang tìm kiếm thông tin trước khi quyết định mua sản phẩm. Ý định chính là tìm hiểu về sản phẩm phù hợp cho tình trạng da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-hoa-hong-chiet-xuat-rau-ma-skin1004-ho-tro-phuc-hoi-tai-tao-da-210ml-86165_q00",
+      "sentence": "Da mụn xài đuoc không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mun"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm cho da mụn, tức là họ muốn biết sản phẩm có phù hợp với tình trạng da của họ hay không. Điều này thuộc về việc tư vấn trước khi mua hàng. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_da_mun', mô tả đúng ý định của khách.",
+      "error": null
+    },
+    {
+      "sample_id": "bang-ve-sinh-diana-sensi-dang-quan-size-m-l-goi-5-mieng-100263_q00",
+      "sentence": "dùng cả ngày được không ạ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "phan_ung_da_sau_khi_su_dung"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm trong suốt cả ngày, điều này cho thấy họ đang tìm hiểu về tính an toàn và khả năng sử dụng của sản phẩm. Ý định chính là tìm hiểu xem sản phẩm có thể được sử dụng liên tục hay không, thuộc về nhóm thông tin trước khi mua. Do đó, L1 là 'truoc_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "dao-cao-chan-may-kai-1-cay1-15273_q00",
+      "sentence": "dao này cạo mặt được ko, hay là dùng loại khác để cạo mặt vậy shop",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhay_cam"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng dao cạo mặt, cụ thể là có thể dùng dao này hay không và có cần loại khác không. Điều này cho thấy khách đang hỏi trước khi mua để tìm sản phẩm phù hợp. Ý định chính là tìm hiểu về sự an toàn và phù hợp của sản phẩm với nhu cầu của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-duong-moi-senka-cap-am-ngua-kho-ne-moi-10g-97523_q00",
+      "sentence": "Giá áp dụng cho 2sp đúng không bạn",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "gia_online_va_offline"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá áp dụng cho hai sản phẩm, điều này cho thấy họ đang tìm hiểu thông tin trước khi quyết định mua hàng. Ý định chính là muốn biết giá cả của sản phẩm. Do đó, L1 sẽ là 'truoc_mua_hang'. L3 phù hợp nhất là 'gia_online_va_offline', từ đó suy ra L2 là 'gia_so_sanh'.",
+      "error": null
+    },
+    {
+      "sample_id": "serum-d-alba-vien-nang-duong-sang-da-50ml-218315_q00",
+      "sentence": "Chi nhánh nguyễn ảnh thủ còn k ạ.",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng tồn kho của sản phẩm tại một chi nhánh cụ thể, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua hàng. Ý định chính là kiểm tra tình trạng hàng hóa có sẵn.",
+      "error": null
+    },
+    {
+      "sample_id": "mascara-maybelline-lam-cong-mi-100-9-2ml-1629_q04",
+      "sentence": "Sao shop chỉ cho đặt mua với số lượng là 1 sản phẩm thôi vậy? Mình muốn đặt mua 2 cây mascara thì làm sao?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cach_dat_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc đặt hàng với số lượng lớn hơn một sản phẩm, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua. Ý định chính là muốn biết cách đặt hàng nhiều sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'cach_dat_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-laneige-cang-bong-huong-qua-mong-10g-131484_q02",
+      "sentence": "Giá sale 195 ngày 25/1 thì có được tặng combo 4 mặt nạ môi 440 k ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "qua_tang_nguoi_mua"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có được tặng combo mặt nạ môi khi mua sản phẩm với giá sale. Điều này cho thấy khách đang tìm hiểu về khuyến mãi và ưu đãi trước khi mua hàng. Do đó, ý định chính là tìm hiểu về ưu đãi liên quan đến sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-rua-mat-tay-trang-hatomugi-chiet-xuat-y-di-sang-da-130g-92699_q02",
+      "sentence": "Khi nào có loại 170 ml em ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "tim_kiem_dung_tich_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thời gian có mặt của một sản phẩm cụ thể, điều này cho thấy họ đang tìm kiếm thông tin trước khi quyết định mua hàng. Ý định này phù hợp với việc tìm hiểu thông tin sản phẩm. Do đó, L1 là 'truoc_mua_hang', và tôi sẽ chọn L2 và L3 phù hợp với ngữ nghĩa câu hỏi.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-cocoon-tay-te-bao-chet-cho-mat-va-toan-than-tu-ca-phe-103451_q03",
+      "sentence": "Ủa sao bửa hởm mình mua giá 180.000đ mà chỉ đc 1 chai tẩy tế bào chết mặt mà ko có toàn thân vậy ???",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_giao_hang_som"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang thắc mắc về việc không nhận được sản phẩm đầy đủ như đã mua, điều này cho thấy khách đã thực hiện giao dịch và đang hỏi về vấn đề liên quan đến đơn hàng của mình. Do đó, ý định chính là liên quan đến vấn đề giao hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-serum-kem-duong-olay-duong-sang-da-mo-tham-mun-30ml-50g-195233_q01",
+      "sentence": "Da dầu ko đều màu sài phù hợp ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_dau"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sự phù hợp của sản phẩm với tình trạng da dầu không đều màu, điều này cho thấy họ đang hỏi trước khi mua sản phẩm. Ý định chính là tìm kiếm thông tin về sản phẩm phù hợp cho da dầu không đều màu.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-avene-ho-tro-lam-lanh-da-ngua-nhiem-khuan-40ml-1-95523_q01",
+      "sentence": "Bị kích ứng làm sao",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "phan_ung_da_sau_khi_su_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi 'Bị kích ứng làm sao' thể hiện sự quan tâm đến phản ứng da sau khi sử dụng sản phẩm, cho thấy khách hàng đang tìm kiếm thông tin về tình trạng da của mình. Ý định này phù hợp với việc tìm hiểu về phản ứng da sau khi sử dụng sản phẩm, do đó tôi chọn L3 là 'phan_ung_da_sau_khi_su_dung'. L2 tương ứng là 'an_toan_da' và L1 là 'truoc_mua_hang' vì khách hàng đang hỏi trước khi mua sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "mat-na-innisfree-cham-soc-lo-chan-long-100ml-moi-109246_q02",
+      "sentence": "Mua tại cửa hàng có giá này k shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cua_hang_co_san_pham_khong"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có thể mua sản phẩm tại cửa hàng với giá đã nêu, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua hàng. Ý định chính là tìm hiểu về giá cả và khả năng có sản phẩm tại cửa hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-dau-dua-ben-tre-cocoon-5g-86707_q04",
+      "sentence": "sao mình đặt 2 lần mà ko thấy đơn mua?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng đơn hàng mà họ đã đặt, cụ thể là việc không thấy đơn mua dù đã đặt hai lần. Điều này cho thấy khách đang quan tâm đến vấn đề giao hàng và trạng thái đơn hàng của mình. Do đó, ý định chính là liên quan đến việc kiểm tra đơn hàng đã đặt.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-l-oreal-paris-sieu-cap-am-cang-min-da-50ml-96181_q04",
+      "sentence": "cho em hỏi cái này dùng trước makuep được ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm trước khi trang điểm, điều này cho thấy họ đang hỏi về tính phù hợp của sản phẩm với nhu cầu của họ. Ý định này liên quan đến việc xác định sản phẩm có phù hợp hay không với việc sử dụng trước khi trang điểm.",
+      "error": null
+    },
+    {
+      "sample_id": "son-kem-3ce-blur-water-tint-sepia-mau-do-gach-4-6g-99019_q01",
+      "sentence": "Mẫu này ở hasaki có được test ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khac_biet_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc mẫu sản phẩm có thể được thử nghiệm hay không, điều này liên quan đến thông tin sản phẩm trước khi mua. Ý định chính là tìm hiểu về khả năng thử nghiệm sản phẩm, do đó thuộc về giai đoạn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "son-kem-li-3ce-nhung-min-mau-01-speak-up-4g-247815_q03",
+      "sentence": "Đặt hàng thanh toán xong từ 11h, báo giao trước 13h đến tối hơn 20h vẫn ko giao, gọi chat cho tổng đài cũng ko ai hỗ trợ. Huỷ đơn cũng ko được, giờ hết 1 ngày cũng chưa được giao đơn trong khi tiền đã lấy của kh",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc giao hàng và không thể hủy đơn hàng, cho thấy khách đang gặp vấn đề sau khi đã đặt hàng. Ý định chính là yêu cầu hỗ trợ về tình trạng giao hàng và hủy đơn. Do đó, L1 là 'sau_mua_hang', L2 là 'thay_doi_don_hang', và L3 là 'yeu_cau_huy_don'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-obagi-cap-am-diu-nhe-50ml-196201_q01",
+      "sentence": "Hàng tặng có cận date ko shop",
+      "category": "Mỹ phẩm high end",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_tang_sample"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng hàng tặng có cận date, tức là họ quan tâm đến thông tin về khuyến mãi hoặc quà tặng đi kèm với sản phẩm. Điều này cho thấy ý định của khách là tìm hiểu về các ưu đãi trước khi mua hàng. Do đó, L1 là 'truoc_mua_hang', L2 là 'uu_dai_yeu_cau' và L3 là 'khuyen_mai_tang_sample'.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-la-roche-posay-ho-tro-phuc-hoi-da-30ml-76584_q00",
+      "sentence": "Mình mua online nhận về hộp móp méo và rách cả đế hộp là sao",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc nhận hàng bị hư hỏng, điều này cho thấy khách đang gặp vấn đề sau khi đã mua sản phẩm. Ý định chính là yêu cầu hỗ trợ về tình trạng sản phẩm đã nhận. Do đó, L1 là 'sau_mua_hang'. L3 phù hợp nhất là 'yeu_cau_huy_don' vì khách có thể muốn yêu cầu đổi trả hoặc hủy đơn hàng do sản phẩm không đạt yêu cầu.",
+      "error": null
+    },
+    {
+      "sample_id": "son-thoi-3ce-mem-moi-08-hush-red-do-mam-xoi-3-5g-183184_q04",
+      "sentence": "sp còn ở hasaki phú mỹ chưa ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng tồn kho của sản phẩm tại một địa điểm cụ thể. Ý định chính là kiểm tra xem sản phẩm còn hay không trước khi mua. Do đó, L1 là 'truoc_mua_hang', L2 là 'ton_kho_kiem_tra' và L3 là 'mau_bien_the'.",
+      "error": null
+    },
+    {
+      "sample_id": "chi-ke-chan-may-innisfree-mau-5-expresso-brown-moi-03g-112529_q00",
+      "sentence": "Honeybrown là màu số mấy vậy ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "chon_san_pham_phu_hop_cho_mau_da"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về màu sắc của sản phẩm, cụ thể là màu số mấy của Honeybrown. Điều này cho thấy khách đang tìm kiếm thông tin về sản phẩm trước khi quyết định mua. Do đó, ý định chính là tìm hiểu thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-hoa-nu-armaf-club-de-nuit-woman-105ml-119860_q04",
+      "sentence": "Mai còn ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi 'Mai còn ko shop' thể hiện sự quan tâm đến tình trạng tồn kho của sản phẩm, tức là khách đang hỏi về việc sản phẩm có còn hàng hay không. Điều này phù hợp với ý định trước khi mua hàng. Tôi sẽ chọn L1 là 'truoc_mua_hang', L2 là 'ton_kho_kiem_tra' và L3 là 'mau_bien_the'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-bong-maybelline-004-silk-hong-nude-anh-be-54ml-247739_q04",
+      "sentence": "em đặt hàng đợi lâu mà  em đang cần gấp thì em ra cửa hàng lấy đc ko ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_giao_nhanh"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự lo lắng về thời gian giao hàng và mong muốn nhận hàng nhanh chóng. Điều này cho thấy khách đang hỏi về tình trạng giao hàng, vì vậy ý định chính là liên quan đến giao hàng. Dựa vào ngữ nghĩa, L1 sẽ là 'sau_mua_hang' vì khách đã đặt hàng và đang hỏi về tình trạng giao hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "giay-tham-dau-mayan-than-hoat-tinh-100-to-goi-3369_q01",
+      "sentence": "Tôi không thích chất liệu giấy như này, giấy thấm 1 tờ còn này phải sử dụng 3-4 tờ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "chat_luong_loi",
+        "level_3": "thong_tin_chinh_sach_doi_tra"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng với chất liệu giấy thấm dầu, cho thấy họ đang phản ánh về chất lượng sản phẩm mà họ đã sử dụng. Điều này cho thấy ý định của khách là liên quan đến việc khiếu nại hoặc phản hồi về sản phẩm đã mua, do đó thuộc về nhóm sau bán.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-3-hop-bong-tay-trang-co-ban-silcot-82-mieng-hop-88133_q02",
+      "sentence": "Ở ngoài giá s ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_san_pham",
+        "level_3": "xac_nhan_gia"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá cả sản phẩm, cụ thể là giá của bông tẩy trang. Đây là một câu hỏi thuộc nhóm thông tin trước khi mua hàng. Ý định chính là xác nhận giá sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "son-bong-maybelline-004-silk-hong-nude-anh-be-54ml-247739_q01",
+      "sentence": "Tối mai đặt 2 cây mà màu khác nhau có dc tính ko shop",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "tu_van_mau_sac"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về khả năng đặt hàng với màu sắc khác nhau, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua sản phẩm. Ý định chính là xác nhận về việc có thể đặt hàng với các màu khác nhau, do đó thuộc về nhóm tư vấn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-lam-sang-da-klairs-vitamin-c-35ml-66054_q03",
+      "sentence": "da còn vài nốt mụn thì có dùng được serum này không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mun"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng serum cho da có mụn, tức là họ muốn biết sản phẩm có phù hợp với tình trạng da của họ hay không. Điều này thuộc về việc tư vấn trước khi mua sản phẩm. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_da_mun'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-ducray-giup-lam-giam-mun-mo-vet-tham-30ml-68128_q03",
+      "sentence": "Tháng sinh nhật mua hàng có ưu đãi gì không shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khuyen_mai_san_pham"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc tìm hiểu về ưu đãi trong tháng sinh nhật, điều này cho thấy khách đang muốn biết thông tin về khuyến mãi trước khi mua hàng. Do đó, ý định chính là tìm kiếm thông tin khuyến mãi sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "gel-rua-mat-eucerin-cho-da-dau-mun-400ml-76844_q01",
+      "sentence": "Mụn viêm nhẹ có dùng srm này đc ko.",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm rửa mặt cho tình trạng da mụn viêm nhẹ, điều này cho thấy khách đang tìm kiếm thông tin về sự phù hợp của sản phẩm với tình trạng da của mình. Ý định này thuộc về việc tư vấn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "gel-tay-te-bao-chet-caryophy-ngan-ngua-mun-250ml-99925_q00",
+      "sentence": "mình tẩy mà bị rát da , đỏ là bị sao ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "phan_ung_da_sau_khi_su_dung"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc bị rát da và đỏ sau khi tẩy tế bào chết, cho thấy họ đang tìm hiểu về phản ứng của da sau khi sử dụng sản phẩm. Điều này liên quan đến an toàn da và phản ứng da sau khi sử dụng sản phẩm, thuộc về ý định trước khi mua. Do đó, L1 là 'truoc_mua_hang', L2 là 'an_toan_da' và L3 là 'phan_ung_da_sau_khi_su_dung'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-chong-nang-skin1004-nang-tong-cho-da-nhay-cam-spf50-50ml-139652_q02",
+      "sentence": "Mình ở Đồng Nai thì khi nào hàng mới giao tới ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thoi_gian_giao_hang"
+      },
+      "confidence": 0.8,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến thời gian giao hàng, cho thấy họ đang quan tâm đến vấn đề giao hàng sau khi đã đặt hàng. Điều này xác định rõ ý định của khách là muốn biết khi nào hàng sẽ được giao tới. Do đó, L1 là 'sau_mua_hang'. Không có ứng viên nào khớp ngữ nghĩa với câu hỏi, vì vậy tôi sẽ tự đề xuất bộ nhãn phù hợp.",
+      "error": null
+    },
+    {
+      "sample_id": "bang-che-khuyet-diem-colorkey-3-mau-3-9g-118912_q01",
+      "sentence": "Em muốn nhạn hàng ngày mai có đc ko ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về khả năng nhận hàng vào ngày mai, điều này cho thấy khách đã đặt hàng và đang quan tâm đến vấn đề giao hàng. Do đó, ý định chính là liên quan đến giao hàng. L1 sẽ là 'sau_mua_hang' vì khách đã thực hiện giao dịch. L2 và L3 sẽ được chọn từ ứng viên phù hợp với ngữ nghĩa câu hỏi.",
+      "error": null
+    },
+    {
+      "sample_id": "bam-mi-can-den-vacosi-bm03-3017_q04",
+      "sentence": "cho mình hỏi giá này có áp dụng tại cửa hàng ko ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_tai_cua_hang_va_app",
+        "level_3": "so_sanh_gia_mua_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc giá có áp dụng tại cửa hàng hay không, điều này cho thấy khách đang tìm hiểu thông tin trước khi mua hàng. Ý định chính là muốn biết về giá cả và khuyến mãi tại cửa hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "dau-duong-toc-tinh-dau-hoa-tu-nhien-l-oreal-100ml-76026_q04",
+      "sentence": "hàng đặt mấy ngày rồi sao vẫn chưa nhận được vậy shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc chưa nhận được hàng đã đặt, cho thấy khách đang hỏi về tình trạng giao hàng. Điều này thuộc về ý định sau khi mua hàng. L3 phù hợp nhất là 'yeu_cau_kiem_tra_don_hang' vì khách muốn kiểm tra đơn hàng của mình.",
+      "error": null
+    },
+    {
+      "sample_id": "gel-rua-mat-bioderma-danh-cho-da-dau-hon-hop-500ml-106815_q00",
+      "sentence": "Da nhạy cảm kích ứng sài đc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhay_cam"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc da nhạy cảm có thể sử dụng sản phẩm hay không, cho thấy khách đang tìm hiểu về sự an toàn và phù hợp của sản phẩm với loại da của mình. Điều này thuộc về ý định trước khi mua hàng. L3 phù hợp nhất là 'chon_san_pham_phu_hop_cho_da_nhay_cam'.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-balance-active-formula-vitamin-c-sang-da-30ml-79881_q04",
+      "sentence": "da thâm do bọ côn trùng bọ chó đốt trên mặt có dùng được không",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mat"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm cho da bị thâm do côn trùng đốt, điều này cho thấy họ đang hỏi về tính an toàn và hiệu quả của sản phẩm trước khi sử dụng. Do đó, ý định chính là tư vấn về sản phẩm phù hợp cho tình trạng da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-phu-b-o-m-kiem-dau-che-phu-lo-chan-long-dang-nen-7-5g-107730_q01",
+      "sentence": "có kèm bông phấn không hay hộp này chỉ có phấn thôi ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "phu_kien_kem_theo"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc có kèm bông phấn hay không, tức là họ đang hỏi thông tin trước khi mua sản phẩm. Ý định chính là muốn biết thêm thông tin về sản phẩm, cụ thể là về phụ kiện đi kèm.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-tao-khoi-too-cool-for-school-15-mau-trung-tinh-95g-117668_q03",
+      "sentence": "Tone da lạnh xài màu nào ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "san_pham_so_sanh",
+        "level_3": "trang_diem_mau_sac_phu_hop_cho_da_ngam"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về màu sắc phù hợp cho tone da lạnh, điều này cho thấy họ đang hỏi trước khi mua sản phẩm. Ý định chính là tư vấn màu sắc phù hợp với loại da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-phu-maybelline-dang-nen-110-da-sang-9g-248806_q00",
+      "sentence": "Em đang có kem nền fitme màu 115 thì dùng phấn nền này 115 có hợp không",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu xem phấn nền có phù hợp với kem nền mà họ đang sử dụng hay không, tức là họ đang hỏi về sự phù hợp của sản phẩm trước khi mua. Điều này cho thấy ý định của khách là muốn biết thông tin về sự tương thích của sản phẩm với sản phẩm hiện tại của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-nuoc-duong-toc-cocoon-tinh-dau-buoi-phien-ban-moi-140ml-105873_q02",
+      "sentence": "mua trực tiếp coa giảm không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có giảm giá hay không, tức là họ muốn biết thông tin về khuyến mãi trước khi mua hàng. Điều này phù hợp với ý định 'truoc_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-bong-3ce-dang-gel-mau-weekend-4g-122944_q03",
+      "sentence": "Chi nhánh Hà Tĩnh còn hàng không",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng hàng hóa tại chi nhánh, cụ thể là có còn hàng hay không. Điều này cho thấy khách đang tìm thông tin trước khi quyết định mua hàng. Do đó, ý định chính là kiểm tra tồn kho.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-duong-moi-torriden-cang-mong-cap-am-11ml-116967_q00",
+      "sentence": "Đặt cây son cả tuần rồi vẫn k nhận được . Qua cái ngày dự kiến giao hàng , ấn vào xem đơn hàng huỷ cũng k được . Nt page k tl , mà gọi TĐ cũng chẳng được . Quá tệ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "khong_nhan_duoc_phan_hoi"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc giao hàng không đúng hẹn và không nhận được phản hồi từ dịch vụ khách hàng. Điều này cho thấy khách đang gặp vấn đề sau khi đã đặt hàng. Ý định chính là yêu cầu kiểm tra đơn hàng hoặc khiếu nại về giao hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-torriden-lam-diu-mat-duong-am-sang-bong-da-100ml-116963_q04",
+      "sentence": "Mua tại cửa hàng có áp dụng giá sale ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có áp dụng giá sale khi mua tại cửa hàng, tức là khách muốn biết thông tin về khuyến mãi trước khi quyết định mua hàng. Do đó, ý định chính là tìm hiểu về khuyến mãi. L3 phù hợp nhất là 'khuyen_mai_dac_biet'.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-phu-kiem-dau-australis-2-trong-1-cho-da-dau-da-nhay-cam-natural-78766_q02",
+      "sentence": "Mua trực tiếp có được giá như trên app không ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "khuyen_mai_tai_cua_hang_va_app"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc giá cả khi mua trực tiếp so với giá trên ứng dụng, điều này cho thấy khách đang tìm hiểu thông tin về giá cả trước khi quyết định mua hàng. Ý định này phù hợp với việc so sánh giá cả giữa các kênh mua sắm.",
+      "error": null
+    },
+    {
+      "sample_id": "gel-chong-nang-anessa-nang-tong-hieu-chinh-sac-tim-90g-moi-263336_q01",
+      "sentence": "Đặt onl còn đc tặng kèm quà ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_tang_sample"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có được tặng kèm quà khi đặt hàng hay không, điều này thuộc về thông tin khuyến mãi trước khi mua hàng. Ý định chính là tìm hiểu về chương trình khuyến mãi hiện tại.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-tam-hatomugi-ho-tro-trang-da-giu-am-800ml-78190_q03",
+      "sentence": "Shop gọi cho tôi để tôi đặt mua hàng, không đặt được",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng về việc không thể đặt hàng, cho thấy họ đang gặp vấn đề sau khi đã có ý định mua hàng. Điều này cho thấy ý định của khách là liên quan đến việc thay đổi đơn hàng hoặc yêu cầu hỗ trợ. Do đó, L1 là 'sau_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-bio-essence-duong-da-san-min-rang-ngoi-50g-89503_q02",
+      "sentence": "Mẹ đang cho bé bú có dùng được không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_me_bu"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm cho mẹ đang cho con bú, điều này liên quan đến sự an toàn và phù hợp của sản phẩm với đối tượng cụ thể. Ý định chính là tìm hiểu xem sản phẩm có an toàn cho mẹ bỉm sữa hay không, do đó thuộc về nhóm tư vấn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-2-mut-trang-diem-mastige-khang-khuan-nhieu-mau-tong-hong-122728_q01",
+      "sentence": "Em ơi , chị Q1, ship liền được ko em",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "khac_biet_chat_luong_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về khả năng giao hàng, cụ thể là liệu sản phẩm có thể được giao ngay hay không. Điều này cho thấy khách đang ở giai đoạn sau khi đã đặt hàng hoặc đang chờ giao hàng. Do đó, L1 sẽ là 'sau_mua_hang'. L3 phù hợp nhất với ý định này là 'khac_biet_chat_luong_san_pham', vì nó liên quan đến vấn đề giao hàng và chất lượng dịch vụ. L2 sẽ là 'van_de_giao_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-tay-da-chet-toan-than-cocoon-tu-ca-phe-dak-lak-2x200ml-97567_q03",
+      "sentence": "khi nào hàng mình giao v. hẹn từ 8/2 mà tới hnay check thì vẫn đang xử lí là sao nhỉ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng giao hàng, cụ thể là lý do tại sao hàng chưa được giao mặc dù đã hẹn. Điều này cho thấy khách đang ở giai đoạn sau khi đã đặt hàng. Ý định chính là yêu cầu kiểm tra đơn hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-garnier-danh-cho-da-dau-va-mun-400ml-moi-106533_q04",
+      "sentence": "Sản phẩm Han Su Dung den khi nao shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "hoi_han_su_dung_truoc_mua"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thời gian sử dụng của sản phẩm, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua. Ý định chính là muốn biết thông tin về hạn sử dụng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'ton_kho_kiem_tra' và L3 là 'hoi_han_su_dung_truoc_mua'.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-tam-hatomugi-ho-tro-trang-da-giu-am-800ml-78190_q00",
+      "sentence": "sửa tắm dat được chưa shop ơi",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_sua_chua_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách liên quan đến việc sửa chữa sản phẩm, cụ thể là sửa tắm. Điều này cho thấy khách đang hỏi về vấn đề sau khi đã mua sản phẩm. Do đó, L1 sẽ là 'sau_mua_hang'. Ý định cụ thể hơn là yêu cầu sửa chữa sản phẩm, vì vậy L2 và L3 sẽ được xác định dựa trên điều này.",
+      "error": null
+    },
+    {
+      "sample_id": "chai-xit-co-dinh-lop-trang-diem-3ce-100ml-103139_q03",
+      "sentence": "Đã đặt hàng nhưng muốn hủy đơn được ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện ý định muốn hủy đơn hàng đã đặt, điều này cho thấy khách đang hỏi về quy trình hủy đơn hàng sau khi đã mua. Do đó, ý định này thuộc về nhóm sau bán hàng. L3 phù hợp nhất là 'yeu_cau_huy_don'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-lot-b-o-m-cap-am-deu-mau-da-30ml-141416_q00",
+      "sentence": "Kem lót JUDYDOLL với kem lót BOM loại nào cấp ẩm cho khô tốt và cho lớp finish mịn lỳ vậy ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_kho"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về khả năng cấp ẩm và độ hoàn thiện của hai loại kem lót, cho thấy họ đang cần thông tin trước khi quyết định mua. Ý định chính là tìm hiểu sản phẩm phù hợp cho nhu cầu của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-am-klairs-lam-diu-phuc-hoi-da-ban-dem-50g-218383_q03",
+      "sentence": "shop oi cho em hỏi dòng này có hợp với da dầu k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu xem sản phẩm có phù hợp với da dầu hay không, điều này cho thấy họ đang hỏi trước khi mua. Ý định chính là xác định sự phù hợp của sản phẩm với loại da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "dung-dich-cham-mun-neogen-dermalogy-lam-diu-giam-do-15ml-94055_q00",
+      "sentence": "mình k ib đc vs hisaki",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự không hài lòng hoặc khó khăn trong việc liên lạc với dịch vụ hỗ trợ, điều này cho thấy khách đang gặp vấn đề sau khi đã mua hàng. Do đó, ý định chính là liên quan đến dịch vụ sau bán hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-rua-mat-tia-m-oc-sen-lam-diu-phuc-hoi-da-200ml-131728_q04",
+      "sentence": "chi nhánh q4 q7 cao cho dùng thử k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_san_pham",
+        "level_3": "thong_tin_qua_tang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có thể dùng thử sản phẩm tại chi nhánh hay không, điều này liên quan đến thông tin trước khi mua hàng. Ý định chính là tìm hiểu về khả năng dùng thử sản phẩm, do đó tôi chọn L1 là 'truoc_mua_hang'. L3 phù hợp nhất là 'thong_tin_qua_tang' vì nó liên quan đến việc dùng thử sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nuoc-laneige-cho-lop-nen-min-li-50h-21n1-15gx2-moi-128928_q01",
+      "sentence": "Hạn sử dụng bao lâu ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "han_su_dung"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này thuộc về thông tin sản phẩm mà khách hàng cần biết trước khi mua. Do đó, ý định chính là tìm hiểu về hạn sử dụng. L3 phù hợp nhất là 'han_su_dung'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-kem-3ce-blur-water-tint-sepia-mau-do-gach-4-6g-99019_q03",
+      "sentence": "Date của son này à ba nhiêu vay shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_san_pham",
+        "level_3": "xac_nhan_gia"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá của sản phẩm son, thể hiện ý định muốn biết thông tin trước khi mua. Do đó, L1 sẽ là 'truoc_mua_hang'. L3 phù hợp nhất với ý định này là 'xac_nhan_gia'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-sua-chong-nang-cocoon-chiet-xuat-bi-dao-quang-pho-rong-50ml-124732_q02",
+      "sentence": "Mới đặt khi nào mới có hàng",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thời gian giao hàng sau khi đã đặt hàng, điều này cho thấy khách đã thực hiện hành động mua sắm. Ý định chính là yêu cầu kiểm tra đơn hàng đã đặt. Do đó, L1 là 'sau_mua_hang'. L3 phù hợp nhất là 'yeu_cau_kiem_tra_don_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-torriden-serum-kem-duong-cap-am-sang-bong-da-50ml-100ml-117580_q04",
+      "sentence": "Combo còn mắc hơn mua lẻ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khac_biet_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang so sánh giá giữa combo và mua lẻ, cho thấy họ đang tìm hiểu thông tin về giá cả trước khi quyết định mua. Ý định chính là muốn biết thông tin về giá sản phẩm. Do đó, L1 sẽ là 'truoc_mua_hang', L2 sẽ là 'gia_san_pham' và L3 sẽ là 'khac_biet_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "bo-goi-xa-pantene-ngan-rung-toc-dau-goi-650ml-dau-xa-sieu-duong-300ml-245323_q01",
+      "sentence": "Mua trực tiếp có giá này k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "gia_online_va_offline"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá cả của sản phẩm khi mua trực tiếp, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua hàng. Ý định chính là muốn biết giá cả, do đó tôi chọn intent liên quan đến giá cả và so sánh giá.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nuoc-bys-min-li-fair-neutral-tong-da-tu-nhien-10g-139396_q00",
+      "sentence": "Mình có đặt phấn BYS. mà không thấy giao",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự quan tâm đến tình trạng giao hàng của sản phẩm đã đặt, cụ thể là phấn BYS. Điều này cho thấy khách đang hỏi về vấn đề giao hàng, vì vậy ý định chính là liên quan đến giao hàng. Dựa vào ngữ nghĩa, L1 sẽ là 'sau_mua_hang' vì khách đã đặt hàng và đang chờ giao hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "chi-ke-may-australis-mau-nau-dam-dark-brown-78580_q00",
+      "sentence": "Chì màu gì ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "chon_san_pham_phu_hop_cho_mau_da",
+        "level_3": "chon_san_pham_phu_hop"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi 'Chì màu gì ạ?' thể hiện ý định của khách hàng muốn biết thông tin về màu sắc của sản phẩm chì kẻ mày. Đây là một câu hỏi thuộc về tư vấn sản phẩm trước khi mua, vì khách hàng đang tìm kiếm thông tin để đưa ra quyết định. Do đó, L1 là 'truoc_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nuoc-judydoll-lau-troi-che-phu-cao-n20-14g-135189_q02",
+      "sentence": "sài da dầu ổn không ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thiet_bi_tu_van",
+        "level_3": "phu_hop_da_dau"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sự phù hợp của sản phẩm cho da dầu, điều này cho thấy họ đang hỏi trước khi mua. Ý định chính là tìm kiếm thông tin về sản phẩm có phù hợp với loại da của họ hay không.",
+      "error": null
+    },
+    {
+      "sample_id": "sap-duong-am-vaseline-50ml-60724_q01",
+      "sentence": "sp này Sài cho môi được phải k ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "chon_san_pham_phu_hop_cho_da",
+        "level_3": "su_dung_san_pham_truoc_khi_makeup"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm cho môi, cụ thể là liệu sản phẩm này có phù hợp hay không. Điều này cho thấy khách đang hỏi trước khi mua sản phẩm. Ý định chính là tìm hiểu thông tin về sự phù hợp của sản phẩm với nhu cầu của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-duong-am-sau-klairs-80ml-66006_q02",
+      "sentence": "hạn sử dụng đến khi nào ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_han_su_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này cho thấy họ đang tìm kiếm thông tin trước khi mua. Ý định chính là muốn biết thông tin về hạn sử dụng của sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'thong_tin_han_su_dung'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-gel-rua-mat-cocoon-bi-dao-giup-giam-dau-mun-310ml-116853_q02",
+      "sentence": "Cho mình hỏi mua tại cửa hảng có được giá giống trên web k ah?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "gia_online_va_offline"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc giá cả khi mua tại cửa hàng có giống với giá trên website hay không, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua hàng. Do đó, ý định chính là tìm hiểu về giá cả sản phẩm. L3 phù hợp nhất là 'gia_online_va_offline' vì nó mô tả rõ ràng ý định so sánh giá giữa hai kênh mua sắm.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-judydoll-co-mau-cap-am-06-hong-tra-ho-phach-3g-130440_q01",
+      "sentence": "màu 01 còn k ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng tồn kho của sản phẩm màu 01, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua. Ý định chính là kiểm tra xem sản phẩm còn hàng hay không.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-cocoon-nuoc-tay-trang-bi-dao-500ml-gel-rua-mat-bi-dao-310ml-107934_q01",
+      "sentence": "Đơn hàng mình sao chưa thấy giao ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_kiem_tra_don_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc chưa nhận được đơn hàng, cho thấy họ đang hỏi về tình trạng giao hàng. Điều này thuộc về ý định sau khi mua hàng. Không có ứng viên nào khớp chính xác với ngữ nghĩa câu hỏi, vì vậy tôi sẽ tự đề xuất bộ nhãn phù hợp. | VERIFIER: Câu hỏi của khách hàng liên quan đến việc chưa nhận được đơn hàng, phù hợp với việc kiểm tra đơn hàng sau khi mua. Nhãn đề xuất của annotator không khớp với ngữ nghĩa câu hỏi, nhưng ứng viên 1 phù hợp hơn.",
+      "error": null,
+      "qa_status_before_reverify": "pending_new_label_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "sau_mua_hang",
+        "level_2": "trang_thai_van_chuyen",
+        "level_3": "yeu_cau_giao_nhanh"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi của khách hàng liên quan đến việc chưa nhận được đơn hàng, phù hợp với việc kiểm tra đơn hàng sau khi mua. Nhãn đề xuất của annotator không khớp với ngữ nghĩa câu hỏi, nhưng ứng viên 1 phù hợp hơn.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "kem-nen-silkygirl-skin-perfect-01-light-mau-sang-25ml-102393_q04",
+      "sentence": "Cho m hỏi sản phẩm này tại cửa hàng có mẫu dùng thử ko ạ. M phân vân giữa 2 màu ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "mau_thu_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có mẫu dùng thử tại cửa hàng hay không, điều này cho thấy khách đang tìm thông tin trước khi mua sản phẩm. Ý định chính là tìm hiểu về mẫu thử của sản phẩm, do đó L2 và L3 sẽ liên quan đến thông tin sản phẩm và mẫu thử.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-naris-cosmetics-ngua-nhan-giam-kho-moi-10g-11704_q03",
+      "sentence": "son này có chỉ số chống nắng hay khử thâm môi không",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khong_biet_kien_dau"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về chỉ số chống nắng và khả năng khử thâm của sản phẩm son, điều này cho thấy họ đang muốn biết thông tin trước khi quyết định mua. Ý định chính là tìm hiểu thông tin sản phẩm liên quan đến công dụng và thành phần của son dưỡng.",
+      "error": null
+    },
+    {
+      "sample_id": "dau-goi-selsun-ngua-gau-giam-ngua-da-dau-250ml-100901_q00",
+      "sentence": "Đang cho con bú có sử dụng đc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "an_toan_da",
+        "level_3": "phan_ung_da_sau_khi_su_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sử dụng sản phẩm trong thời gian cho con bú, điều này liên quan đến sự an toàn và phù hợp của sản phẩm với đối tượng cụ thể. Ý định chính là tìm hiểu xem sản phẩm có an toàn cho mẹ bỉm sữa hay không, do đó thuộc về nhóm tư vấn trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "gel-duong-megaduo-plus-gel-giam-mun-mo-tham-15g-102185_q03",
+      "sentence": "giá 25/1 30k tại cửa hàng là bất kì chi nhánh nào cx đc ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_san_pham",
+        "level_3": "xac_nhan_gia"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về giá cả của sản phẩm tại cửa hàng, điều này cho thấy họ đang tìm hiểu thông tin trước khi mua. Ý định chính là xác nhận giá sản phẩm tại các chi nhánh khác nhau. Do đó, L1 là 'truoc_mua_hang', và L2, L3 sẽ liên quan đến giá cả.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-la-roche-posay-giam-mun-hieu-qua-40ml-114501_q04",
+      "sentence": "cái này có hiệu quả với mụn ẩn dưới da không",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cong_dung_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về hiệu quả của sản phẩm đối với mụn ẩn, điều này cho thấy họ đang hỏi trước khi mua để xác định tính phù hợp của sản phẩm. Ý định này liên quan đến thông tin sản phẩm và công dụng của nó.",
+      "error": null
+    },
+    {
+      "sample_id": "chi-ke-mat-b-o-m-sieu-manh-lau-troi-01-mau-den-0-1g-105337_q00",
+      "sentence": "Chì kẻ mắt nâu 03 và 04, tư vấn giúp em nên chọn màu nào nhìn tự nhiên hơn ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "tu_van_san_pham_phu_hop_cho_mau_da"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách yêu cầu tư vấn về việc chọn màu chì kẻ mắt nào phù hợp và tự nhiên hơn. Điều này cho thấy khách đang tìm kiếm thông tin trước khi mua sản phẩm. Ý định chính là tư vấn sản phẩm phù hợp cho màu da, do đó L3 sẽ là 'tu_van_san_pham_phu_hop_cho_mau_da'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-kem-chong-nang-cocoon-bi-dao-quang-pho-rong-50ml-110648_q04",
+      "sentence": "Bài đâu để đặt hàng ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "cach_dat_hang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách là về việc đặt hàng, điều này cho thấy họ đang tìm kiếm thông tin trước khi mua sản phẩm. Ý định chính là muốn biết cách đặt hàng cho sản phẩm. Do đó, L1 sẽ là 'truoc_mua_hang'. L3 phù hợp nhất là 'cach_dat_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-naris-cosmetics-ngua-nhan-giam-kho-moi-10g-11704_q01",
+      "sentence": "em lỡ vứt vỏ hộp rồi, giờ muốn check hạn sử dụng thì check ở đâu vậy ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm cách kiểm tra hạn sử dụng của sản phẩm sau khi đã vứt vỏ hộp, điều này cho thấy khách đã sở hữu sản phẩm và đang cần thông tin về nó. Do đó, ý định này thuộc về việc kiểm tra thông tin sản phẩm sau khi mua. L3 phù hợp nhất là 'han_su_dung_san_pham', từ đó suy ra L2 là 'thong_tin_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-chong-nang-vichy-thoang-nhe-khong-bong-dau-spf-50-50ml-1006_q02",
+      "sentence": "Mẫu mới hay s mà nay chất kem lỏng với dính hơn trước vậy shop,kiểu nó k dc thoáng,cứ bị nổi mụn",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc chất kem lỏng và cảm giác không thoáng, dẫn đến việc nổi mụn. Điều này cho thấy khách đang tìm hiểu về sản phẩm và có thể đang lo lắng về sự phù hợp của sản phẩm với làn da của mình. Do đó, ý định chính là tìm hiểu về sự phù hợp của sản phẩm trước khi mua.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-ma-hong-3ce-min-li-mono-pink-mau-hong-dao-5-5g-98947_q02",
+      "sentence": "Mua hôm nay được tặng kèm son mini ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_tang_sample"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc mua hàng và có yêu cầu về việc tặng kèm sản phẩm, điều này cho thấy khách đang tìm hiểu về khuyến mãi hoặc ưu đãi khi mua hàng. Ý định chính là hỏi về thông tin khuyến mãi đi kèm với sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'uu_dai_yeu_cau', và L3 là 'khuyen_mai_tang_sample'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-laneige-cang-bong-huong-qua-mong-10g-131484_q00",
+      "sentence": "ngày 25/1 nói tặng mặt nạ môi sao ko thấy vậy",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc không nhận được mặt nạ môi đã được hứa tặng, cho thấy khách đang thắc mắc về vấn đề giao hàng. Do đó, ý định chính là liên quan đến giao hàng. Không có ứng viên nào khớp với ngữ nghĩa câu hỏi, vì vậy tôi sẽ đề xuất một bộ nhãn mới. | VERIFIER: Câu hỏi của khách hàng liên quan đến việc không nhận được quà tặng đã hứa, phù hợp với vấn đề giao hàng và thiếu quà tặng khuyến mãi. Ứng viên số 2 khớp với ngữ nghĩa câu hỏi.",
+      "error": null,
+      "qa_status_before_reverify": "pending_new_label_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_san_pham_tang"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi của khách hàng liên quan đến việc không nhận được quà tặng đã hứa, phù hợp với vấn đề giao hàng và thiếu quà tặng khuyến mãi. Ứng viên số 2 khớp với ngữ nghĩa câu hỏi.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "phan-ma-hong-judydoll-mem-min-tu-nhien-44-hong-sua-2g-125540_q02",
+      "sentence": "da tone ấm nên chọn màu nào ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "chon_san_pham_phu_hop_cho_mau_da"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về màu sắc phù hợp cho làn da tone ấm, điều này cho thấy họ đang cần thông tin trước khi mua sản phẩm. Ý định chính là chọn sản phẩm phù hợp cho màu da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "chi-ke-chan-may-innisfree-mau-5-expresso-brown-moi-03g-112529_q01",
+      "sentence": "Bầu dùng được ko ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_mang_thai_bau"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm có phù hợp cho bà bầu hay không, điều này liên quan đến sự an toàn và tính phù hợp của sản phẩm trước khi mua. Do đó, ý định chính là tìm hiểu về sự phù hợp của sản phẩm với đối tượng cụ thể.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-nen-kiem-dau-maybelline-spf28-pa-112-natural-ivory-86731_q00",
+      "sentence": "Có màu 115 kh ah",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "tu_van_mau_sac"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về màu sắc của sản phẩm, cụ thể là màu 115. Điều này cho thấy khách đang tìm kiếm thông tin trước khi mua sản phẩm. Ý định chính là muốn biết thông tin về màu sắc của sản phẩm trang điểm.",
+      "error": null
+    },
+    {
+      "sample_id": "son-min-moi-naris-cnc-105-mau-do-cam-3g-71149_q02",
+      "sentence": "Đã mua son chứ rất nhiều chì mới son có mấy lần mà thâm hết môi",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "hong_vo_san_pham",
+        "level_3": "cham_soc_da_hong_vo"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc đã mua son và gặp vấn đề với việc thâm môi, cho thấy khách đang hỏi về tình trạng sản phẩm sau khi đã sử dụng. Điều này cho thấy ý định của khách là liên quan đến vấn đề sản phẩm đã mua, cụ thể là tình trạng hư hỏng hoặc không đạt yêu cầu. Do đó, L1 là 'sau_mua_hang'.",
+      "error": null
+    },
+    {
+      "sample_id": "sap-duong-am-vaseline-50ml-60724_q00",
+      "sentence": "có hũ lớn nữa ko",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "giam_tham_moi"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về sự tồn tại của một sản phẩm lớn hơn, điều này cho thấy họ đang tìm kiếm thông tin trước khi quyết định mua. Ý định chính là tìm hiểu về sản phẩm, cụ thể là kích thước hoặc dung tích của sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'giam_tham_moi'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-eucerin-lam-sang-da-ban-dem-50ml-moi-97137_q01",
+      "sentence": "loại ban đêm có hạn sử dụng đến khi nào vậy",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_han_su_dung"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này cho thấy họ đang tìm kiếm thông tin trước khi mua. Ý định chính là muốn biết thông tin về sản phẩm, cụ thể là hạn sử dụng của kem dưỡng. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'thong_tin_han_su_dung'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-danh-rang-marvis-whitening-mint-lam-trang-rang-85ml-113073_q02",
+      "sentence": "Sản phẩm này không có in Hạn sử dụng hay ngày sản xuất mà chỉ có lot number phải ko ạ? Mình được tặng nhưng không thấy ngày",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_han_su_dung"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về thông tin liên quan đến hạn sử dụng của sản phẩm, cụ thể là việc không thấy thông tin này trên bao bì. Điều này cho thấy khách đang tìm hiểu thông tin trước khi sử dụng sản phẩm. Do đó, ý định chính là tìm hiểu thông tin sản phẩm. L3 phù hợp nhất là 'thong_tin_han_su_dung'.",
+      "error": null
+    },
+    {
+      "sample_id": "che-khuyet-diem-aperire-mong-nhe-lau-troi-02-warm-4-5ml-186501_q04",
+      "sentence": "HSD lâu k ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "han_su_dung",
+        "level_3": "han_su_dung_san_pham"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về hạn sử dụng của sản phẩm, điều này cho thấy họ đang tìm kiếm thông tin trước khi mua. Ý định chính là muốn biết hạn sử dụng của sản phẩm cụ thể.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-l-oreal-paris-glycolic-sang-min-mo-tham-nam-ban-dem-50ml-99713_q03",
+      "sentence": "Thương hiệu pháp sản xuất ở đâu sao không ghi",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "xuat_xu_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về nguồn gốc sản xuất của sản phẩm, điều này liên quan đến thông tin sản phẩm. Ý định chính là tìm hiểu về xuất xứ của sản phẩm. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'xuat_xu_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-d-alba-serum-dang-xit-cang-bong-kem-chong-nang-nang-tong-100ml-50ml-140208_q00",
+      "sentence": "E mới mua combo qua online thì cầm hóa đơn đến cửa hàng được nhận túi tặng không",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_tang_kem",
+        "level_3": "thong_tin_qua_tang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có thể nhận túi tặng khi mang hóa đơn đến cửa hàng, điều này cho thấy khách đang tìm hiểu thông tin về khuyến mãi và quà tặng trước khi mua. Do đó, ý định chính là tìm hiểu về khuyến mãi. L3 phù hợp nhất là thông tin quà tặng.",
+      "error": null
+    },
+    {
+      "sample_id": "mieng-dan-mun-derma-angel-dung-ban-ngay-dem-43843_q01",
+      "sentence": "18x2 là 36 miếng hả sốp",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "so_luong_mieng_trong_tui"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về số lượng miếng trong sản phẩm, điều này cho thấy họ đang tìm kiếm thông tin trước khi quyết định mua. Ý định chính là muốn biết thông tin về sản phẩm, cụ thể là số lượng miếng trong gói. Do đó, L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'so_luong_mieng_trong_tui'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-bioderma-phuc-hoi-da-ton-thuong-va-ngua-seo-40ml-138008_q02",
+      "sentence": "Dạ em muốn mua mẫu cũ thì có cần phải ghi chú hay gì không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khong_biet_kien_dau"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có cần ghi chú khi mua mẫu cũ, điều này cho thấy khách đang tìm hiểu thông tin trước khi mua hàng. Ý định chính là muốn biết thông tin liên quan đến việc mua sản phẩm. Do đó, L1 là 'truoc_mua_hang'. L3 phù hợp nhất là 'khong_biet_kien_dau' vì khách không chắc chắn về quy trình mua hàng mẫu cũ.",
+      "error": null
+    },
+    {
+      "sample_id": "son-duong-bioderma-dang-sap-lam-diu-moi-kho-nut-ne-4g-99877_q00",
+      "sentence": "Date mới nhất của sản phẩm này là ngày nào vậy ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_han_su_dung"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về ngày hết hạn của sản phẩm, điều này liên quan đến thông tin sản phẩm trước khi mua. Ý định chính là tìm hiểu thông tin về hạn sử dụng của sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-danh-rang-median-dental-iq-lam-sang-mau-trang-bac-120g-moi-113417_q00",
+      "sentence": "Chị hai màu xanh dương và đỏ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "mau_sac_hop_san_pham"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi không rõ ràng về sản phẩm cụ thể mà khách đang hỏi, chỉ đề cập đến màu sắc. Tuy nhiên, ý định có thể liên quan đến việc chọn lựa màu sắc cho sản phẩm. Do đó, tôi sẽ đề xuất một nhãn mới cho việc tư vấn màu sắc sản phẩm. | VERIFIER: Câu hỏi liên quan đến màu sắc, phù hợp với việc tìm hiểu thông tin sản phẩm trước khi mua. Nhãn 'mau_sac_hop_san_pham' chính xác hơn cho ngữ nghĩa câu hỏi.",
+      "error": null,
+      "qa_status_before_reverify": "needs_review",
+      "intent_3_level_before_reverify": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thiet_bi_tu_van",
+        "level_3": "tu_van_mau_sac"
+      },
+      "verifier_decision": "REVISE",
+      "verifier_reason": "Câu hỏi liên quan đến màu sắc, phù hợp với việc tìm hiểu thông tin sản phẩm trước khi mua. Nhãn 'mau_sac_hop_san_pham' chính xác hơn cho ngữ nghĩa câu hỏi.",
+      "confidence_before_verify": 0.75,
+      "reverify_error": null
+    },
+    {
+      "sample_id": "combo-angel-s-liquid-serum-kem-duong-lam-sang-da-mo-tham-110398_q04",
+      "sentence": "Dạ da mình mụn dùng dc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_mun"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm có phù hợp cho da mụn hay không, tức là khách đang tìm kiếm thông tin trước khi mua. Ý định này phù hợp với việc chọn sản phẩm an toàn cho da mụn.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-tuoi-mat-l-oreal-3-in-1-danh-cho-da-dau-da-hon-hop-400ml-19325_q02",
+      "sentence": "Mua tại cửa hàng được khuyến mãi Ko shop",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc mua hàng và có thông tin về khuyến mãi, cho thấy khách đang tìm hiểu về ưu đãi trước khi quyết định mua. Do đó, ý định chính là tìm hiểu về khuyến mãi. L3 phù hợp nhất là 'khuyen_mai_dac_biet'.",
+      "error": null
+    },
+    {
+      "sample_id": "son-moi-colorkey-nhung-mo-o106-sunset-red-tea-2g-117321_q00",
+      "sentence": "Có lì k shop",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_tang_qua"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi 'Có lì k shop' thể hiện sự quan tâm đến việc có khuyến mãi hoặc ưu đãi nào không trước khi quyết định mua hàng. Điều này cho thấy khách hàng đang tìm kiếm thông tin về khuyến mãi. Do đó, ý định chính là hỏi về khuyến mãi. L3 phù hợp nhất là 'khuyen_mai_tang_qua'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-u-toc-fino-premium-touch-cai-thien-toc-hu-ton-230g-106953_q03",
+      "sentence": "Ủ trước khi gội hay gội xả r mới ủ ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "huong_dan_su_dung_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về quy trình sử dụng sản phẩm ủ tóc, cụ thể là thời điểm ủ trước hay sau khi gội. Điều này cho thấy khách đang cần thông tin trước khi mua sản phẩm. Ý định chính là tìm hiểu cách sử dụng sản phẩm phù hợp với nhu cầu của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "son-bong-maybelline-125-keen-hong-dao-dat-4-2ml-106417_q04",
+      "sentence": "shop ơi e mới mua bóc seal rồi test k ưng đổi màu khác đc k ạ huhu",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "yeu_cau_sua_chua_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách thể hiện sự quan tâm đến việc đổi màu sản phẩm sau khi đã mua và thử nghiệm. Điều này cho thấy khách đang hỏi về khả năng đổi trả sản phẩm, vì vậy ý định chính là liên quan đến vấn đề sau khi mua hàng. Dựa vào ngữ nghĩa, L1 sẽ là 'sau_mua_hang', L2 là 'van_de_giao_hang' và L3 là 'yeu_cau_sua_chua_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-goi-xa-tresemme-salon-rebond-ngan-gay-rung-toc-640g-620g-106495_q01",
+      "sentence": "Tại sao lấy combo mà tính tiền riêng 2 sản phẩm combo là 260k mà tính lại tính riêng thành tổng 380k rất là kì",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "thay_doi_don_hang",
+        "level_3": "yeu_cau_huy_don"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang đề cập đến việc tính tiền cho sản phẩm trong combo, cho thấy khách đang gặp vấn đề với đơn hàng của mình. Điều này cho thấy ý định của khách là liên quan đến vấn đề giao hàng hoặc thanh toán sau khi đã đặt hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "dau-duong-toc-tinh-dau-hoa-tu-nhien-l-oreal-100ml-76026_q00",
+      "sentence": "Sao giá xem trên shopee là 60k lên đây có 30k tại sao ak.chả nhẽ fake sao lại rẻ v",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_gia_ca"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang thắc mắc về sự chênh lệch giá giữa hai nền tảng mua sắm, điều này cho thấy khách đang tìm hiểu thông tin về giá cả sản phẩm. Ý định chính là muốn biết lý do tại sao giá lại khác nhau, do đó thuộc về nhóm thông tin sản phẩm trước khi mua.",
+      "error": null
+    },
+    {
+      "sample_id": "gift-carslan-lip-glow-serum-g104-mini-size-123132_q00",
+      "sentence": "Cho mình hỏi giá trên app và tại cửa hàng có giống nhau không ạ?",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "gia_so_sanh",
+        "level_3": "so_sanh_gia_mua_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách yêu cầu thông tin về sự khác biệt giá giữa app và cửa hàng, điều này cho thấy khách đang tìm hiểu trước khi mua. Ý định chính là so sánh giá giữa hai kênh mua sắm. Do đó, L1 là 'truoc_mua_hang', và L2, L3 sẽ liên quan đến việc so sánh giá.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-cocoon-nuoc-tay-trang-500ml-sua-rua-mat-310ml-sen-hau-giang-cho-da-rat-nhay-cam-245256_q01",
+      "sentence": "sao sale mà hủy không vậy",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "thieu_qua_tang_khuyen_mai"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc hủy sale, cho thấy họ đang thắc mắc về một vấn đề liên quan đến giao hàng hoặc khuyến mãi. Điều này cho thấy ý định của khách là muốn biết về tình trạng đơn hàng hoặc khuyến mãi đã được áp dụng. Do đó, L1 là 'sau_mua_hang' vì khách đã thực hiện một hành động mua sắm trước đó.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-l-oreal-paris-sieu-cap-am-cang-min-da-50ml-96181_q00",
+      "sentence": "Kem dưỡng này là ban ngày hay ban đêm ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "su_dung_san_pham_vao_ban_dem"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về loại kem dưỡng này có thể sử dụng vào ban ngày hay ban đêm, tức là khách đang hỏi thông tin về sản phẩm trước khi mua. Ý định chính là muốn biết thông tin về sản phẩm phù hợp với thời gian sử dụng.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-la-roche-posay-giam-mun-3-tac-dong-30ml-93795_q01",
+      "sentence": "Tư vấn giúp e. Hướng dẫn dùng các bước cho dòng sp La Roche Posay trị mụn giảm mụn này nhé ạ .",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "su_dung_san_pham_truoc_khi_makeup"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách yêu cầu tư vấn về cách sử dụng sản phẩm, cụ thể là hướng dẫn các bước dùng sản phẩm trị mụn của La Roche-Posay. Điều này cho thấy khách đang tìm kiếm thông tin trước khi sử dụng sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-bi-dao-cocoon-lam-giam-mun-mo-tham-70ml-moi-96811_q04",
+      "sentence": "chai này khác gì chai N7 không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu sự khác biệt giữa hai sản phẩm, điều này cho thấy họ đang trong giai đoạn trước khi mua hàng và muốn biết thêm thông tin để đưa ra quyết định. Ý định chính là tìm hiểu về sản phẩm, do đó L1 sẽ là 'truoc_mua_hang'. L3 phù hợp nhất là 'khuyen_mai_dac_biet' vì khách có thể đang so sánh các tính năng hoặc ưu đãi của hai sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-goi-xa-tresemme-salon-rebond-ngan-gay-rung-toc-640g-620g-106495_q03",
+      "sentence": "Cho mình hỏi, nếu mua tại cửa hàng có áp dụng tặng kèm ủ kh ạ ?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_tang_kem",
+        "level_3": "thong_tin_qua_tang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có áp dụng chương trình tặng kèm khi mua sản phẩm tại cửa hàng, điều này liên quan đến khuyến mãi. Ý định chính là tìm hiểu thông tin về khuyến mãi tặng kèm sản phẩm. Do đó, L1 là 'truoc_mua_hang' và L2, L3 sẽ được xác định từ ứng viên phù hợp.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-lot-judydoll-kiem-dau-mong-nhe-ben-mau-30g-128988_q00",
+      "sentence": "Độ che phủ của kem lót này có tốt k?",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "khong_biet_kien_dau"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về độ che phủ của kem lót, tức là họ muốn biết thông tin về chất lượng sản phẩm trước khi quyết định mua. Điều này phù hợp với ý định tư vấn về thông tin sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "phan-ma-hong-bat-sang-3ce-middy-hype-canh-hong-phai-9g-195477_q01",
+      "sentence": "Khu vực long hải bà rịa có tại cửa hàng mẫu má hồng này không",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_san_pham_tai_cua_hang"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về sự có mặt của sản phẩm tại cửa hàng, điều này cho thấy họ đang hỏi trước khi mua. Ý định chính là thông tin về sản phẩm tại cửa hàng cụ thể.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-10-mat-na-caryophy-giam-mun-tham-duong-am-da-22g-108668_q03",
+      "sentence": "Ở Đà Nẵng còn không ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "ton_kho_kiem_tra",
+        "level_3": "mau_bien_the"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về tình trạng tồn kho sản phẩm tại Đà Nẵng, điều này cho thấy khách đang tìm hiểu thông tin trước khi quyết định mua hàng. Do đó, ý định chính là kiểm tra tồn kho. L3 phù hợp nhất là 'mau_bien_the' từ ứng viên đầu tiên.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-duong-elixir-retinol-ho-tro-giam-nep-nhan-15g-123856_q04",
+      "sentence": "mình cần loại nào chưâ Retinol 0,3 %",
+      "category": "Mỹ phẩm high end",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về loại sản phẩm Retinol 0,3%, điều này cho thấy họ đang cần thông tin về sản phẩm trước khi quyết định mua. Ý định chính là tìm hiểu về sản phẩm phù hợp với nhu cầu của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-2-nuoc-suc-mieng-listerine-tra-xanh-ngua-sau-rang-750ml-114689_q00",
+      "sentence": "Tại sao đăng 127k mà giao tới là 186k? Lại còn xóa câu hỏi của khách mà không trả lời??????",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "sau_mua_hang",
+        "level_2": "van_de_giao_hang",
+        "level_3": "khong_nhan_duoc_phan_hoi"
+      },
+      "confidence": 0.95,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang đề cập đến vấn đề giao hàng và sự không hài lòng với dịch vụ, cụ thể là về giá cả và việc không nhận được câu trả lời cho câu hỏi trước đó. Điều này cho thấy khách hàng đã trải nghiệm dịch vụ và đang khiếu nại về vấn đề giao hàng. Do đó, ý định chính là liên quan đến vấn đề giao hàng sau khi đã mua sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "mascara-judydoll-dau-sieu-cong-6-do-lam-cong-mi-01-den-3g-moi-229863_q00",
+      "sentence": "Mẫu mới làm tơi mi hay tạo mi cụm ạ",
+      "category": "Trang điểm",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thong_tin_san_pham_moi"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến mẫu mới làm tơi mi hay tạo mi cụm, cho thấy khách đang tìm hiểu về sản phẩm trang điểm mới. Ý định chính là muốn biết thông tin về sản phẩm mới, do đó phù hợp với intent trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "dung-dich-ve-sinh-phu-nu-lactacyd-odor-fresh-ngan-mui-250ml-83037_q04",
+      "sentence": "Mua trực tiếp tại cửa hàng có được tặng quà như mua online ko ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "uu_dai_yeu_cau",
+        "level_3": "khuyen_mai_dac_biet"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc có được tặng quà khi mua trực tiếp tại cửa hàng giống như khi mua online hay không. Điều này cho thấy khách đang hỏi về chương trình khuyến mãi hoặc ưu đãi liên quan đến việc mua hàng. Do đó, ý định chính là tìm hiểu về khuyến mãi. L1 được xác định là 'truoc_mua_hang' vì khách hỏi trước khi mua hàng.",
+      "error": null
+    },
+    {
+      "sample_id": "tinh-chat-neogen-dermalogy-duong-sang-da-mo-tham-32g-moi-103765_q02",
+      "sentence": "Sản phẩm này bầu có dùng đc k ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc sản phẩm có phù hợp để sử dụng hay không, điều này cho thấy khách đang tìm kiếm thông tin trước khi quyết định mua. Ý định này liên quan đến việc chọn sản phẩm phù hợp cho loại da của họ.",
+      "error": null
+    },
+    {
+      "sample_id": "combo-tay-da-chet-toan-than-cocoon-tu-ca-phe-dak-lak-2x200ml-97567_q02",
+      "sentence": "sử dụng s ạ có ủ ko ạ hay mik thoa đều hết r r rửa liền vs tẩy là ở bước sau tấm hay tẩy r ms tấm",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "sua_rua_mat"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách liên quan đến việc sử dụng sản phẩm và cách thực hiện các bước chăm sóc da. Khách đang tìm hiểu về quy trình sử dụng sản phẩm, cụ thể là việc thoa và rửa mặt. Điều này cho thấy ý định của khách là trước khi mua, họ cần thông tin về cách sử dụng sản phẩm. Do đó, L1 là 'truoc_mua_hang'. L3 phù hợp nhất là 'sua_rua_mat' vì nó mô tả rõ ràng ý định của khách về việc rửa mặt sau khi sử dụng sản phẩm.",
+      "error": null
+    },
+    {
+      "sample_id": "sua-chong-nang-elixir-nang-tong-ngua-lao-hoa-35g-123880_q01",
+      "sentence": "có tặng thêm quà k shop",
+      "category": "Mỹ phẩm high end",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "khuyen_mai_tang_sample",
+        "level_3": "thong_tin_qua_tang"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang hỏi về việc có tặng thêm quà hay không, điều này cho thấy khách đang tìm hiểu thông tin khuyến mãi trước khi quyết định mua hàng. Do đó, ý định chính là tìm hiểu về khuyến mãi. L3 phù hợp nhất là 'thong_tin_qua_tang' từ ứng viên 5. L2 tương ứng là 'khuyen_mai_tang_sample'.",
+      "error": null
+    },
+    {
+      "sample_id": "nuoc-tay-trang-jmsolution-rau-ma-cho-da-dau-mun-500ml-114623_q04",
+      "sentence": "bạn ơi da mình da nhạy cảm thiên dầu đang có mụn xài loại gì ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "di_ung_an_toan",
+        "level_3": "chon_san_pham_phu_hop_cho_da_nhon"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đề cập đến việc tìm kiếm sản phẩm phù hợp cho da nhạy cảm thiên dầu đang có mụn. Điều này cho thấy khách đang tìm hiểu thông tin trước khi mua sản phẩm. Ý định chính là chọn sản phẩm phù hợp cho loại da cụ thể.",
+      "error": null
+    },
+    {
+      "sample_id": "ca-phe-dak-lak-lam-sach-da-chet-cho-mat-cocoon-150ml-92215_q03",
+      "sentence": "sản phầm dùng cho độ tuổi bao nhiêu trở lên là ổn nhất ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "phu_hop_da_dau",
+        "level_3": "phu_hop_cho_tre_em"
+      },
+      "confidence": 0.85,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về độ tuổi phù hợp để sử dụng sản phẩm, điều này cho thấy họ đang hỏi trước khi mua. Ý định chính là tìm kiếm thông tin về sự phù hợp của sản phẩm với độ tuổi. Do đó, L1 là 'truoc_mua_hang', và L2, L3 sẽ liên quan đến sự phù hợp của sản phẩm với da.",
+      "error": null
+    },
+    {
+      "sample_id": "serum-l-oreal-professionnel-kich-thich-moc-toc-90ml-moi-106751_q03",
+      "sentence": "Sản phẩm này có những thành phần chính là gì ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thong_tin_san_pham",
+        "level_3": "thanh_phan_san_pham"
+      },
+      "confidence": 0.9,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách yêu cầu thông tin về thành phần chính của sản phẩm, điều này cho thấy khách đang tìm hiểu trước khi mua. Ý định này phù hợp với việc hỏi về thông tin sản phẩm. Do đó, tôi chọn L1 là 'truoc_mua_hang', L2 là 'thong_tin_san_pham' và L3 là 'thanh_phan_san_pham'.",
+      "error": null
+    },
+    {
+      "sample_id": "kem-nen-maybelline-bat-sang-che-phu-sieu-nhe-110-35ml-125672_q01",
+      "sentence": "da ngâm dùng 110 dc kh ạ",
+      "category": "Sức khỏe làm đẹp",
+      "intent_3_level": {
+        "level_1": "truoc_mua_hang",
+        "level_2": "thiet_bi_tu_van",
+        "level_3": "phu_hop_mang_thai_bau"
+      },
+      "confidence": 0.8,
+      "qa_status": "approved",
+      "reasoning": "Câu hỏi của khách đang tìm hiểu về việc sử dụng sản phẩm kem nền cho làn da ngâm, tức là họ đang hỏi về sự phù hợp của sản phẩm với tình trạng da của họ. Điều này thuộc về ý định tư vấn trước khi mua hàng. L3 phù hợp nhất là 'phu_hop_mang_thai_bau' vì nó liên quan đến việc xác định sự phù hợp của sản phẩm với người dùng.",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "num_pool": 2043,
+  "num_d3": 300,
+  "num_d3_val": 100,
+  "num_d3_test": 200,
+  "num_train_pool": 1743,
+  "d3_val_ids_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/splits/d3_val_ids.txt",
+  "d3_test_ids_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/splits/d3_test_ids.txt",
+  "train_pool_ids_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/splits/train_pool_ids.txt",
+  "pool_file": "/Users/huynguyen/Documents/research/mutli intentclassification data/data/annotations/pool.json"
+}

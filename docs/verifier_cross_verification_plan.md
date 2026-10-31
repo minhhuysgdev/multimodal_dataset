@@ -117,7 +117,7 @@ Báo cáo: `python scripts/generate_verifier_report.py --input <file_human_revie
 
 **Không chạy trong notebook gán nhãn chính.**
 
-Mở trên Google Colab: [`data/code/run_full_reverify_colab.ipynb`](../data/code/run_full_reverify_colab.ipynb)
+Mở trên Google Colab: [`notebooks/run_full_reverify_colab.ipynb`](../notebooks/run_full_reverify_colab.ipynb)
 
 1. Mount Drive → set `INTENT_REPO=/content/drive/MyDrive/intent_kb`
 2. Nhập `MONGODB_URI`, `OPENAI_API_KEY`

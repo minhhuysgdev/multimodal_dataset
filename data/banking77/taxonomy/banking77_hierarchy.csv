@@ -1,0 +1,78 @@
+label_id,L3,L2,L1,flag,rationale
+0,activate_my_card,card_issuance,card,,Post-delivery activation of physical card.
+1,age_limit,eligibility,account_and_access,,Minimum age or age limit policy.
+2,apple_pay_or_google_pay,card_product_info,card,,Apple Pay / Google Pay support.
+3,atm_support,atm_operation,cash_withdrawal,,General ATM support.
+4,automatic_top_up,top_up_method,top_up,,Automatic top-up configuration.
+5,balance_not_updated_after_bank_transfer,top_up_status,top_up,,"Inbound bank transfer not reflected in balance; utterances are top-up posting, not an outgoing transfer."
+6,balance_not_updated_after_cheque_or_cash_deposit,top_up_status,top_up,,Balance not updated after cash/cheque deposit.
+7,beneficiary_not_allowed,transfer_setup,transfer,,Beneficiary not allowed for transfer.
+8,cancel_transfer,transfer_status,transfer,,Cancel an outgoing transfer.
+9,card_about_to_expire,card_issuance,card,,"Card expiring and user asks for a replacement; issuance lifecycle, not a malfunction."
+10,card_acceptance,card_product_info,card,,Merchant or terminal card acceptance.
+11,card_arrival,card_issuance,card,,Tracking or delay of card delivery.
+12,card_delivery_estimate,card_issuance,card,,Expected delivery timeline for a card.
+13,card_linking,card_issuance,card,,Linking card to wallet or account.
+14,card_not_working,card_function,card,,Card fails for payments or general use.
+15,card_payment_fee_charged,card_payment,card,,Fee charged on card payment.
+16,card_payment_not_recognised,card_payment,card,,Unrecognised card payment on statement.
+17,card_payment_wrong_exchange_rate,card_payment,card,,Wrong FX rate applied to card payment.
+18,card_swallowed,atm_operation,cash_withdrawal,,"ATM retained the card; same channel as cash withdrawal, not a card-function failure."
+19,cash_withdrawal_charge,atm_operation,cash_withdrawal,,"Fee charged when using an ATM; same channel as withdrawal, not a dispensed-amount discrepancy."
+20,cash_withdrawal_not_recognised,withdrawal_discrepancy,cash_withdrawal,,Unrecognised ATM withdrawal.
+21,change_pin,card_security,card,,PIN change workflow.
+22,compromised_card,card_security,card,,Suspected fraud or compromised card.
+23,contactless_not_working,card_function,card,,Contactless payment not working.
+24,country_support,eligibility,account_and_access,,Country availability support.
+25,declined_card_payment,card_payment,card,,Card payment declined.
+26,declined_cash_withdrawal,atm_operation,cash_withdrawal,,Cash withdrawal declined.
+27,declined_transfer,transfer_status,transfer,,Transfer declined.
+28,direct_debit_payment_not_recognised,unrecognised_or_extra_charge,refund_and_charges,,Unrecognised direct debit.
+29,disposable_card_limits,virtual_card,card,,Limits on disposable virtual cards.
+30,edit_personal_details,account_lifecycle,account_and_access,,Edit personal profile details.
+31,exchange_charge,exchange_info,currency_exchange,,"Currency-exchange fee; same family as rate, in-app exchange, and fiat support."
+32,exchange_rate,exchange_info,currency_exchange,,General exchange rate inquiry.
+33,exchange_via_app,exchange_info,currency_exchange,,Exchange via mobile app.
+34,extra_charge_on_statement,unrecognised_or_extra_charge,refund_and_charges,,Extra charge on statement.
+35,failed_transfer,transfer_status,transfer,,Transfer failed.
+36,fiat_currency_support,exchange_info,currency_exchange,,Supported fiat currencies.
+37,get_disposable_virtual_card,virtual_card,card,,Disposable virtual card issuance.
+38,get_physical_card,card_issuance,card,,How to obtain a physical card.
+39,getting_spare_card,card_issuance,card,,Replacement or spare physical card.
+40,getting_virtual_card,virtual_card,card,,Creating or accessing a virtual card.
+41,lost_or_stolen_card,card_security,card,,Report lost or stolen card.
+42,lost_or_stolen_phone,app_access_security,account_and_access,,Lost or stolen phone with app access.
+43,order_physical_card,card_issuance,card,,Ordering a new physical card.
+44,passcode_forgotten,app_access_security,account_and_access,,Forgotten app passcode.
+45,pending_card_payment,card_payment,card,,Card payment pending settlement.
+46,pending_cash_withdrawal,atm_operation,cash_withdrawal,,Cash withdrawal pending.
+47,pending_top_up,top_up_status,top_up,,Top-up pending.
+48,pending_transfer,transfer_status,transfer,,Outgoing transfer pending.
+49,pin_blocked,card_security,card,,PIN blocked after failed attempts.
+50,receiving_money,transfer_setup,transfer,,Receiving money from others.
+51,Refund_not_showing_up,refund,refund_and_charges,,Refund not visible on account.
+52,request_refund,refund,refund_and_charges,,Customer requests a refund.
+53,reverted_card_payment?,card_payment,card,,Card payment reverted or reversed.
+54,supported_cards_and_currencies,top_up_method,top_up,,"Which cards or currencies can be used to add money; top-up instrument, not the user's card product."
+55,terminate_account,account_lifecycle,account_and_access,,Close or terminate account.
+56,top_up_by_bank_transfer_charge,top_up_fee_and_limit,top_up,,Fee for top-up by bank transfer.
+57,top_up_by_card_charge,top_up_fee_and_limit,top_up,,Fee for top-up by card.
+58,top_up_by_cash_or_cheque,top_up_method,top_up,,Top up via cash or cheque.
+59,top_up_failed,top_up_status,top_up,,Top-up failed.
+60,top_up_limits,top_up_fee_and_limit,top_up,,Top-up amount limits.
+61,top_up_reverted,top_up_status,top_up,,Top-up reverted.
+62,topping_up_by_card,top_up_method,top_up,,Top up using another card.
+63,transaction_charged_twice,unrecognised_or_extra_charge,refund_and_charges,,Same transaction charged twice.
+64,transfer_fee_charged,transfer_info_and_fee,transfer,,Fee charged on transfer.
+65,transfer_into_account,transfer_setup,transfer,,Incoming transfer to own account.
+66,transfer_not_received_by_recipient,transfer_status,transfer,,Recipient did not receive transfer.
+67,transfer_timing,transfer_info_and_fee,transfer,,How long transfers take.
+68,unable_to_verify_identity,kyc,identity_verification,,Unable to complete identity verification.
+69,verify_my_identity,kyc,identity_verification,,Complete identity verification.
+70,verify_source_of_funds,kyc,identity_verification,,Source-of-funds verification.
+71,verify_top_up,top_up_method,top_up,,How to verify the card used for a top-up; not a posting status and not identity KYC.
+72,virtual_card_not_working,virtual_card,card,,Virtual card malfunction.
+73,visa_or_mastercard,card_product_info,card,,Visa vs Mastercard product question.
+74,why_verify_identity,kyc,identity_verification,,Why identity verification is required.
+75,wrong_amount_of_cash_received,withdrawal_discrepancy,cash_withdrawal,,Wrong cash amount dispensed.
+76,wrong_exchange_rate_for_cash_withdrawal,withdrawal_discrepancy,cash_withdrawal,,Wrong FX on cash withdrawal.

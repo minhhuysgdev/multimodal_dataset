@@ -1,0 +1,12 @@
+flowchart TB
+  root["cash_withdrawal"]
+  root --> l2_atmoperation["atm_operation"]
+  l2_atmoperation --> l3_3["3: atm_support"]
+  l2_atmoperation --> l3_18["18: card_swallowed"]
+  l2_atmoperation --> l3_19["19: cash_withdrawal_charge"]
+  l2_atmoperation --> l3_26["26: declined_cash_withdrawal"]
+  l2_atmoperation --> l3_46["46: pending_cash_withdrawal"]
+  root --> l2_withdrawaldiscrepanc["withdrawal_discrepancy"]
+  l2_withdrawaldiscrepanc --> l3_20["20: cash_withdrawal_not_recognised"]
+  l2_withdrawaldiscrepanc --> l3_75["75: wrong_amount_of_cash_received"]
+  l2_withdrawaldiscrepanc --> l3_76["76: wrong_exchange_rate_for_cash_withdrawal"]

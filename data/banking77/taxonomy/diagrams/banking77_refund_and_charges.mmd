@@ -1,0 +1,9 @@
+flowchart TB
+  root["refund_and_charges"]
+  root --> l2_refund["refund"]
+  l2_refund --> l3_51["51: Refund_not_showing_up"]
+  l2_refund --> l3_52["52: request_refund"]
+  root --> l2_unrecognisedorextrac["unrecognised_or_extra_charge"]
+  l2_unrecognisedorextrac --> l3_28["28: direct_debit_payment_not_recognised"]
+  l2_unrecognisedorextrac --> l3_34["34: extra_charge_on_statement"]
+  l2_unrecognisedorextrac --> l3_63["63: transaction_charged_twice"]

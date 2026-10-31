@@ -1,0 +1,8 @@
+issue,count,action
+Invalid L3 slug,25,Map to valid taxonomy slug
+Skipped ambiguous,7,Human review or discard
+Needs human review,275,Claude VERIFY loop
+Exact sentence duplicates,0,Dedup before split
+L3 not in official taxonomy,1563,Remap or extend taxonomy
+Sentences < 5 words,72,Review — may be noise
+No L3 label assigned,7,Re-run labeling pipeline
