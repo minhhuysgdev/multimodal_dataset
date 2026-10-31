@@ -1,0 +1,16 @@
+{
+  "variants": [
+    {
+      "method": "D. Full CV-HIL",
+      "method_full_name": "Cross-Verified Hierarchical Intent Labeling",
+      "method_key": "cvhil_d",
+      "num_matched": 300,
+      "l1_accuracy": 0.9666666666666667,
+      "l2_accuracy": 0.6566666666666666,
+      "l3_accuracy": 0.5066666666666667,
+      "l3_macro_f1": 0.3985231321966016,
+      "l3_weighted_f1": 0.4826544011544011,
+      "full_path_accuracy": 0.46
+    }
+  ]
+}

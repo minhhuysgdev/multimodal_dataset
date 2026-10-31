@@ -12,4 +12,5 @@ env.sh
 
 # Outputs / checkpoints
 data/outputs/
+*.log
 data/hasaki_prelabel.json  # symlink, vẫn có file gốc ở data/raw/hasaki/

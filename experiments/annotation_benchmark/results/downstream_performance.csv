@@ -1,0 +1,23 @@
+training_dataset,method_key,classifier,n_train,n_train_invalid,train_invalid_rate,n_val,n_test,decoding,l1_accuracy,l2_accuracy,l3_accuracy,l3_macro_f1,full_path_accuracy
+Zero-shot,zero_shot,TF-IDF+SVM,1720,,,100,200,,0.82,0.105,0.095,0.03918934946332207,0.04
+Zero-shot,zero_shot,PhoBERT (vinai/phobert-base),1720,,,100,200,,0.91,0.075,0.055,0.012262484099301913,0.035
+Zero-shot,zero_shot,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1720,,,100,200,,0.91,0.075,0.055,0.00994750656167979,0.04
+Few-shot,few_shot,TF-IDF+SVM,1661,,,100,200,,0.865,0.125,0.08,0.0255742094963436,0.04
+Few-shot,few_shot,PhoBERT (vinai/phobert-base),1661,,,100,200,,0.915,0.105,0.06,0.01062589434682458,0.03
+Few-shot,few_shot,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1661,,,100,200,,0.94,0.1,0.045,0.008217574280922697,0.03
+CoT,cot,TF-IDF+SVM,1699,,,100,200,,0.825,0.115,0.105,0.0385546642899584,0.065
+CoT,cot,PhoBERT (vinai/phobert-base),1699,,,100,200,,0.905,0.08,0.055,0.012470095693779904,0.035
+CoT,cot,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1699,,,100,200,,0.92,0.04,0.055,0.009264901111959937,0.04
+FreeAL (LLM-only),freeal,TF-IDF+SVM,1711,,,100,200,,0.885,0.37,0.165,0.08221855992556629,0.13
+FreeAL (LLM-only),freeal,PhoBERT (vinai/phobert-base),1711,,,100,200,,0.91,0.32,0.11,0.03861806530979463,0.085
+FreeAL (LLM-only),freeal,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1711,,,100,200,,0.955,0.285,0.115,0.02561136068544295,0.095
+CanDist (LLM-only),candist,TF-IDF+SVM,1743,,,100,200,,0.91,0.175,0.1,0.03352985227985228,0.07
+CanDist (LLM-only),candist,PhoBERT (vinai/phobert-base),1743,,,100,200,,0.93,0.075,0.045,0.012384691170898068,0.025
+CanDist (LLM-only),candist,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1743,,,100,200,,0.93,0.085,0.05,0.014033301650367206,0.025
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,TF-IDF+SVM,1453,1,0.000688,100,200,marginal,0.89,0.51,0.225,0.146317266744096,0.185
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,PhoBERT (vinai/phobert-base),1453,1,0.000688,100,200,marginal,0.935,0.475,0.11,0.02356491746735649,0.08
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1453,1,0.000688,100,200,marginal,0.96,0.495,0.17,0.0532234448031412,0.135
+Zero-shot,zero_shot,Qwen3-1.7B-LoRA (Qwen/Qwen3-1.7B),1720,100,200,0.855,0.11,0.065,0.024376541661440695,0.04
+Few-shot,few_shot,Qwen3-1.7B-LoRA (Qwen/Qwen3-1.7B),1661,100,200,0.94,0.11,0.07,0.029128788504873195,0.045
+CoT,cot,Qwen3-1.7B-LoRA (Qwen/Qwen3-1.7B),1699,100,200,0.895,0.115,0.08,0.02947129083883055,0.05
+FreeAL (LLM-only),freeal,Qwen3-1.7B-LoRA (Qwen/Qwen3-1.7B),1711,100,200,0.905,0.29,0.125,0.045781957506095435,0.08

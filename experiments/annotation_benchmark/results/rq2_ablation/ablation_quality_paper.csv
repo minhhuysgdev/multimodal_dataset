@@ -1,0 +1,2 @@
+Variant,N,L1 Acc,L2 Acc,L3 Acc,L3 Macro-F1,Full-path Acc,method_key,l1_accuracy,l2_accuracy,l3_accuracy,l3_macro_f1,l3_weighted_f1,full_path_accuracy
+D. Full CV-HIL,300,96.7%,65.7%,50.7%,39.9%,46.0%,cvhil_d,0.9667,0.6567,0.5067,0.3985,0.4827,0.46

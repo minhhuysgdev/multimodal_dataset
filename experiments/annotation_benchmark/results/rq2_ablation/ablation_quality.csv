@@ -1,0 +1,2 @@
+method,method_full_name,method_key,num_matched,l1_accuracy,l2_accuracy,l3_accuracy,l3_macro_f1,l3_weighted_f1,full_path_accuracy
+D. Full CV-HIL,Cross-Verified Hierarchical Intent Labeling,cvhil_d,300,0.9666666666666667,0.6566666666666666,0.5066666666666667,0.3985231321966016,0.4826544011544011,0.46

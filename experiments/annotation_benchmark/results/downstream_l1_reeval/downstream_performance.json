@@ -1,0 +1,67 @@
+{
+  "classifiers": [
+    "tfidf",
+    "phobert",
+    "xlmr"
+  ],
+  "epochs": 10,
+  "decoding": "marginal",
+  "use_l1_head": true,
+  "lambda_l1": 1.0,
+  "results": [
+    {
+      "training_dataset": "Cross-Verified Hierarchical Intent Labeling (Ours)",
+      "method_key": "verified_d2",
+      "classifier": "TF-IDF+SVM",
+      "n_train": 1453,
+      "n_train_invalid": 1,
+      "train_invalid_rate": 0.000688,
+      "n_val": 100,
+      "n_test": 200,
+      "decoding": "marginal",
+      "use_l1_head": true,
+      "lambda_l1": 0.0,
+      "l1_accuracy": 0.89,
+      "l2_accuracy": 0.51,
+      "l3_accuracy": 0.225,
+      "l3_macro_f1": 0.146317266744096,
+      "full_path_accuracy": 0.185
+    },
+    {
+      "training_dataset": "Cross-Verified Hierarchical Intent Labeling (Ours)",
+      "method_key": "verified_d2",
+      "classifier": "PhoBERT (vinai/phobert-base)",
+      "n_train": 1453,
+      "n_train_invalid": 1,
+      "train_invalid_rate": 0.000688,
+      "n_val": 100,
+      "n_test": 200,
+      "decoding": "marginal",
+      "use_l1_head": true,
+      "lambda_l1": 1.0,
+      "l1_accuracy": 0.935,
+      "l2_accuracy": 0.475,
+      "l3_accuracy": 0.11,
+      "l3_macro_f1": 0.02356491746735649,
+      "full_path_accuracy": 0.08
+    },
+    {
+      "training_dataset": "Cross-Verified Hierarchical Intent Labeling (Ours)",
+      "method_key": "verified_d2",
+      "classifier": "XLM-RoBERTa (FacebookAI/xlm-roberta-base)",
+      "n_train": 1453,
+      "n_train_invalid": 1,
+      "train_invalid_rate": 0.000688,
+      "n_val": 100,
+      "n_test": 200,
+      "decoding": "marginal",
+      "use_l1_head": true,
+      "lambda_l1": 1.0,
+      "l1_accuracy": 0.96,
+      "l2_accuracy": 0.495,
+      "l3_accuracy": 0.17,
+      "l3_macro_f1": 0.0532234448031412,
+      "full_path_accuracy": 0.135
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+training_dataset,method_key,classifier,n_train,n_train_invalid,train_invalid_rate,n_val,n_test,decoding,use_l1_head,lambda_l1,l1_accuracy,l2_accuracy,l3_accuracy,l3_macro_f1,full_path_accuracy
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1453,1,0.000688,100,200,marginal,True,1.0,0.93,0.465,0.09,0.021865726258344848,0.07

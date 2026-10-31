@@ -1,0 +1,67 @@
+{
+  "evaluation_config_version": "1.0",
+  "frozen_at": "2026-07-19",
+  "seed": 42,
+  "data_sources": {
+    "d1_annotator": "data/raw/hasaki/d1_dataset.json",
+    "d2_verified": "data/d2_dataset.json",
+    "d3_human_gold": "data/gold/d3_human_gold.json",
+    "d1_train": "data/datasets/d1_annotator_train.json",
+    "d2_train": "data/datasets/d2_verified_train.json",
+    "taxonomy": "data/unified_intents.csv",
+    "intent_nodes": "data/intent_kb.intent_nodes_27_05_2026.csv",
+    "intent_edges": "data/intent_kb.intent_edges_28_05_2026.csv"
+  },
+  "splits": {
+    "train": "data/splits/train.json",
+    "val": "data/splits/val.json",
+    "test": "data/splits/test.json",
+    "meta": "data/splits/split_meta.json",
+    "train_size": 989,
+    "val_size": 188,
+    "test_size": 225,
+    "d3_excluded": 300,
+    "total_pool": 1402
+  },
+  "models": {
+    "annotator": "gpt-4o-mini",
+    "verifier": "gpt-4o",
+    "embedding": "paraphrase-multilingual-MiniLM-L12-v2",
+    "reranker": "gpt-4o"
+  },
+  "metrics": {
+    "primary": "macro_f1_l3",
+    "secondary": [
+      "accuracy_l1",
+      "accuracy_l2",
+      "accuracy_l3",
+      "macro_f1_l1",
+      "macro_f1_l2",
+      "weighted_f1_l3",
+      "full_path_accuracy"
+    ],
+    "review_metrics": [
+      "review_rate",
+      "approval_rate",
+      "human_effort",
+      "api_cost"
+    ]
+  },
+  "retrieval_params": {
+    "K_candidates": 40,
+    "k_exemplars": 3,
+    "recall_at": [1, 3, 5, 10]
+  },
+  "review_budgets": [0.2, 0.4, 0.6],
+  "verification_config": {
+    "VERIFY_CONF_THRESHOLD": 0.85,
+    "MIN_CONF_APPROVE_EXISTING": 0.80,
+    "ENABLE_VERIFIER": true
+  },
+  "notes": {
+    "leakage_check": "D3 IDs excluded from all train/val/test splits",
+    "matched_ids": "D1/D2 train use same 1454 sample_ids",
+    "full_verification_status": "NOT_COMPLETED - would require ~2000 API calls",
+    "human_gold_status": "COMPLETED - 300 samples with complete L1/L2/L3 labels"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "method": "Zero-shot",
+      "method_full_name": "",
+      "method_key": "zero_shot",
+      "num_matched": 300,
+      "l1_accuracy": 0.8833333333333333,
+      "l2_accuracy": 0.12666666666666668,
+      "l3_accuracy": 0.10666666666666667,
+      "l3_macro_f1": 0.049137029863953074,
+      "l3_weighted_f1": 0.06162513968211236,
+      "full_path_accuracy": 0.056666666666666664
+    },
+    {
+      "method": "Few-shot",
+      "method_full_name": "",
+      "method_key": "few_shot",
+      "num_matched": 282,
+      "l1_accuracy": 0.9361702127659575,
+      "l2_accuracy": 0.13829787234042554,
+      "l3_accuracy": 0.09219858156028368,
+      "l3_macro_f1": 0.045045136146130316,
+      "l3_weighted_f1": 0.04919045870808167,
+      "full_path_accuracy": 0.05673758865248227
+    },
+    {
+      "method": "Chain-of-Thought",
+      "method_full_name": "",
+      "method_key": "cot",
+      "num_matched": 300,
+      "l1_accuracy": 0.9166666666666666,
+      "l2_accuracy": 0.11333333333333333,
+      "l3_accuracy": 0.08666666666666667,
+      "l3_macro_f1": 0.0349117186475141,
+      "l3_weighted_f1": 0.04542484367484367,
+      "full_path_accuracy": 0.05333333333333334
+    },
+    {
+      "method": "FreeAL",
+      "method_full_name": "",
+      "method_key": "freeal",
+      "num_matched": 300,
+      "l1_accuracy": 0.93,
+      "l2_accuracy": 0.42,
+      "l3_accuracy": 0.20333333333333334,
+      "l3_macro_f1": 0.1147325349771002,
+      "l3_weighted_f1": 0.17485233285233284,
+      "full_path_accuracy": 0.14666666666666667
+    },
+    {
+      "method": "CanDist",
+      "method_full_name": "",
+      "method_key": "candist",
+      "num_matched": 300,
+      "l1_accuracy": 0.9466666666666667,
+      "l2_accuracy": 0.09333333333333334,
+      "l3_accuracy": 0.06333333333333334,
+      "l3_macro_f1": 0.029725474935939137,
+      "l3_weighted_f1": 0.04918517742711291,
+      "full_path_accuracy": 0.043333333333333335
+    },
+    {
+      "method": "RVI-HUL (Ours)",
+      "method_full_name": "Cross-Verified Hierarchical Intent Labeling",
+      "method_key": "verified_d2",
+      "num_matched": 300,
+      "l1_accuracy": 0.9666666666666667,
+      "l2_accuracy": 0.6566666666666666,
+      "l3_accuracy": 0.5066666666666667,
+      "l3_macro_f1": 0.3985231321966016,
+      "l3_weighted_f1": 0.4826544011544011,
+      "full_path_accuracy": 0.46
+    }
+  ]
+}

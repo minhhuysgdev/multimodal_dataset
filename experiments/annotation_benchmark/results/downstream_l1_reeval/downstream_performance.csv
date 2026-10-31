@@ -1,0 +1,4 @@
+training_dataset,method_key,classifier,n_train,n_train_invalid,train_invalid_rate,n_val,n_test,decoding,use_l1_head,lambda_l1,l1_accuracy,l2_accuracy,l3_accuracy,l3_macro_f1,full_path_accuracy
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,TF-IDF+SVM,1453,1,0.000688,100,200,marginal,True,0.0,0.89,0.51,0.225,0.146317266744096,0.185
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,PhoBERT (vinai/phobert-base),1453,1,0.000688,100,200,marginal,True,1.0,0.935,0.475,0.11,0.02356491746735649,0.08
+Cross-Verified Hierarchical Intent Labeling (Ours),verified_d2,XLM-RoBERTa (FacebookAI/xlm-roberta-base),1453,1,0.000688,100,200,marginal,True,1.0,0.96,0.495,0.17,0.0532234448031412,0.135
